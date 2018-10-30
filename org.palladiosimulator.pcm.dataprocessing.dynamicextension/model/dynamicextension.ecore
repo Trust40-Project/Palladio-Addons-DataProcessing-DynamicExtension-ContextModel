@@ -3,8 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dynamicextension" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/0.1/"
     nsPrefix="dynamicextension">
   <eClassifiers xsi:type="ecore:EClass" name="DynamicSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contextContainer" lowerBound="1"
-        eType="#//context/Contexts" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subjectContainer" lowerBound="1"
         eType="#//util/subject/Subjects" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="helperContainer" lowerBound="1"
@@ -12,10 +10,6 @@
   </eClassifiers>
   <eSubpackages name="context" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/context/0.1/"
       nsPrefix="context">
-    <eClassifiers xsi:type="ecore:EClass" name="Contexts">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
-          eType="#//context/Context" containment="true"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="EnvironmentalContext" abstract="true"
         eSuperTypes="#//context/Context"/>
@@ -41,16 +35,12 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="ecore:EClass ../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/EnumCharacteristicLiteral"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ContextCharacteristic" eSuperTypes="../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/Characteristic">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="permission" upperBound="-1"
-          eType="#//context/Permission" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
+          eType="#//context/Context"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ContextCharacteristicType" eSuperTypes="../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/CharacteristicType">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" lowerBound="1"
-          eType="#//context/Contexts"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Permission">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="context" lowerBound="1"
-          upperBound="-1" eType="#//context/Context"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
+          eType="#//context/Context" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IntegerThresholdContext" eSuperTypes="#//context/EnvironmentalContext">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparision" eType="#//context/Comparison"/>
