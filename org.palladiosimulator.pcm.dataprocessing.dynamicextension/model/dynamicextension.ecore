@@ -41,18 +41,23 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="ecore:EClass ../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/EnumCharacteristicLiteral"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ContextCharacteristic" eSuperTypes="../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/Characteristic">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="context" lowerBound="1"
-          eType="#//context/Context"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="contextcharacteristictype"
-          eType="#//context/ContextCharacteristicType" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="permission" upperBound="-1"
+          eType="#//context/Permission" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ContextCharacteristicType" eSuperTypes="../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/CharacteristicType">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="permission" lowerBound="1"
-          eType="#//context/Permission" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" lowerBound="1"
+          eType="#//context/Contexts"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Permission">
       <eStructuralFeatures xsi:type="ecore:EReference" name="context" lowerBound="1"
           upperBound="-1" eType="#//context/Context"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IntegerThresholdContext" eSuperTypes="#//context/EnvironmentalContext">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparision" eType="#//context/Comparison"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Comparison">
+      <eLiterals name="GREATER"/>
+      <eLiterals name="SMALLER" value="1"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="util" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/0.1/"
@@ -64,11 +69,16 @@
             eType="#//util/subject/Subject" containment="true"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Subject" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-      <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//util/subject/Subject"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//util/subject/StatefulSubjects"/>
       <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//util/subject/Subject"/>
-      <eClassifiers xsi:type="ecore:EClass" name="Organisation" eSuperTypes="#//util/subject/Subject">
+      <eClassifiers xsi:type="ecore:EClass" name="Organisation" eSuperTypes="#//util/subject/StatefulSubjects">
         <eStructuralFeatures xsi:type="ecore:EReference" name="ownedSubjects" upperBound="-1"
             eType="#//util/subject/Subject"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StatefulSubjects" abstract="true"
+          eSuperTypes="#//util/subject/Subject">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="currentState" eType="ecore:EClass ../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/EnumCharacteristicLiteral"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="stateType" eType="ecore:EClass ../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/EnumCharacteristicType"/>
       </eClassifiers>
     </eSubpackages>
     <eSubpackages name="helperattributes" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/helperattributes/0.1/"
