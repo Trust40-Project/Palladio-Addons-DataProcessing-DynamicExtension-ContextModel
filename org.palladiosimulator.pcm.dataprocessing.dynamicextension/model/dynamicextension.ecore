@@ -33,6 +33,8 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InternalStateContext" eSuperTypes="#//context/UserDeclaredContext">
       <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="ecore:EClass ../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/EnumCharacteristicLiteral"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
+          eType="#//util/subject/Subject"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ContextCharacteristic" eSuperTypes="../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/Characteristic">
       <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"

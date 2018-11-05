@@ -8,7 +8,13 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.palladiosimulator.pcm.dataprocessing.dynamicextension,
+Export-Package: characteristics,
+ characteristics.impl,
+ characteristics.util,
+ data,
+ data.impl,
+ data.util,
+ org.palladiosimulator.pcm.dataprocessing.dynamicextension,
  org.palladiosimulator.pcm.dataprocessing.dynamicextension.context,
  org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl,
  org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.util,
@@ -19,7 +25,10 @@ Export-Package: org.palladiosimulator.pcm.dataprocessing.dynamicextension,
  org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.util,
  org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject,
  org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.impl,
- org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.util
+ org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.util,
+ repository,
+ repository.impl,
+ repository.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
  org.palladiosimulator.pcm.dataprocessing;bundle-version="0.1.0";visibility:=reexport,
