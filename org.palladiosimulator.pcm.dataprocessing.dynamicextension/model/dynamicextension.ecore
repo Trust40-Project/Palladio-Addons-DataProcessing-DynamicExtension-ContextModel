@@ -28,7 +28,7 @@
           eType="#//util/helperattributes/Shift"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleContext" eSuperTypes="#//context/UserDeclaredContext">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1"
           eType="#//util/helperattributes/Role"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InternalStateContext" eSuperTypes="#//context/UserDeclaredContext">
@@ -51,6 +51,10 @@
       <eLiterals name="GREATER"/>
       <eLiterals name="SMALLER" value="1"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PrivacyLevelContext" eSuperTypes="#//context/UserDeclaredContext">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="level" eType="ecore:EClass ../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/EnumCharacteristicLiteral"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ShiftCheckContext" eSuperTypes="#//context/UserDeclaredContext"/>
   </eSubpackages>
   <eSubpackages name="util" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/0.1/"
       nsPrefix="util">
