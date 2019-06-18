@@ -12,10 +12,11 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.palladiosimulator.pcm.PcmPackage;
@@ -29,6 +30,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.C
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.DynamicextensionPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextCharacteristic;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextCharacteristicType;
@@ -158,7 +160,21 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass comparisonContextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum comparisonEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType numberEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -217,6 +233,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		ProbfunctionPackage.eINSTANCE.eClass();
 		StoexPackage.eINSTANCE.eClass();
 		UnitsPackage.eINSTANCE.eClass();
+		EcorePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DynamicextensionPackage.eNS_URI);
@@ -458,6 +475,16 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getIntegerThresholdContext_Threshold() {
+		return (EAttribute) integerThresholdContextEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPrivacyLevelContext() {
 		return privacyLevelContextEClass;
 	}
@@ -488,8 +515,48 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getComparisonContext() {
+		return comparisonContextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getComparisonContext_Comparison() {
+		return (EAttribute) comparisonContextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getComparisonContext_Threshold() {
+		return (EAttribute) comparisonContextEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getComparison() {
 		return comparisonEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getNumber() {
+		return numberEDataType;
 	}
 
 	/**
@@ -552,14 +619,22 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 
 		integerThresholdContextEClass = createEClass(INTEGER_THRESHOLD_CONTEXT);
 		createEAttribute(integerThresholdContextEClass, INTEGER_THRESHOLD_CONTEXT__COMPARISION);
+		createEAttribute(integerThresholdContextEClass, INTEGER_THRESHOLD_CONTEXT__THRESHOLD);
 
 		privacyLevelContextEClass = createEClass(PRIVACY_LEVEL_CONTEXT);
 		createEReference(privacyLevelContextEClass, PRIVACY_LEVEL_CONTEXT__LEVEL);
 
 		shiftCheckContextEClass = createEClass(SHIFT_CHECK_CONTEXT);
 
+		comparisonContextEClass = createEClass(COMPARISON_CONTEXT);
+		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__COMPARISON);
+		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__THRESHOLD);
+
 		// Create enums
 		comparisonEEnum = createEEnum(COMPARISON);
+
+		// Create data types
+		numberEDataType = createEDataType(NUMBER);
 	}
 
 	/**
@@ -594,6 +669,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 				.getEPackage(SubjectPackage.eNS_URI);
 		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage) EPackage.Registry.INSTANCE
 				.getEPackage(CharacteristicsPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -613,6 +689,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		integerThresholdContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
 		privacyLevelContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 		shiftCheckContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
+		comparisonContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -673,6 +750,9 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEAttribute(getIntegerThresholdContext_Comparision(), this.getComparison(), "comparision", null, 0, 1,
 				IntegerThresholdContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIntegerThresholdContext_Threshold(), theEcorePackage.getEInt(), "threshold", null, 0, 1,
+				IntegerThresholdContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(privacyLevelContextEClass, PrivacyLevelContext.class, "PrivacyLevelContext", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -683,10 +763,22 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEClass(shiftCheckContextEClass, ShiftCheckContext.class, "ShiftCheckContext", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(comparisonContextEClass, ComparisonContext.class, "ComparisonContext", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getComparisonContext_Comparison(), this.getComparison(), "comparison", null, 0, 1,
+				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComparisonContext_Threshold(), this.getNumber(), "threshold", null, 0, 1,
+				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(comparisonEEnum, Comparison.class, "Comparison");
 		addEEnumLiteral(comparisonEEnum, Comparison.GREATER);
 		addEEnumLiteral(comparisonEEnum, Comparison.SMALLER);
+
+		// Initialize data types
+		initEDataType(numberEDataType, Number.class, "Number", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //ContextPackageImpl

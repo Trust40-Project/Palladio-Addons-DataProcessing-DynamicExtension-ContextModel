@@ -17,6 +17,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Integer
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegerThresholdContextImpl#getComparision <em>Comparision</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegerThresholdContextImpl#getThreshold <em>Threshold</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +60,26 @@ public class IntegerThresholdContextImpl extends EnvironmentalContextImpl implem
 	@Override
 	public void setComparision(Comparison newComparision) {
 		eSet(ContextPackage.Literals.INTEGER_THRESHOLD_CONTEXT__COMPARISION, newComparision);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getThreshold() {
+		return (Integer) eGet(ContextPackage.Literals.INTEGER_THRESHOLD_CONTEXT__THRESHOLD, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setThreshold(int newThreshold) {
+		eSet(ContextPackage.Literals.INTEGER_THRESHOLD_CONTEXT__THRESHOLD, newThreshold);
 	}
 
 } //IntegerThresholdContextImpl

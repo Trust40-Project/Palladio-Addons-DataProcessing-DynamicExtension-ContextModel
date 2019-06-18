@@ -77,6 +77,8 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 			return (EObject) createPrivacyLevelContext();
 		case ContextPackage.SHIFT_CHECK_CONTEXT:
 			return (EObject) createShiftCheckContext();
+		case ContextPackage.COMPARISON_CONTEXT:
+			return (EObject) createComparisonContext();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +94,8 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 		switch (eDataType.getClassifierID()) {
 		case ContextPackage.COMPARISON:
 			return createComparisonFromString(eDataType, initialValue);
+		case ContextPackage.NUMBER:
+			return createNumberFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -107,6 +111,8 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 		switch (eDataType.getClassifierID()) {
 		case ContextPackage.COMPARISON:
 			return convertComparisonToString(eDataType, instanceValue);
+		case ContextPackage.NUMBER:
+			return convertNumberToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -227,6 +233,17 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public ComparisonContext createComparisonContext() {
+		ComparisonContextImpl comparisonContext = new ComparisonContextImpl();
+		return comparisonContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Comparison createComparisonFromString(EDataType eDataType, String initialValue) {
 		Comparison result = Comparison.get(initialValue);
 		if (result == null)
@@ -242,6 +259,24 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	 */
 	public String convertComparisonToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Number createNumberFromString(EDataType eDataType, String initialValue) {
+		return (Number) super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNumberToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

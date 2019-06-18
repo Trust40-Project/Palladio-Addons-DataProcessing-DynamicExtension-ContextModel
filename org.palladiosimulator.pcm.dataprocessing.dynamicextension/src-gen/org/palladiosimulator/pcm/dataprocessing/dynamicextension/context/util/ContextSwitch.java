@@ -279,6 +279,23 @@ public class ContextSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ContextPackage.COMPARISON_CONTEXT: {
+			ComparisonContext comparisonContext = (ComparisonContext) theEObject;
+			T result = caseComparisonContext(comparisonContext);
+			if (result == null)
+				result = caseEnvironmentalContext(comparisonContext);
+			if (result == null)
+				result = caseContext(comparisonContext);
+			if (result == null)
+				result = caseEntity(comparisonContext);
+			if (result == null)
+				result = caseIdentifier(comparisonContext);
+			if (result == null)
+				result = caseNamedElement(comparisonContext);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -476,6 +493,21 @@ public class ContextSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseShiftCheckContext(ShiftCheckContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Comparison Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Comparison Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComparisonContext(ComparisonContext object) {
 		return null;
 	}
 
