@@ -89,6 +89,9 @@
             eType="#//util/helperattributes/RoleContainer" containment="true"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="locationcontainer"
             upperBound="-1" eType="#//util/helperattributes/LocationContainer" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisitecontainer"
+            upperBound="-1" eType="#//util/helperattributes/PrerequisiteContainer"
+            containment="true"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="LocationContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="organisation" lowerBound="1"
@@ -119,6 +122,14 @@
       <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="subordinateroles" upperBound="-1"
             eType="#//util/helperattributes/Role"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PrerequisiteContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" upperBound="-1"
+            eType="#//util/helperattributes/Prerequisite" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Prerequisite" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="IDPrerequisite" eSuperTypes="#//util/helperattributes/Prerequisite">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>

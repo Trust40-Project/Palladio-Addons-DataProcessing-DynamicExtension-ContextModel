@@ -102,6 +102,7 @@
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension.ecore#//util/helperattributes/HelperContainer/shiftcontainer"/>
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension.ecore#//util/helperattributes/HelperContainer/rolecontainer"/>
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension.ecore#//util/helperattributes/HelperContainer/locationcontainer"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension.ecore#//util/helperattributes/HelperContainer/prerequisitecontainer"/>
         </genClasses>
         <genClasses ecoreClass="dynamicextension.ecore#//util/helperattributes/LocationContainer">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -129,6 +130,13 @@
         <genClasses ecoreClass="dynamicextension.ecore#//util/helperattributes/Role">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension.ecore#//util/helperattributes/Role/subordinateroles"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension.ecore#//util/helperattributes/PrerequisiteContainer">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension.ecore#//util/helperattributes/PrerequisiteContainer/prerequisite"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="dynamicextension.ecore#//util/helperattributes/Prerequisite"/>
+        <genClasses ecoreClass="dynamicextension.ecore#//util/helperattributes/IDPrerequisite">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//util/helperattributes/IDPrerequisite/id"/>
         </genClasses>
       </nestedGenPackages>
     </nestedGenPackages>
