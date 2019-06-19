@@ -95,13 +95,22 @@ public interface HelperattributesPackage extends EPackage {
 	int HELPER_CONTAINER__LOCATIONCONTAINER = 2;
 
 	/**
+	 * The feature id for the '<em><b>Prerequisitecontainer</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HELPER_CONTAINER__PREREQUISITECONTAINER = 3;
+
+	/**
 	 * The number of structural features of the '<em>Helper Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HELPER_CONTAINER_FEATURE_COUNT = 3;
+	int HELPER_CONTAINER_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.LocationContainerImpl <em>Location Container</em>}' class.
@@ -416,6 +425,135 @@ public interface HelperattributesPackage extends EPackage {
 	int ROLE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteContainerImpl <em>Prerequisite Container</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteContainerImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getPrerequisiteContainer()
+	 * @generated
+	 */
+	int PREREQUISITE_CONTAINER = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTAINER__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTAINER__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Prerequisite</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTAINER__PREREQUISITE = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Prerequisite Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTAINER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getPrerequisite()
+	 * @generated
+	 */
+	int PREREQUISITE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
+	 * The number of structural features of the '<em>Prerequisite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl <em>Report ID Prerequisite</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getReportIDPrerequisite()
+	 * @generated
+	 */
+	int REPORT_ID_PREREQUISITE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_ID_PREREQUISITE__ID = PREREQUISITE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_ID_PREREQUISITE__ENTITY_NAME = PREREQUISITE__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Report Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_ID_PREREQUISITE__REPORT_ID = PREREQUISITE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Report ID Prerequisite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_ID_PREREQUISITE_FEATURE_COUNT = PREREQUISITE_FEATURE_COUNT + 1;
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer <em>Helper Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -457,6 +595,17 @@ public interface HelperattributesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getHelperContainer_Locationcontainer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getPrerequisitecontainer <em>Prerequisitecontainer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Prerequisitecontainer</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getPrerequisitecontainer()
+	 * @see #getHelperContainer()
+	 * @generated
+	 */
+	EReference getHelperContainer_Prerequisitecontainer();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.LocationContainer <em>Location Container</em>}'.
@@ -629,6 +778,58 @@ public interface HelperattributesPackage extends EPackage {
 	EReference getRole_Subordinateroles();
 
 	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer <em>Prerequisite Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Prerequisite Container</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer
+	 * @generated
+	 */
+	EClass getPrerequisiteContainer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer#getPrerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Prerequisite</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer#getPrerequisite()
+	 * @see #getPrerequisiteContainer()
+	 * @generated
+	 */
+	EReference getPrerequisiteContainer_Prerequisite();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Prerequisite</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite
+	 * @generated
+	 */
+	EClass getPrerequisite();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite <em>Report ID Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Report ID Prerequisite</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite
+	 * @generated
+	 */
+	EClass getReportIDPrerequisite();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite#getReportId <em>Report Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Report Id</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite#getReportId()
+	 * @see #getReportIDPrerequisite()
+	 * @generated
+	 */
+	EAttribute getReportIDPrerequisite_ReportId();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -683,6 +884,14 @@ public interface HelperattributesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference HELPER_CONTAINER__LOCATIONCONTAINER = eINSTANCE.getHelperContainer_Locationcontainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Prerequisitecontainer</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HELPER_CONTAINER__PREREQUISITECONTAINER = eINSTANCE.getHelperContainer_Prerequisitecontainer();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.LocationContainerImpl <em>Location Container</em>}' class.
@@ -823,6 +1032,52 @@ public interface HelperattributesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROLE__SUBORDINATEROLES = eINSTANCE.getRole_Subordinateroles();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteContainerImpl <em>Prerequisite Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteContainerImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getPrerequisiteContainer()
+		 * @generated
+		 */
+		EClass PREREQUISITE_CONTAINER = eINSTANCE.getPrerequisiteContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Prerequisite</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREREQUISITE_CONTAINER__PREREQUISITE = eINSTANCE.getPrerequisiteContainer_Prerequisite();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.PrerequisiteImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getPrerequisite()
+		 * @generated
+		 */
+		EClass PREREQUISITE = eINSTANCE.getPrerequisite();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl <em>Report ID Prerequisite</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getReportIDPrerequisite()
+		 * @generated
+		 */
+		EClass REPORT_ID_PREREQUISITE = eINSTANCE.getReportIDPrerequisite();
+
+		/**
+		 * The meta object literal for the '<em><b>Report Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPORT_ID_PREREQUISITE__REPORT_ID = eINSTANCE.getReportIDPrerequisite_ReportId();
 
 	}
 

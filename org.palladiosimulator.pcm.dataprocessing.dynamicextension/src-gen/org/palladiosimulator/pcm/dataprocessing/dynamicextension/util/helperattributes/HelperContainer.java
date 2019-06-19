@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getShiftcontainer <em>Shiftcontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getRolecontainer <em>Rolecontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getLocationcontainer <em>Locationcontainer</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getPrerequisitecontainer <em>Prerequisitecontainer</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage#getHelperContainer()
@@ -61,5 +62,17 @@ public interface HelperContainer extends CDOObject {
 	 * @generated
 	 */
 	EList<LocationContainer> getLocationcontainer();
+
+	/**
+	 * Returns the value of the '<em><b>Prerequisitecontainer</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prerequisitecontainer</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage#getHelperContainer_Prerequisitecontainer()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PrerequisiteContainer> getPrerequisitecontainer();
 
 } // HelperContainer

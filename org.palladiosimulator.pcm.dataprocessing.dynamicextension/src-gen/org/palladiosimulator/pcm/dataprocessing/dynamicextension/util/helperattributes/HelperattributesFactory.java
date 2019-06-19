@@ -86,6 +86,24 @@ public interface HelperattributesFactory extends EFactory {
 	Role createRole();
 
 	/**
+	 * Returns a new object of class '<em>Prerequisite Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prerequisite Container</em>'.
+	 * @generated
+	 */
+	PrerequisiteContainer createPrerequisiteContainer();
+
+	/**
+	 * Returns a new object of class '<em>Report ID Prerequisite</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Report ID Prerequisite</em>'.
+	 * @generated
+	 */
+	ReportIDPrerequisite createReportIDPrerequisite();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

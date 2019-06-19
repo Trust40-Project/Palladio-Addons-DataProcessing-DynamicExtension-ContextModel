@@ -41,6 +41,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Integer
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.InternalStateContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.LocationContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.OrganisationContext;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrivacyLevelContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.RoleContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ShiftCheckContext;
@@ -161,6 +162,13 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	private EClass comparisonContextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass prerequisiteContextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -545,6 +553,26 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getPrerequisiteContext() {
+		return prerequisiteContextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPrerequisiteContext_Prerequisite() {
+		return (EReference) prerequisiteContextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getComparison() {
 		return comparisonEEnum;
 	}
@@ -630,6 +658,9 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__COMPARISON);
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__THRESHOLD);
 
+		prerequisiteContextEClass = createEClass(PREREQUISITE_CONTEXT);
+		createEReference(prerequisiteContextEClass, PREREQUISITE_CONTEXT__PREREQUISITE);
+
 		// Create enums
 		comparisonEEnum = createEEnum(COMPARISON);
 
@@ -690,6 +721,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		privacyLevelContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 		shiftCheckContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 		comparisonContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
+		prerequisiteContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -771,6 +803,12 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEAttribute(getComparisonContext_Threshold(), this.getNumber(), "threshold", null, 0, 1,
 				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(prerequisiteContextEClass, PrerequisiteContext.class, "PrerequisiteContext", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPrerequisiteContext_Prerequisite(), theHelperattributesPackage.getPrerequisite(), null,
+				"prerequisite", null, 1, 1, PrerequisiteContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(comparisonEEnum, Comparison.class, "Comparison");

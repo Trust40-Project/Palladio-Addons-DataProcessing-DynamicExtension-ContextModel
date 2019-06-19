@@ -61,6 +61,10 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparison" eType="#//context/Comparison"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="threshold" eType="#//context/Number"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PrerequisiteContext" eSuperTypes="#//context/UserDeclaredContext">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
+          eType="#//util/helperattributes/Prerequisite"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="util" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/0.1/"
       nsPrefix="util">
@@ -123,13 +127,13 @@
         <eStructuralFeatures xsi:type="ecore:EReference" name="subordinateroles" upperBound="-1"
             eType="#//util/helperattributes/Role"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="PrerequisiteContainer">
+      <eClassifiers xsi:type="ecore:EClass" name="PrerequisiteContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" upperBound="-1"
             eType="#//util/helperattributes/Prerequisite" containment="true"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Prerequisite" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="IDPrerequisite" eSuperTypes="#//util/helperattributes/Prerequisite">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Prerequisite" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReportIDPrerequisite" eSuperTypes="#//util/helperattributes/Prerequisite">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="reportId" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>

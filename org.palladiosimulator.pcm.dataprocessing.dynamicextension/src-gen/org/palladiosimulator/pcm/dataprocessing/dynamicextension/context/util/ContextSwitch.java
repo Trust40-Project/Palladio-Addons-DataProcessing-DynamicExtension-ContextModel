@@ -296,6 +296,23 @@ public class ContextSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ContextPackage.PREREQUISITE_CONTEXT: {
+			PrerequisiteContext prerequisiteContext = (PrerequisiteContext) theEObject;
+			T result = casePrerequisiteContext(prerequisiteContext);
+			if (result == null)
+				result = caseUserDeclaredContext(prerequisiteContext);
+			if (result == null)
+				result = caseContext(prerequisiteContext);
+			if (result == null)
+				result = caseEntity(prerequisiteContext);
+			if (result == null)
+				result = caseIdentifier(prerequisiteContext);
+			if (result == null)
+				result = caseNamedElement(prerequisiteContext);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -508,6 +525,21 @@ public class ContextSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComparisonContext(ComparisonContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Prerequisite Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Prerequisite Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrerequisiteContext(PrerequisiteContext object) {
 		return null;
 	}
 

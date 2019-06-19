@@ -39,6 +39,9 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattr
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Location;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.LocationContainer;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Role;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.RoleContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Shift;
@@ -103,6 +106,27 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	 * @generated
 	 */
 	private EClass roleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass prerequisiteContainerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass prerequisiteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reportIDPrerequisiteEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -236,6 +260,16 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	@Override
 	public EReference getHelperContainer_Locationcontainer() {
 		return (EReference) helperContainerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getHelperContainer_Prerequisitecontainer() {
+		return (EReference) helperContainerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -404,6 +438,56 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	 * @generated
 	 */
 	@Override
+	public EClass getPrerequisiteContainer() {
+		return prerequisiteContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPrerequisiteContainer_Prerequisite() {
+		return (EReference) prerequisiteContainerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPrerequisite() {
+		return prerequisiteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReportIDPrerequisite() {
+		return reportIDPrerequisiteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getReportIDPrerequisite_ReportId() {
+		return (EAttribute) reportIDPrerequisiteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public HelperattributesFactory getHelperattributesFactory() {
 		return (HelperattributesFactory) getEFactoryInstance();
 	}
@@ -432,6 +516,7 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		createEReference(helperContainerEClass, HELPER_CONTAINER__SHIFTCONTAINER);
 		createEReference(helperContainerEClass, HELPER_CONTAINER__ROLECONTAINER);
 		createEReference(helperContainerEClass, HELPER_CONTAINER__LOCATIONCONTAINER);
+		createEReference(helperContainerEClass, HELPER_CONTAINER__PREREQUISITECONTAINER);
 
 		locationContainerEClass = createEClass(LOCATION_CONTAINER);
 		createEReference(locationContainerEClass, LOCATION_CONTAINER__ORGANISATION);
@@ -454,6 +539,14 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 
 		roleEClass = createEClass(ROLE);
 		createEReference(roleEClass, ROLE__SUBORDINATEROLES);
+
+		prerequisiteContainerEClass = createEClass(PREREQUISITE_CONTAINER);
+		createEReference(prerequisiteContainerEClass, PREREQUISITE_CONTAINER__PREREQUISITE);
+
+		prerequisiteEClass = createEClass(PREREQUISITE);
+
+		reportIDPrerequisiteEClass = createEClass(REPORT_ID_PREREQUISITE);
+		createEAttribute(reportIDPrerequisiteEClass, REPORT_ID_PREREQUISITE__REPORT_ID);
 	}
 
 	/**
@@ -498,6 +591,9 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		locationEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		shiftEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		roleEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		prerequisiteContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		prerequisiteEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		reportIDPrerequisiteEClass.getESuperTypes().add(this.getPrerequisite());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(helperContainerEClass, HelperContainer.class, "HelperContainer", !IS_ABSTRACT, !IS_INTERFACE,
@@ -511,6 +607,9 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		initEReference(getHelperContainer_Locationcontainer(), this.getLocationContainer(), null, "locationcontainer",
 				null, 0, -1, HelperContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHelperContainer_Prerequisitecontainer(), this.getPrerequisiteContainer(), null,
+				"prerequisitecontainer", null, 0, -1, HelperContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationContainerEClass, LocationContainer.class, "LocationContainer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -554,6 +653,21 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRole_Subordinateroles(), this.getRole(), null, "subordinateroles", null, 0, -1, Role.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(prerequisiteContainerEClass, PrerequisiteContainer.class, "PrerequisiteContainer", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPrerequisiteContainer_Prerequisite(), this.getPrerequisite(), null, "prerequisite", null, 0,
+				-1, PrerequisiteContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(prerequisiteEClass, Prerequisite.class, "Prerequisite", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reportIDPrerequisiteEClass, ReportIDPrerequisite.class, "ReportIDPrerequisite", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getReportIDPrerequisite_ReportId(), theXMLTypePackage.getString(), "reportId", null, 0, 1,
+				ReportIDPrerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 

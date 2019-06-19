@@ -696,6 +696,52 @@ public interface ContextPackage extends EPackage {
 	int COMPARISON_CONTEXT_FEATURE_COUNT = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl <em>Prerequisite Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getPrerequisiteContext()
+	 * @generated
+	 */
+	int PREREQUISITE_CONTEXT = 14;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTEXT__ID = USER_DECLARED_CONTEXT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTEXT__ENTITY_NAME = USER_DECLARED_CONTEXT__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Prerequisite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTEXT__PREREQUISITE = USER_DECLARED_CONTEXT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Prerequisite Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_CONTEXT_FEATURE_COUNT = USER_DECLARED_CONTEXT_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison <em>Comparison</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -703,7 +749,7 @@ public interface ContextPackage extends EPackage {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getComparison()
 	 * @generated
 	 */
-	int COMPARISON = 14;
+	int COMPARISON = 15;
 
 	/**
 	 * The meta object id for the '<em>Number</em>' data type.
@@ -713,7 +759,7 @@ public interface ContextPackage extends EPackage {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getNumber()
 	 * @generated
 	 */
-	int NUMBER = 15;
+	int NUMBER = 16;
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context <em>Context</em>}'.
@@ -997,6 +1043,27 @@ public interface ContextPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getComparisonContext_Threshold();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext <em>Prerequisite Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Prerequisite Context</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext
+	 * @generated
+	 */
+	EClass getPrerequisiteContext();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext#getPrerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prerequisite</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext#getPrerequisite()
+	 * @see #getPrerequisiteContext()
+	 * @generated
+	 */
+	EReference getPrerequisiteContext_Prerequisite();
 
 	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison <em>Comparison</em>}'.
@@ -1284,6 +1351,24 @@ public interface ContextPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPARISON_CONTEXT__THRESHOLD = eINSTANCE.getComparisonContext_Threshold();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl <em>Prerequisite Context</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getPrerequisiteContext()
+		 * @generated
+		 */
+		EClass PREREQUISITE_CONTEXT = eINSTANCE.getPrerequisiteContext();
+
+		/**
+		 * The meta object literal for the '<em><b>Prerequisite</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREREQUISITE_CONTEXT__PREREQUISITE = eINSTANCE.getPrerequisiteContext_Prerequisite();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison <em>Comparison</em>}' enum.

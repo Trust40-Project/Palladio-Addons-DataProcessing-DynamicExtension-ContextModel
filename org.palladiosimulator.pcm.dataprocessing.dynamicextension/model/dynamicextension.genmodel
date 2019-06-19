@@ -80,6 +80,10 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//context/ComparisonContext/comparison"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//context/ComparisonContext/threshold"/>
       </genClasses>
+      <genClasses ecoreClass="dynamicextension.ecore#//context/PrerequisiteContext">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension.ecore#//context/PrerequisiteContext/prerequisite"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Util" basePackage="org.palladiosimulator.pcm.dataprocessing.dynamicextension"
         disposableProviderFactory="true" ecorePackage="dynamicextension.ecore#//util">
@@ -135,8 +139,8 @@
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension.ecore#//util/helperattributes/PrerequisiteContainer/prerequisite"/>
         </genClasses>
         <genClasses image="false" ecoreClass="dynamicextension.ecore#//util/helperattributes/Prerequisite"/>
-        <genClasses ecoreClass="dynamicextension.ecore#//util/helperattributes/IDPrerequisite">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//util/helperattributes/IDPrerequisite/id"/>
+        <genClasses ecoreClass="dynamicextension.ecore#//util/helperattributes/ReportIDPrerequisite">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//util/helperattributes/ReportIDPrerequisite/reportId"/>
         </genClasses>
       </nestedGenPackages>
     </nestedGenPackages>

@@ -107,6 +107,21 @@ public class HelperattributesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter casePrerequisiteContainer(PrerequisiteContainer object) {
+			return createPrerequisiteContainerAdapter();
+		}
+
+		@Override
+		public Adapter casePrerequisite(Prerequisite object) {
+			return createPrerequisiteAdapter();
+		}
+
+		@Override
+		public Adapter caseReportIDPrerequisite(ReportIDPrerequisite object) {
+			return createReportIDPrerequisiteAdapter();
+		}
+
+		@Override
 		public Adapter caseIdentifier(Identifier object) {
 			return createIdentifierAdapter();
 		}
@@ -235,6 +250,48 @@ public class HelperattributesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer <em>Prerequisite Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer
+	 * @generated
+	 */
+	public Adapter createPrerequisiteContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite
+	 * @generated
+	 */
+	public Adapter createPrerequisiteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite <em>Report ID Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite
+	 * @generated
+	 */
+	public Adapter createReportIDPrerequisiteAdapter() {
 		return null;
 	}
 

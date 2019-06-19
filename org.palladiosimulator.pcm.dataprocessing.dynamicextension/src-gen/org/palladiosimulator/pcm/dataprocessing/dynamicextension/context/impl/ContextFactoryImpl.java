@@ -79,6 +79,8 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 			return (EObject) createShiftCheckContext();
 		case ContextPackage.COMPARISON_CONTEXT:
 			return (EObject) createComparisonContext();
+		case ContextPackage.PREREQUISITE_CONTEXT:
+			return (EObject) createPrerequisiteContext();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -237,6 +239,17 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	public ComparisonContext createComparisonContext() {
 		ComparisonContextImpl comparisonContext = new ComparisonContextImpl();
 		return comparisonContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PrerequisiteContext createPrerequisiteContext() {
+		PrerequisiteContextImpl prerequisiteContext = new PrerequisiteContextImpl();
+		return prerequisiteContext;
 	}
 
 	/**

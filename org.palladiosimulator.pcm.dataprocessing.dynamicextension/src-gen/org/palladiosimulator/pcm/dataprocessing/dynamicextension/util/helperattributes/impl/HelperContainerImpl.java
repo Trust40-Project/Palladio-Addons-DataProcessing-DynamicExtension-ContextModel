@@ -11,6 +11,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.LocationContainer;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.RoleContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ShiftContainer;
 
@@ -25,6 +26,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattr
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getShiftcontainer <em>Shiftcontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getRolecontainer <em>Rolecontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getLocationcontainer <em>Locationcontainer</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getPrerequisitecontainer <em>Prerequisitecontainer</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,6 +93,18 @@ public class HelperContainerImpl extends CDOObjectImpl implements HelperContaine
 	public EList<LocationContainer> getLocationcontainer() {
 		return (EList<LocationContainer>) eGet(HelperattributesPackage.Literals.HELPER_CONTAINER__LOCATIONCONTAINER,
 				true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<PrerequisiteContainer> getPrerequisitecontainer() {
+		return (EList<PrerequisiteContainer>) eGet(
+				HelperattributesPackage.Literals.HELPER_CONTAINER__PREREQUISITECONTAINER, true);
 	}
 
 } //HelperContainerImpl
