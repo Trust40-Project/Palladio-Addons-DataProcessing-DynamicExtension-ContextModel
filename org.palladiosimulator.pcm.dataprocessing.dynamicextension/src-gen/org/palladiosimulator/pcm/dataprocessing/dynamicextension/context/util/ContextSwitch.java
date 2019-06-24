@@ -262,23 +262,6 @@ public class ContextSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ContextPackage.SHIFT_CHECK_CONTEXT: {
-			ShiftCheckContext shiftCheckContext = (ShiftCheckContext) theEObject;
-			T result = caseShiftCheckContext(shiftCheckContext);
-			if (result == null)
-				result = caseUserDeclaredContext(shiftCheckContext);
-			if (result == null)
-				result = caseContext(shiftCheckContext);
-			if (result == null)
-				result = caseEntity(shiftCheckContext);
-			if (result == null)
-				result = caseIdentifier(shiftCheckContext);
-			if (result == null)
-				result = caseNamedElement(shiftCheckContext);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case ContextPackage.COMPARISON_CONTEXT: {
 			ComparisonContext comparisonContext = (ComparisonContext) theEObject;
 			T result = caseComparisonContext(comparisonContext);
@@ -495,21 +478,6 @@ public class ContextSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePrivacyLevelContext(PrivacyLevelContext object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Shift Check Context</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Shift Check Context</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseShiftCheckContext(ShiftCheckContext object) {
 		return null;
 	}
 

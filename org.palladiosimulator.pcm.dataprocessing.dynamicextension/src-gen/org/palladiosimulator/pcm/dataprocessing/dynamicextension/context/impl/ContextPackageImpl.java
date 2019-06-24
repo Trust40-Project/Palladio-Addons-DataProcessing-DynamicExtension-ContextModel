@@ -44,7 +44,6 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Organis
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrivacyLevelContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.RoleContext;
-import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ShiftCheckContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ShiftContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.UserDeclaredContext;
 
@@ -148,13 +147,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	private EClass privacyLevelContextEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass shiftCheckContextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -513,16 +505,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getShiftCheckContext() {
-		return shiftCheckContextEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getComparisonContext() {
 		return comparisonContextEClass;
 	}
@@ -652,8 +634,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		privacyLevelContextEClass = createEClass(PRIVACY_LEVEL_CONTEXT);
 		createEReference(privacyLevelContextEClass, PRIVACY_LEVEL_CONTEXT__LEVEL);
 
-		shiftCheckContextEClass = createEClass(SHIFT_CHECK_CONTEXT);
-
 		comparisonContextEClass = createEClass(COMPARISON_CONTEXT);
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__COMPARISON);
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__THRESHOLD);
@@ -719,7 +699,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		contextCharacteristicTypeEClass.getESuperTypes().add(theCharacteristicsPackage.getCharacteristicType());
 		integerThresholdContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
 		privacyLevelContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
-		shiftCheckContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 		comparisonContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
 		prerequisiteContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 
@@ -791,9 +770,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEReference(getPrivacyLevelContext_Level(), theCharacteristicsPackage.getEnumCharacteristicLiteral(), null,
 				"level", null, 0, 1, PrivacyLevelContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(shiftCheckContextEClass, ShiftCheckContext.class, "ShiftCheckContext", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(comparisonContextEClass, ComparisonContext.class, "ComparisonContext", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

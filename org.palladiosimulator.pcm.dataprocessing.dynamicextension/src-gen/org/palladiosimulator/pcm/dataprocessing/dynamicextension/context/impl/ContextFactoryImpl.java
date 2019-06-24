@@ -75,8 +75,6 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 			return (EObject) createIntegerThresholdContext();
 		case ContextPackage.PRIVACY_LEVEL_CONTEXT:
 			return (EObject) createPrivacyLevelContext();
-		case ContextPackage.SHIFT_CHECK_CONTEXT:
-			return (EObject) createShiftCheckContext();
 		case ContextPackage.COMPARISON_CONTEXT:
 			return (EObject) createComparisonContext();
 		case ContextPackage.PREREQUISITE_CONTEXT:
@@ -217,17 +215,6 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	public PrivacyLevelContext createPrivacyLevelContext() {
 		PrivacyLevelContextImpl privacyLevelContext = new PrivacyLevelContextImpl();
 		return privacyLevelContext;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ShiftCheckContext createShiftCheckContext() {
-		ShiftCheckContextImpl shiftCheckContext = new ShiftCheckContextImpl();
-		return shiftCheckContext;
 	}
 
 	/**

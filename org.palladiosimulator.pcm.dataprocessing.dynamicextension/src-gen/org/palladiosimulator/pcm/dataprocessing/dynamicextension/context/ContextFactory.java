@@ -104,15 +104,6 @@ public interface ContextFactory extends EFactory {
 	PrivacyLevelContext createPrivacyLevelContext();
 
 	/**
-	 * Returns a new object of class '<em>Shift Check Context</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Shift Check Context</em>'.
-	 * @generated
-	 */
-	ShiftCheckContext createShiftCheckContext();
-
-	/**
 	 * Returns a new object of class '<em>Comparison Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

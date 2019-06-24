@@ -604,43 +604,6 @@ public interface ContextPackage extends EPackage {
 	int PRIVACY_LEVEL_CONTEXT_FEATURE_COUNT = USER_DECLARED_CONTEXT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ShiftCheckContextImpl <em>Shift Check Context</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ShiftCheckContextImpl
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getShiftCheckContext()
-	 * @generated
-	 */
-	int SHIFT_CHECK_CONTEXT = 12;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHIFT_CHECK_CONTEXT__ID = USER_DECLARED_CONTEXT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHIFT_CHECK_CONTEXT__ENTITY_NAME = USER_DECLARED_CONTEXT__ENTITY_NAME;
-
-	/**
-	 * The number of structural features of the '<em>Shift Check Context</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHIFT_CHECK_CONTEXT_FEATURE_COUNT = USER_DECLARED_CONTEXT_FEATURE_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl <em>Comparison Context</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -648,7 +611,7 @@ public interface ContextPackage extends EPackage {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getComparisonContext()
 	 * @generated
 	 */
-	int COMPARISON_CONTEXT = 13;
+	int COMPARISON_CONTEXT = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -703,7 +666,7 @@ public interface ContextPackage extends EPackage {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getPrerequisiteContext()
 	 * @generated
 	 */
-	int PREREQUISITE_CONTEXT = 14;
+	int PREREQUISITE_CONTEXT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -749,7 +712,7 @@ public interface ContextPackage extends EPackage {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getComparison()
 	 * @generated
 	 */
-	int COMPARISON = 15;
+	int COMPARISON = 14;
 
 	/**
 	 * The meta object id for the '<em>Number</em>' data type.
@@ -759,7 +722,7 @@ public interface ContextPackage extends EPackage {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getNumber()
 	 * @generated
 	 */
-	int NUMBER = 16;
+	int NUMBER = 15;
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context <em>Context</em>}'.
@@ -1001,16 +964,6 @@ public interface ContextPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPrivacyLevelContext_Level();
-
-	/**
-	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ShiftCheckContext <em>Shift Check Context</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Shift Check Context</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ShiftCheckContext
-	 * @generated
-	 */
-	EClass getShiftCheckContext();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext <em>Comparison Context</em>}'.
@@ -1315,16 +1268,6 @@ public interface ContextPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRIVACY_LEVEL_CONTEXT__LEVEL = eINSTANCE.getPrivacyLevelContext_Level();
-
-		/**
-		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ShiftCheckContextImpl <em>Shift Check Context</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ShiftCheckContextImpl
-		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getShiftCheckContext()
-		 * @generated
-		 */
-		EClass SHIFT_CHECK_CONTEXT = eINSTANCE.getShiftCheckContext();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl <em>Comparison Context</em>}' class.
