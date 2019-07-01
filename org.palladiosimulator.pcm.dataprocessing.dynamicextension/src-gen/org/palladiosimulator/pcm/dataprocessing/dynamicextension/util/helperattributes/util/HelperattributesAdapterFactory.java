@@ -117,11 +117,6 @@ public class HelperattributesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseReportIDPrerequisite(ReportIDPrerequisite object) {
-			return createReportIDPrerequisiteAdapter();
-		}
-
-		@Override
 		public Adapter caseIdentifier(Identifier object) {
 			return createIdentifierAdapter();
 		}
@@ -278,20 +273,6 @@ public class HelperattributesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrerequisiteAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite <em>Report ID Prerequisite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite
-	 * @generated
-	 */
-	public Adapter createReportIDPrerequisiteAdapter() {
 		return null;
 	}
 

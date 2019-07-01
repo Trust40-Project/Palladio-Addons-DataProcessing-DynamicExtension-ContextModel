@@ -5,7 +5,9 @@ package org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperatt
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Role;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.RoleContainer;

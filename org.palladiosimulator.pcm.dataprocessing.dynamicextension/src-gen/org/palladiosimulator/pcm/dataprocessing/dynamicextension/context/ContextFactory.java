@@ -86,15 +86,6 @@ public interface ContextFactory extends EFactory {
 	ContextCharacteristicType createContextCharacteristicType();
 
 	/**
-	 * Returns a new object of class '<em>Integer Threshold Context</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer Threshold Context</em>'.
-	 * @generated
-	 */
-	IntegerThresholdContext createIntegerThresholdContext();
-
-	/**
 	 * Returns a new object of class '<em>Privacy Level Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,6 +111,15 @@ public interface ContextFactory extends EFactory {
 	 * @generated
 	 */
 	PrerequisiteContext createPrerequisiteContext();
+
+	/**
+	 * Returns a new object of class '<em>Extension Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Extension Context</em>'.
+	 * @generated
+	 */
+	ExtensionContext createExtensionContext();
 
 	/**
 	 * Returns the package supported by this factory.

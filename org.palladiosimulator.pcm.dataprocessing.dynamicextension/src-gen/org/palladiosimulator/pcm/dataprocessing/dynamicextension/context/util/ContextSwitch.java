@@ -228,23 +228,6 @@ public class ContextSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ContextPackage.INTEGER_THRESHOLD_CONTEXT: {
-			IntegerThresholdContext integerThresholdContext = (IntegerThresholdContext) theEObject;
-			T result = caseIntegerThresholdContext(integerThresholdContext);
-			if (result == null)
-				result = caseEnvironmentalContext(integerThresholdContext);
-			if (result == null)
-				result = caseContext(integerThresholdContext);
-			if (result == null)
-				result = caseEntity(integerThresholdContext);
-			if (result == null)
-				result = caseIdentifier(integerThresholdContext);
-			if (result == null)
-				result = caseNamedElement(integerThresholdContext);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case ContextPackage.PRIVACY_LEVEL_CONTEXT: {
 			PrivacyLevelContext privacyLevelContext = (PrivacyLevelContext) theEObject;
 			T result = casePrivacyLevelContext(privacyLevelContext);
@@ -292,6 +275,23 @@ public class ContextSwitch<T> extends Switch<T> {
 				result = caseIdentifier(prerequisiteContext);
 			if (result == null)
 				result = caseNamedElement(prerequisiteContext);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ContextPackage.EXTENSION_CONTEXT: {
+			ExtensionContext extensionContext = (ExtensionContext) theEObject;
+			T result = caseExtensionContext(extensionContext);
+			if (result == null)
+				result = caseUserDeclaredContext(extensionContext);
+			if (result == null)
+				result = caseContext(extensionContext);
+			if (result == null)
+				result = caseEntity(extensionContext);
+			if (result == null)
+				result = caseIdentifier(extensionContext);
+			if (result == null)
+				result = caseNamedElement(extensionContext);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -452,21 +452,6 @@ public class ContextSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer Threshold Context</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer Threshold Context</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIntegerThresholdContext(IntegerThresholdContext object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Privacy Level Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -508,6 +493,21 @@ public class ContextSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePrerequisiteContext(PrerequisiteContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Extension Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Extension Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExtensionContext(ExtensionContext object) {
 		return null;
 	}
 

@@ -71,14 +71,14 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 			return (EObject) createContextCharacteristic();
 		case ContextPackage.CONTEXT_CHARACTERISTIC_TYPE:
 			return (EObject) createContextCharacteristicType();
-		case ContextPackage.INTEGER_THRESHOLD_CONTEXT:
-			return (EObject) createIntegerThresholdContext();
 		case ContextPackage.PRIVACY_LEVEL_CONTEXT:
 			return (EObject) createPrivacyLevelContext();
 		case ContextPackage.COMPARISON_CONTEXT:
 			return (EObject) createComparisonContext();
 		case ContextPackage.PREREQUISITE_CONTEXT:
 			return (EObject) createPrerequisiteContext();
+		case ContextPackage.EXTENSION_CONTEXT:
+			return (EObject) createExtensionContext();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -201,17 +201,6 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	 * @generated
 	 */
 	@Override
-	public IntegerThresholdContext createIntegerThresholdContext() {
-		IntegerThresholdContextImpl integerThresholdContext = new IntegerThresholdContextImpl();
-		return integerThresholdContext;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public PrivacyLevelContext createPrivacyLevelContext() {
 		PrivacyLevelContextImpl privacyLevelContext = new PrivacyLevelContextImpl();
 		return privacyLevelContext;
@@ -237,6 +226,17 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	public PrerequisiteContext createPrerequisiteContext() {
 		PrerequisiteContextImpl prerequisiteContext = new PrerequisiteContextImpl();
 		return prerequisiteContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ExtensionContext createExtensionContext() {
+		ExtensionContextImpl extensionContext = new ExtensionContextImpl();
+		return extensionContext;
 	}
 
 	/**

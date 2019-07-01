@@ -5,7 +5,9 @@ package org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextCharacteristic;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage;

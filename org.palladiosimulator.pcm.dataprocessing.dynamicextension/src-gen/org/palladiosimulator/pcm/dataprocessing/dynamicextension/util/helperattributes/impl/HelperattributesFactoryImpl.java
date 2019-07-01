@@ -72,8 +72,8 @@ public class HelperattributesFactoryImpl extends EFactoryImpl implements Helpera
 			return (EObject) createRole();
 		case HelperattributesPackage.PREREQUISITE_CONTAINER:
 			return (EObject) createPrerequisiteContainer();
-		case HelperattributesPackage.REPORT_ID_PREREQUISITE:
-			return (EObject) createReportIDPrerequisite();
+		case HelperattributesPackage.PREREQUISITE:
+			return (EObject) createPrerequisite();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -173,9 +173,9 @@ public class HelperattributesFactoryImpl extends EFactoryImpl implements Helpera
 	 * @generated
 	 */
 	@Override
-	public ReportIDPrerequisite createReportIDPrerequisite() {
-		ReportIDPrerequisiteImpl reportIDPrerequisite = new ReportIDPrerequisiteImpl();
-		return reportIDPrerequisite;
+	public Prerequisite createPrerequisite() {
+		PrerequisiteImpl prerequisite = new PrerequisiteImpl();
+		return prerequisite;
 	}
 
 	/**

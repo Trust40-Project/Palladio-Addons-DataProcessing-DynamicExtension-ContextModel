@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.palladiosimulator.pcm.core.entity.EntityPackage;
 
 /**
@@ -499,59 +500,22 @@ public interface HelperattributesPackage extends EPackage {
 	int PREREQUISITE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
 	/**
+	 * The feature id for the '<em><b>Prerequisite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE__PREREQUISITE = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Prerequisite</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREREQUISITE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl <em>Report ID Prerequisite</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getReportIDPrerequisite()
-	 * @generated
-	 */
-	int REPORT_ID_PREREQUISITE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_ID_PREREQUISITE__ID = PREREQUISITE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_ID_PREREQUISITE__ENTITY_NAME = PREREQUISITE__ENTITY_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Report Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_ID_PREREQUISITE__REPORT_ID = PREREQUISITE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Report ID Prerequisite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_ID_PREREQUISITE_FEATURE_COUNT = PREREQUISITE_FEATURE_COUNT + 1;
+	int PREREQUISITE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer <em>Helper Container</em>}'.
@@ -809,25 +773,15 @@ public interface HelperattributesPackage extends EPackage {
 	EClass getPrerequisite();
 
 	/**
-	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite <em>Report ID Prerequisite</em>}'.
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite#getPrerequisite <em>Prerequisite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Report ID Prerequisite</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite
+	 * @return the meta object for the reference '<em>Prerequisite</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite#getPrerequisite()
+	 * @see #getPrerequisite()
 	 * @generated
 	 */
-	EClass getReportIDPrerequisite();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite#getReportId <em>Report Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Report Id</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite#getReportId()
-	 * @see #getReportIDPrerequisite()
-	 * @generated
-	 */
-	EAttribute getReportIDPrerequisite_ReportId();
+	EReference getPrerequisite_Prerequisite();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1062,22 +1016,12 @@ public interface HelperattributesPackage extends EPackage {
 		EClass PREREQUISITE = eINSTANCE.getPrerequisite();
 
 		/**
-		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl <em>Report ID Prerequisite</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ReportIDPrerequisiteImpl
-		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getReportIDPrerequisite()
-		 * @generated
-		 */
-		EClass REPORT_ID_PREREQUISITE = eINSTANCE.getReportIDPrerequisite();
-
-		/**
-		 * The meta object literal for the '<em><b>Report Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Prerequisite</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute REPORT_ID_PREREQUISITE__REPORT_ID = eINSTANCE.getReportIDPrerequisite_ReportId();
+		EReference PREREQUISITE__PREREQUISITE = eINSTANCE.getPrerequisite_Prerequisite();
 
 	}
 

@@ -125,11 +125,6 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseIntegerThresholdContext(IntegerThresholdContext object) {
-			return createIntegerThresholdContextAdapter();
-		}
-
-		@Override
 		public Adapter casePrivacyLevelContext(PrivacyLevelContext object) {
 			return createPrivacyLevelContextAdapter();
 		}
@@ -142,6 +137,11 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter casePrerequisiteContext(PrerequisiteContext object) {
 			return createPrerequisiteContextAdapter();
+		}
+
+		@Override
+		public Adapter caseExtensionContext(ExtensionContext object) {
+			return createExtensionContextAdapter();
 		}
 
 		@Override
@@ -329,20 +329,6 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegerThresholdContext <em>Integer Threshold Context</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegerThresholdContext
-	 * @generated
-	 */
-	public Adapter createIntegerThresholdContextAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrivacyLevelContext <em>Privacy Level Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -381,6 +367,20 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrerequisiteContextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext <em>Extension Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext
+	 * @generated
+	 */
+	public Adapter createExtensionContextAdapter() {
 		return null;
 	}
 

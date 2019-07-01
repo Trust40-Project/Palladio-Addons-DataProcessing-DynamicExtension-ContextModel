@@ -5,6 +5,7 @@ package org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperatt
 import org.eclipse.emf.common.util.EList;
 
 import org.palladiosimulator.pcm.core.entity.Entity;
+
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.Organisation;
 
 /**

@@ -18,6 +18,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#getComparison <em>Comparison</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#getThreshold <em>Threshold</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#isIsFloating <em>Is Floating</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +81,26 @@ public class ComparisonContextImpl extends EnvironmentalContextImpl implements C
 	@Override
 	public void setThreshold(Number newThreshold) {
 		eSet(ContextPackage.Literals.COMPARISON_CONTEXT__THRESHOLD, newThreshold);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isIsFloating() {
+		return (Boolean) eGet(ContextPackage.Literals.COMPARISON_CONTEXT__IS_FLOATING, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsFloating(boolean newIsFloating) {
+		eSet(ContextPackage.Literals.COMPARISON_CONTEXT__IS_FLOATING, newIsFloating);
 	}
 
 } //ComparisonContextImpl

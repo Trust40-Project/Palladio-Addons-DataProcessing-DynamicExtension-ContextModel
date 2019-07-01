@@ -95,13 +95,13 @@ public interface HelperattributesFactory extends EFactory {
 	PrerequisiteContainer createPrerequisiteContainer();
 
 	/**
-	 * Returns a new object of class '<em>Report ID Prerequisite</em>'.
+	 * Returns a new object of class '<em>Prerequisite</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Report ID Prerequisite</em>'.
+	 * @return a new object of class '<em>Prerequisite</em>'.
 	 * @generated
 	 */
-	ReportIDPrerequisite createReportIDPrerequisite();
+	Prerequisite createPrerequisite();
 
 	/**
 	 * Returns the package supported by this factory.

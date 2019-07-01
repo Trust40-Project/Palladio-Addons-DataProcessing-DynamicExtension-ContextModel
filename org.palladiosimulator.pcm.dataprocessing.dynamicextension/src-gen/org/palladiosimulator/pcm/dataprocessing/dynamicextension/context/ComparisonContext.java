@@ -13,6 +13,7 @@ package org.palladiosimulator.pcm.dataprocessing.dynamicextension.context;
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getComparison <em>Comparison</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold <em>Threshold</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#isIsFloating <em>Is Floating</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage#getComparisonContext()
@@ -66,5 +67,27 @@ public interface ComparisonContext extends EnvironmentalContext {
 	 * @generated
 	 */
 	void setThreshold(Number value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Floating</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Floating</em>' attribute.
+	 * @see #setIsFloating(boolean)
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage#getComparisonContext_IsFloating()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsFloating();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#isIsFloating <em>Is Floating</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Floating</em>' attribute.
+	 * @see #isIsFloating()
+	 * @generated
+	 */
+	void setIsFloating(boolean value);
 
 } // ComparisonContext

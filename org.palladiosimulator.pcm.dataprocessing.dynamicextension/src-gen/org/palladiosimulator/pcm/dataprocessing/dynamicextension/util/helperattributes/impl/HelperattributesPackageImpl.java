@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.EcorePackage;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
@@ -41,7 +41,6 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattr
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.LocationContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.PrerequisiteContainer;
-import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ReportIDPrerequisite;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Role;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.RoleContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Shift;
@@ -50,6 +49,8 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattr
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.SubjectPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.impl.SubjectPackageImpl;
+
+import org.palladiosimulator.pcm.seff.SeffPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -120,13 +121,6 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	 * @generated
 	 */
 	private EClass prerequisiteEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass reportIDPrerequisiteEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -468,18 +462,8 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	 * @generated
 	 */
 	@Override
-	public EClass getReportIDPrerequisite() {
-		return reportIDPrerequisiteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getReportIDPrerequisite_ReportId() {
-		return (EAttribute) reportIDPrerequisiteEClass.getEStructuralFeatures().get(0);
+	public EReference getPrerequisite_Prerequisite() {
+		return (EReference) prerequisiteEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -544,9 +528,7 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		createEReference(prerequisiteContainerEClass, PREREQUISITE_CONTAINER__PREREQUISITE);
 
 		prerequisiteEClass = createEClass(PREREQUISITE);
-
-		reportIDPrerequisiteEClass = createEClass(REPORT_ID_PREREQUISITE);
-		createEAttribute(reportIDPrerequisiteEClass, REPORT_ID_PREREQUISITE__REPORT_ID);
+		createEReference(prerequisiteEClass, PREREQUISITE__PREREQUISITE);
 	}
 
 	/**
@@ -579,6 +561,7 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 				.getEPackage(SubjectPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
 				.getEPackage(XMLTypePackage.eNS_URI);
+		SeffPackage theSeffPackage = (SeffPackage) EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -593,7 +576,6 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		roleEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		prerequisiteContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		prerequisiteEClass.getESuperTypes().add(theEntityPackage.getEntity());
-		reportIDPrerequisiteEClass.getESuperTypes().add(this.getPrerequisite());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(helperContainerEClass, HelperContainer.class, "HelperContainer", !IS_ABSTRACT, !IS_INTERFACE,
@@ -661,14 +643,11 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 				-1, PrerequisiteContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(prerequisiteEClass, Prerequisite.class, "Prerequisite", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(prerequisiteEClass, Prerequisite.class, "Prerequisite", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(reportIDPrerequisiteEClass, ReportIDPrerequisite.class, "ReportIDPrerequisite", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getReportIDPrerequisite_ReportId(), theXMLTypePackage.getString(), "reportId", null, 0, 1,
-				ReportIDPrerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPrerequisite_Prerequisite(), theSeffPackage.getServiceEffectSpecification(), null,
+				"prerequisite", null, 1, 1, Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //HelperattributesPackageImpl

@@ -17,7 +17,10 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 import org.palladiosimulator.pcm.PcmPackage;
 
@@ -37,7 +40,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextFactory;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.EnvironmentalContext;
-import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegerThresholdContext;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.InternalStateContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.LocationContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.OrganisationContext;
@@ -139,13 +142,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass integerThresholdContextEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass privacyLevelContextEClass = null;
 
 	/**
@@ -161,6 +157,13 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	private EClass prerequisiteContextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass extensionContextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -234,6 +237,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		StoexPackage.eINSTANCE.eClass();
 		UnitsPackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DynamicextensionPackage.eNS_URI);
@@ -455,36 +459,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getIntegerThresholdContext() {
-		return integerThresholdContextEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getIntegerThresholdContext_Comparision() {
-		return (EAttribute) integerThresholdContextEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getIntegerThresholdContext_Threshold() {
-		return (EAttribute) integerThresholdContextEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getPrivacyLevelContext() {
 		return privacyLevelContextEClass;
 	}
@@ -535,6 +509,16 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getComparisonContext_IsFloating() {
+		return (EAttribute) comparisonContextEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPrerequisiteContext() {
 		return prerequisiteContextEClass;
 	}
@@ -547,6 +531,26 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	@Override
 	public EReference getPrerequisiteContext_Prerequisite() {
 		return (EReference) prerequisiteContextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getExtensionContext() {
+		return extensionContextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getExtensionContext_ExtensionCode() {
+		return (EAttribute) extensionContextEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -627,19 +631,19 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		contextCharacteristicTypeEClass = createEClass(CONTEXT_CHARACTERISTIC_TYPE);
 		createEReference(contextCharacteristicTypeEClass, CONTEXT_CHARACTERISTIC_TYPE__CONTEXT);
 
-		integerThresholdContextEClass = createEClass(INTEGER_THRESHOLD_CONTEXT);
-		createEAttribute(integerThresholdContextEClass, INTEGER_THRESHOLD_CONTEXT__COMPARISION);
-		createEAttribute(integerThresholdContextEClass, INTEGER_THRESHOLD_CONTEXT__THRESHOLD);
-
 		privacyLevelContextEClass = createEClass(PRIVACY_LEVEL_CONTEXT);
 		createEReference(privacyLevelContextEClass, PRIVACY_LEVEL_CONTEXT__LEVEL);
 
 		comparisonContextEClass = createEClass(COMPARISON_CONTEXT);
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__COMPARISON);
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__THRESHOLD);
+		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__IS_FLOATING);
 
 		prerequisiteContextEClass = createEClass(PREREQUISITE_CONTEXT);
 		createEReference(prerequisiteContextEClass, PREREQUISITE_CONTEXT__PREREQUISITE);
+
+		extensionContextEClass = createEClass(EXTENSION_CONTEXT);
+		createEAttribute(extensionContextEClass, EXTENSION_CONTEXT__EXTENSION_CODE);
 
 		// Create enums
 		comparisonEEnum = createEEnum(COMPARISON);
@@ -681,6 +685,8 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage) EPackage.Registry.INSTANCE
 				.getEPackage(CharacteristicsPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -697,10 +703,10 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		internalStateContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 		contextCharacteristicEClass.getESuperTypes().add(theCharacteristicsPackage.getCharacteristic());
 		contextCharacteristicTypeEClass.getESuperTypes().add(theCharacteristicsPackage.getCharacteristicType());
-		integerThresholdContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
 		privacyLevelContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 		comparisonContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
 		prerequisiteContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
+		extensionContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -756,15 +762,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 				ContextCharacteristicType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(integerThresholdContextEClass, IntegerThresholdContext.class, "IntegerThresholdContext",
-				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntegerThresholdContext_Comparision(), this.getComparison(), "comparision", null, 0, 1,
-				IntegerThresholdContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIntegerThresholdContext_Threshold(), theEcorePackage.getEInt(), "threshold", null, 0, 1,
-				IntegerThresholdContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(privacyLevelContextEClass, PrivacyLevelContext.class, "PrivacyLevelContext", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPrivacyLevelContext_Level(), theCharacteristicsPackage.getEnumCharacteristicLiteral(), null,
@@ -779,12 +776,21 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEAttribute(getComparisonContext_Threshold(), this.getNumber(), "threshold", null, 0, 1,
 				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComparisonContext_IsFloating(), theEcorePackage.getEBoolean(), "isFloating", null, 0, 1,
+				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(prerequisiteContextEClass, PrerequisiteContext.class, "PrerequisiteContext", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPrerequisiteContext_Prerequisite(), theHelperattributesPackage.getPrerequisite(), null,
 				"prerequisite", null, 1, 1, PrerequisiteContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(extensionContextEClass, ExtensionContext.class, "ExtensionContext", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExtensionContext_ExtensionCode(), theXMLTypePackage.getString(), "extensionCode", null, 0, 1,
+				ExtensionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(comparisonEEnum, Comparison.class, "Comparison");

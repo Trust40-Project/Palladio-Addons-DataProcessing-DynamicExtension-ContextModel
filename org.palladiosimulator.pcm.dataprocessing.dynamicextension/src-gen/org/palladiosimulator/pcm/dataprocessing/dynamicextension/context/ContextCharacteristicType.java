@@ -3,6 +3,7 @@
 package org.palladiosimulator.pcm.dataprocessing.dynamicextension.context;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
 
 /**

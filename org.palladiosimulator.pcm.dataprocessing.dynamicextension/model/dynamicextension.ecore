@@ -44,10 +44,6 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
           eType="#//context/Context" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IntegerThresholdContext" eSuperTypes="#//context/EnvironmentalContext">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparision" eType="#//context/Comparison"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="threshold" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Comparison">
       <eLiterals name="GREATER"/>
       <eLiterals name="SMALLER" value="1"/>
@@ -59,10 +55,14 @@
     <eClassifiers xsi:type="ecore:EClass" name="ComparisonContext" eSuperTypes="#//context/EnvironmentalContext">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparison" eType="#//context/Comparison"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="threshold" eType="#//context/Number"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFloating" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PrerequisiteContext" eSuperTypes="#//context/UserDeclaredContext">
       <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
           eType="#//util/helperattributes/Prerequisite"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExtensionContext" eSuperTypes="#//context/UserDeclaredContext">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="util" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/0.1/"
@@ -130,9 +130,9 @@
         <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" upperBound="-1"
             eType="#//util/helperattributes/Prerequisite" containment="true"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Prerequisite" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-      <eClassifiers xsi:type="ecore:EClass" name="ReportIDPrerequisite" eSuperTypes="#//util/helperattributes/Prerequisite">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="reportId" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Prerequisite" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
+            eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//seff/ServiceEffectSpecification"/>
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
