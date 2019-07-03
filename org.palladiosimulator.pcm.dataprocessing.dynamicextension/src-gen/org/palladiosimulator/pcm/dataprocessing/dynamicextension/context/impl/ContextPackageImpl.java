@@ -12,7 +12,6 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -171,13 +170,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	private EEnum comparisonEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType numberEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -499,18 +491,8 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getComparisonContext_Threshold() {
-		return (EAttribute) comparisonContextEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getComparisonContext_IsFloating() {
-		return (EAttribute) comparisonContextEClass.getEStructuralFeatures().get(2);
+	public EReference getComparisonContext_Threshold() {
+		return (EReference) comparisonContextEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -561,16 +543,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	@Override
 	public EEnum getComparison() {
 		return comparisonEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EDataType getNumber() {
-		return numberEDataType;
 	}
 
 	/**
@@ -636,8 +608,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 
 		comparisonContextEClass = createEClass(COMPARISON_CONTEXT);
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__COMPARISON);
-		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__THRESHOLD);
-		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__IS_FLOATING);
+		createEReference(comparisonContextEClass, COMPARISON_CONTEXT__THRESHOLD);
 
 		prerequisiteContextEClass = createEClass(PREREQUISITE_CONTEXT);
 		createEReference(prerequisiteContextEClass, PREREQUISITE_CONTEXT__PREREQUISITE);
@@ -647,9 +618,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 
 		// Create enums
 		comparisonEEnum = createEEnum(COMPARISON);
-
-		// Create data types
-		numberEDataType = createEDataType(NUMBER);
 	}
 
 	/**
@@ -684,7 +652,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 				.getEPackage(SubjectPackage.eNS_URI);
 		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage) EPackage.Registry.INSTANCE
 				.getEPackage(CharacteristicsPackage.eNS_URI);
-		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
 				.getEPackage(XMLTypePackage.eNS_URI);
 
@@ -773,12 +740,9 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEAttribute(getComparisonContext_Comparison(), this.getComparison(), "comparison", null, 0, 1,
 				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComparisonContext_Threshold(), this.getNumber(), "threshold", null, 0, 1,
-				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComparisonContext_IsFloating(), theEcorePackage.getEBoolean(), "isFloating", null, 0, 1,
-				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEReference(getComparisonContext_Threshold(), theHelperattributesPackage.getComparisonValue(), null,
+				"threshold", null, 1, 1, ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prerequisiteContextEClass, PrerequisiteContext.class, "PrerequisiteContext", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -796,9 +760,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEEnum(comparisonEEnum, Comparison.class, "Comparison");
 		addEEnumLiteral(comparisonEEnum, Comparison.GREATER);
 		addEEnumLiteral(comparisonEEnum, Comparison.SMALLER);
-
-		// Initialize data types
-		initEDataType(numberEDataType, Number.class, "Number", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //ContextPackageImpl

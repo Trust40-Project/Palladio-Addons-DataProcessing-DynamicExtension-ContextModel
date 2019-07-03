@@ -4,7 +4,6 @@ package org.palladiosimulator.pcm.dataprocessing.dynamicextension.context;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -588,7 +587,7 @@ public interface ContextPackage extends EPackage {
 	int COMPARISON_CONTEXT__COMPARISON = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Threshold</b></em>' attribute.
+	 * The feature id for the '<em><b>Threshold</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -597,22 +596,13 @@ public interface ContextPackage extends EPackage {
 	int COMPARISON_CONTEXT__THRESHOLD = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Floating</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPARISON_CONTEXT__IS_FLOATING = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Comparison Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARISON_CONTEXT_FEATURE_COUNT = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 3;
+	int COMPARISON_CONTEXT_FEATURE_COUNT = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl <em>Prerequisite Context</em>}' class.
@@ -715,16 +705,6 @@ public interface ContextPackage extends EPackage {
 	 * @generated
 	 */
 	int COMPARISON = 14;
-
-	/**
-	 * The meta object id for the '<em>Number</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.lang.Number
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getNumber()
-	 * @generated
-	 */
-	int NUMBER = 15;
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context <em>Context</em>}'.
@@ -957,26 +937,15 @@ public interface ContextPackage extends EPackage {
 	EAttribute getComparisonContext_Comparison();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold <em>Threshold</em>}'.
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold <em>Threshold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Threshold</em>'.
+	 * @return the meta object for the reference '<em>Threshold</em>'.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold()
 	 * @see #getComparisonContext()
 	 * @generated
 	 */
-	EAttribute getComparisonContext_Threshold();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#isIsFloating <em>Is Floating</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Floating</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#isIsFloating()
-	 * @see #getComparisonContext()
-	 * @generated
-	 */
-	EAttribute getComparisonContext_IsFloating();
+	EReference getComparisonContext_Threshold();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext <em>Prerequisite Context</em>}'.
@@ -1029,17 +998,6 @@ public interface ContextPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getComparison();
-
-	/**
-	 * Returns the meta object for data type '{@link java.lang.Number <em>Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Number</em>'.
-	 * @see java.lang.Number
-	 * @model instanceClass="java.lang.Number"
-	 * @generated
-	 */
-	EDataType getNumber();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1264,20 +1222,12 @@ public interface ContextPackage extends EPackage {
 		EAttribute COMPARISON_CONTEXT__COMPARISON = eINSTANCE.getComparisonContext_Comparison();
 
 		/**
-		 * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Threshold</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPARISON_CONTEXT__THRESHOLD = eINSTANCE.getComparisonContext_Threshold();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Floating</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPARISON_CONTEXT__IS_FLOATING = eINSTANCE.getComparisonContext_IsFloating();
+		EReference COMPARISON_CONTEXT__THRESHOLD = eINSTANCE.getComparisonContext_Threshold();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl <em>Prerequisite Context</em>}' class.
@@ -1324,16 +1274,6 @@ public interface ContextPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum COMPARISON = eINSTANCE.getComparison();
-
-		/**
-		 * The meta object literal for the '<em>Number</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.lang.Number
-		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getNumber()
-		 * @generated
-		 */
-		EDataType NUMBER = eINSTANCE.getNumber();
 
 	}
 

@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.LocationContainer;
@@ -27,6 +28,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattr
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getRolecontainer <em>Rolecontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getLocationcontainer <em>Locationcontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getPrerequisitecontainer <em>Prerequisitecontainer</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperContainerImpl#getComparisonvalues <em>Comparisonvalues</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,6 +107,17 @@ public class HelperContainerImpl extends CDOObjectImpl implements HelperContaine
 	public EList<PrerequisiteContainer> getPrerequisitecontainer() {
 		return (EList<PrerequisiteContainer>) eGet(
 				HelperattributesPackage.Literals.HELPER_CONTAINER__PREREQUISITECONTAINER, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<ComparisonValue> getComparisonvalues() {
+		return (EList<ComparisonValue>) eGet(HelperattributesPackage.Literals.HELPER_CONTAINER__COMPARISONVALUES, true);
 	}
 
 } //HelperContainerImpl

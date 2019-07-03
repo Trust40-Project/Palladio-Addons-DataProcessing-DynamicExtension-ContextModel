@@ -74,6 +74,8 @@ public class HelperattributesFactoryImpl extends EFactoryImpl implements Helpera
 			return (EObject) createPrerequisiteContainer();
 		case HelperattributesPackage.PREREQUISITE:
 			return (EObject) createPrerequisite();
+		case HelperattributesPackage.COMPARISON_VALUE:
+			return (EObject) createComparisonValue();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -176,6 +178,17 @@ public class HelperattributesFactoryImpl extends EFactoryImpl implements Helpera
 	public Prerequisite createPrerequisite() {
 		PrerequisiteImpl prerequisite = new PrerequisiteImpl();
 		return prerequisite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ComparisonValue createComparisonValue() {
+		ComparisonValueImpl comparisonValue = new ComparisonValueImpl();
+		return comparisonValue;
 	}
 
 	/**

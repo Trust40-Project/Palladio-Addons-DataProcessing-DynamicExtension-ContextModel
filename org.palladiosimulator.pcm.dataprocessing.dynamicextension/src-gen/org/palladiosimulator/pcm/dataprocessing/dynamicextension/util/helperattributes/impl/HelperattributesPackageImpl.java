@@ -33,7 +33,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.impl.DynamicextensionPackageImpl;
-
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesFactory;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage;
@@ -50,7 +50,7 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.Su
 
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.impl.SubjectPackageImpl;
 
-import org.palladiosimulator.pcm.seff.SeffPackage;
+import org.palladiosimulator.pcm.repository.RepositoryPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,6 +121,13 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	 * @generated
 	 */
 	private EClass prerequisiteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass comparisonValueEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -264,6 +271,16 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	@Override
 	public EReference getHelperContainer_Prerequisitecontainer() {
 		return (EReference) helperContainerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getHelperContainer_Comparisonvalues() {
+		return (EReference) helperContainerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -472,6 +489,46 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 	 * @generated
 	 */
 	@Override
+	public EClass getComparisonValue() {
+		return comparisonValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getComparisonValue_IntegralValue() {
+		return (EAttribute) comparisonValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getComparisonValue_FloatingValue() {
+		return (EAttribute) comparisonValueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getComparisonValue_IsFloating() {
+		return (EAttribute) comparisonValueEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public HelperattributesFactory getHelperattributesFactory() {
 		return (HelperattributesFactory) getEFactoryInstance();
 	}
@@ -501,6 +558,7 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		createEReference(helperContainerEClass, HELPER_CONTAINER__ROLECONTAINER);
 		createEReference(helperContainerEClass, HELPER_CONTAINER__LOCATIONCONTAINER);
 		createEReference(helperContainerEClass, HELPER_CONTAINER__PREREQUISITECONTAINER);
+		createEReference(helperContainerEClass, HELPER_CONTAINER__COMPARISONVALUES);
 
 		locationContainerEClass = createEClass(LOCATION_CONTAINER);
 		createEReference(locationContainerEClass, LOCATION_CONTAINER__ORGANISATION);
@@ -529,6 +587,11 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 
 		prerequisiteEClass = createEClass(PREREQUISITE);
 		createEReference(prerequisiteEClass, PREREQUISITE__PREREQUISITE);
+
+		comparisonValueEClass = createEClass(COMPARISON_VALUE);
+		createEAttribute(comparisonValueEClass, COMPARISON_VALUE__INTEGRAL_VALUE);
+		createEAttribute(comparisonValueEClass, COMPARISON_VALUE__FLOATING_VALUE);
+		createEAttribute(comparisonValueEClass, COMPARISON_VALUE__IS_FLOATING);
 	}
 
 	/**
@@ -561,7 +624,9 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 				.getEPackage(SubjectPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
 				.getEPackage(XMLTypePackage.eNS_URI);
-		SeffPackage theSeffPackage = (SeffPackage) EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
+		RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
+				.getEPackage(RepositoryPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -576,6 +641,7 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		roleEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		prerequisiteContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		prerequisiteEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		comparisonValueEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(helperContainerEClass, HelperContainer.class, "HelperContainer", !IS_ABSTRACT, !IS_INTERFACE,
@@ -592,6 +658,9 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 		initEReference(getHelperContainer_Prerequisitecontainer(), this.getPrerequisiteContainer(), null,
 				"prerequisitecontainer", null, 0, -1, HelperContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHelperContainer_Comparisonvalues(), this.getComparisonValue(), null, "comparisonvalues", null,
+				0, -1, HelperContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationContainerEClass, LocationContainer.class, "LocationContainer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -645,9 +714,21 @@ public class HelperattributesPackageImpl extends EPackageImpl implements Helpera
 
 		initEClass(prerequisiteEClass, Prerequisite.class, "Prerequisite", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrerequisite_Prerequisite(), theSeffPackage.getServiceEffectSpecification(), null,
+		initEReference(getPrerequisite_Prerequisite(), theRepositoryPackage.getOperationSignature(), null,
 				"prerequisite", null, 1, 1, Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(comparisonValueEClass, ComparisonValue.class, "ComparisonValue", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getComparisonValue_IntegralValue(), theEcorePackage.getELong(), "integralValue", null, 0, 1,
+				ComparisonValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComparisonValue_FloatingValue(), theEcorePackage.getEDouble(), "floatingValue", null, 0, 1,
+				ComparisonValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComparisonValue_IsFloating(), theEcorePackage.getEBoolean(), "isFloating", null, 0, 1,
+				ComparisonValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 	}
 
 } //HelperattributesPackageImpl

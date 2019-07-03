@@ -4,7 +4,7 @@ package org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperatt
 
 import org.palladiosimulator.pcm.core.entity.Entity;
 
-import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
+import org.palladiosimulator.pcm.repository.OperationSignature;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,12 +28,12 @@ public interface Prerequisite extends Entity {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prerequisite</em>' reference.
-	 * @see #setPrerequisite(ServiceEffectSpecification)
+	 * @see #setPrerequisite(OperationSignature)
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage#getPrerequisite_Prerequisite()
 	 * @model required="true"
 	 * @generated
 	 */
-	ServiceEffectSpecification getPrerequisite();
+	OperationSignature getPrerequisite();
 
 	/**
 	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite#getPrerequisite <em>Prerequisite</em>}' reference.
@@ -43,6 +43,6 @@ public interface Prerequisite extends Entity {
 	 * @see #getPrerequisite()
 	 * @generated
 	 */
-	void setPrerequisite(ServiceEffectSpecification value);
+	void setPrerequisite(OperationSignature value);
 
 } // Prerequisite

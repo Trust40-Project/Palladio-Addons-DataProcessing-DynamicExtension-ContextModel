@@ -104,6 +104,15 @@ public interface HelperattributesFactory extends EFactory {
 	Prerequisite createPrerequisite();
 
 	/**
+	 * Returns a new object of class '<em>Comparison Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comparison Value</em>'.
+	 * @generated
+	 */
+	ComparisonValue createComparisonValue();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getRolecontainer <em>Rolecontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getLocationcontainer <em>Locationcontainer</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getPrerequisitecontainer <em>Prerequisitecontainer</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getComparisonvalues <em>Comparisonvalues</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage#getHelperContainer()
@@ -74,5 +75,17 @@ public interface HelperContainer extends CDOObject {
 	 * @generated
 	 */
 	EList<PrerequisiteContainer> getPrerequisitecontainer();
+
+	/**
+	 * Returns the value of the '<em><b>Comparisonvalues</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comparisonvalues</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage#getHelperContainer_Comparisonvalues()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ComparisonValue> getComparisonvalues();
 
 } // HelperContainer

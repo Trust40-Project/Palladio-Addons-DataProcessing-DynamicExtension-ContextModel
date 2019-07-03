@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dynamicextension.context;
 
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Comparison Context</b></em>'.
@@ -13,7 +15,6 @@ package org.palladiosimulator.pcm.dataprocessing.dynamicextension.context;
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getComparison <em>Comparison</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold <em>Threshold</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#isIsFloating <em>Is Floating</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage#getComparisonContext()
@@ -47,47 +48,25 @@ public interface ComparisonContext extends EnvironmentalContext {
 	void setComparison(Comparison value);
 
 	/**
-	 * Returns the value of the '<em><b>Threshold</b></em>' attribute.
+	 * Returns the value of the '<em><b>Threshold</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Threshold</em>' attribute.
-	 * @see #setThreshold(Number)
+	 * @return the value of the '<em>Threshold</em>' reference.
+	 * @see #setThreshold(ComparisonValue)
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage#getComparisonContext_Threshold()
-	 * @model dataType="org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Number"
+	 * @model required="true"
 	 * @generated
 	 */
-	Number getThreshold();
+	ComparisonValue getThreshold();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold <em>Threshold</em>}' attribute.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold <em>Threshold</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Threshold</em>' attribute.
+	 * @param value the new value of the '<em>Threshold</em>' reference.
 	 * @see #getThreshold()
 	 * @generated
 	 */
-	void setThreshold(Number value);
-
-	/**
-	 * Returns the value of the '<em><b>Is Floating</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Floating</em>' attribute.
-	 * @see #setIsFloating(boolean)
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage#getComparisonContext_IsFloating()
-	 * @model
-	 * @generated
-	 */
-	boolean isIsFloating();
-
-	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#isIsFloating <em>Is Floating</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Floating</em>' attribute.
-	 * @see #isIsFloating()
-	 * @generated
-	 */
-	void setIsFloating(boolean value);
+	void setThreshold(ComparisonValue value);
 
 } // ComparisonContext

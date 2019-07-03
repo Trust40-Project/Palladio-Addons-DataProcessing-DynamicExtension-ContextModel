@@ -9,7 +9,7 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperattributesPackage;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.Prerequisite;
 
-import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
+import org.palladiosimulator.pcm.repository.OperationSignature;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,8 +50,8 @@ public class PrerequisiteImpl extends EntityImpl implements Prerequisite {
 	 * @generated
 	 */
 	@Override
-	public ServiceEffectSpecification getPrerequisite() {
-		return (ServiceEffectSpecification) eGet(HelperattributesPackage.Literals.PREREQUISITE__PREREQUISITE, true);
+	public OperationSignature getPrerequisite() {
+		return (OperationSignature) eGet(HelperattributesPackage.Literals.PREREQUISITE__PREREQUISITE, true);
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class PrerequisiteImpl extends EntityImpl implements Prerequisite {
 	 * @generated
 	 */
 	@Override
-	public void setPrerequisite(ServiceEffectSpecification newPrerequisite) {
+	public void setPrerequisite(OperationSignature newPrerequisite) {
 		eSet(HelperattributesPackage.Literals.PREREQUISITE__PREREQUISITE, newPrerequisite);
 	}
 

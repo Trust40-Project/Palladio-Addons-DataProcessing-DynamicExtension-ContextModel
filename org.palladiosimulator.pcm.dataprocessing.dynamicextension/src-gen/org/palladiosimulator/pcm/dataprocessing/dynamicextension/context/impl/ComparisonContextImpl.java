@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +19,6 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#getComparison <em>Comparison</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#getThreshold <em>Threshold</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#isIsFloating <em>Is Floating</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,8 +69,8 @@ public class ComparisonContextImpl extends EnvironmentalContextImpl implements C
 	 * @generated
 	 */
 	@Override
-	public Number getThreshold() {
-		return (Number) eGet(ContextPackage.Literals.COMPARISON_CONTEXT__THRESHOLD, true);
+	public ComparisonValue getThreshold() {
+		return (ComparisonValue) eGet(ContextPackage.Literals.COMPARISON_CONTEXT__THRESHOLD, true);
 	}
 
 	/**
@@ -79,28 +79,8 @@ public class ComparisonContextImpl extends EnvironmentalContextImpl implements C
 	 * @generated
 	 */
 	@Override
-	public void setThreshold(Number newThreshold) {
+	public void setThreshold(ComparisonValue newThreshold) {
 		eSet(ContextPackage.Literals.COMPARISON_CONTEXT__THRESHOLD, newThreshold);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isIsFloating() {
-		return (Boolean) eGet(ContextPackage.Literals.COMPARISON_CONTEXT__IS_FLOATING, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIsFloating(boolean newIsFloating) {
-		eSet(ContextPackage.Literals.COMPARISON_CONTEXT__IS_FLOATING, newIsFloating);
 	}
 
 } //ComparisonContextImpl

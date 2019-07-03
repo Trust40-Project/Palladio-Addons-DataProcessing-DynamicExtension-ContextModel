@@ -105,13 +105,22 @@ public interface HelperattributesPackage extends EPackage {
 	int HELPER_CONTAINER__PREREQUISITECONTAINER = 3;
 
 	/**
+	 * The feature id for the '<em><b>Comparisonvalues</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HELPER_CONTAINER__COMPARISONVALUES = 4;
+
+	/**
 	 * The number of structural features of the '<em>Helper Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HELPER_CONTAINER_FEATURE_COUNT = 4;
+	int HELPER_CONTAINER_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.LocationContainerImpl <em>Location Container</em>}' class.
@@ -518,6 +527,70 @@ public interface HelperattributesPackage extends EPackage {
 	int PREREQUISITE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ComparisonValueImpl <em>Comparison Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ComparisonValueImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getComparisonValue()
+	 * @generated
+	 */
+	int COMPARISON_VALUE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_VALUE__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_VALUE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Integral Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_VALUE__INTEGRAL_VALUE = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Floating Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_VALUE__FLOATING_VALUE = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Is Floating</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_VALUE__IS_FLOATING = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Comparison Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_VALUE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 3;
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer <em>Helper Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -570,6 +643,17 @@ public interface HelperattributesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getHelperContainer_Prerequisitecontainer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getComparisonvalues <em>Comparisonvalues</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Comparisonvalues</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.HelperContainer#getComparisonvalues()
+	 * @see #getHelperContainer()
+	 * @generated
+	 */
+	EReference getHelperContainer_Comparisonvalues();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.LocationContainer <em>Location Container</em>}'.
@@ -784,6 +868,49 @@ public interface HelperattributesPackage extends EPackage {
 	EReference getPrerequisite_Prerequisite();
 
 	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue <em>Comparison Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Comparison Value</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue
+	 * @generated
+	 */
+	EClass getComparisonValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue#getIntegralValue <em>Integral Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Integral Value</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue#getIntegralValue()
+	 * @see #getComparisonValue()
+	 * @generated
+	 */
+	EAttribute getComparisonValue_IntegralValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue#getFloatingValue <em>Floating Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Floating Value</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue#getFloatingValue()
+	 * @see #getComparisonValue()
+	 * @generated
+	 */
+	EAttribute getComparisonValue_FloatingValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue#isIsFloating <em>Is Floating</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Floating</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue#isIsFloating()
+	 * @see #getComparisonValue()
+	 * @generated
+	 */
+	EAttribute getComparisonValue_IsFloating();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -846,6 +973,14 @@ public interface HelperattributesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference HELPER_CONTAINER__PREREQUISITECONTAINER = eINSTANCE.getHelperContainer_Prerequisitecontainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Comparisonvalues</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HELPER_CONTAINER__COMPARISONVALUES = eINSTANCE.getHelperContainer_Comparisonvalues();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.LocationContainerImpl <em>Location Container</em>}' class.
@@ -1022,6 +1157,40 @@ public interface HelperattributesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PREREQUISITE__PREREQUISITE = eINSTANCE.getPrerequisite_Prerequisite();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ComparisonValueImpl <em>Comparison Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.ComparisonValueImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.impl.HelperattributesPackageImpl#getComparisonValue()
+		 * @generated
+		 */
+		EClass COMPARISON_VALUE = eINSTANCE.getComparisonValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Integral Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPARISON_VALUE__INTEGRAL_VALUE = eINSTANCE.getComparisonValue_IntegralValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Floating Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPARISON_VALUE__FLOATING_VALUE = eINSTANCE.getComparisonValue_FloatingValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Floating</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPARISON_VALUE__IS_FLOATING = eINSTANCE.getComparisonValue_IsFloating();
 
 	}
 
