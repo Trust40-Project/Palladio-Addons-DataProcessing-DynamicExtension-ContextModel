@@ -7,7 +7,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage;
-import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.ComparisonValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,12 +17,11 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattr
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#getComparison <em>Comparison</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ComparisonContextImpl#getThreshold <em>Threshold</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ComparisonContextImpl extends EnvironmentalContextImpl implements ComparisonContext {
+public abstract class ComparisonContextImpl extends EnvironmentalContextImpl implements ComparisonContext {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,26 +59,6 @@ public class ComparisonContextImpl extends EnvironmentalContextImpl implements C
 	@Override
 	public void setComparison(Comparison newComparison) {
 		eSet(ContextPackage.Literals.COMPARISON_CONTEXT__COMPARISON, newComparison);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ComparisonValue getThreshold() {
-		return (ComparisonValue) eGet(ContextPackage.Literals.COMPARISON_CONTEXT__THRESHOLD, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setThreshold(ComparisonValue newThreshold) {
-		eSet(ContextPackage.Literals.COMPARISON_CONTEXT__THRESHOLD, newThreshold);
 	}
 
 } //ComparisonContextImpl

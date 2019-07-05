@@ -73,12 +73,14 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 			return (EObject) createContextCharacteristicType();
 		case ContextPackage.PRIVACY_LEVEL_CONTEXT:
 			return (EObject) createPrivacyLevelContext();
-		case ContextPackage.COMPARISON_CONTEXT:
-			return (EObject) createComparisonContext();
 		case ContextPackage.PREREQUISITE_CONTEXT:
 			return (EObject) createPrerequisiteContext();
 		case ContextPackage.EXTENSION_CONTEXT:
 			return (EObject) createExtensionContext();
+		case ContextPackage.INTEGRAL_COMPARISON_CONTEXT:
+			return (EObject) createIntegralComparisonContext();
+		case ContextPackage.FLOATING_COMPARISON_CONTEXT:
+			return (EObject) createFloatingComparisonContext();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -208,17 +210,6 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	 * @generated
 	 */
 	@Override
-	public ComparisonContext createComparisonContext() {
-		ComparisonContextImpl comparisonContext = new ComparisonContextImpl();
-		return comparisonContext;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public PrerequisiteContext createPrerequisiteContext() {
 		PrerequisiteContextImpl prerequisiteContext = new PrerequisiteContextImpl();
 		return prerequisiteContext;
@@ -233,6 +224,28 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	public ExtensionContext createExtensionContext() {
 		ExtensionContextImpl extensionContext = new ExtensionContextImpl();
 		return extensionContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IntegralComparisonContext createIntegralComparisonContext() {
+		IntegralComparisonContextImpl integralComparisonContext = new IntegralComparisonContextImpl();
+		return integralComparisonContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FloatingComparisonContext createFloatingComparisonContext() {
+		FloatingComparisonContextImpl floatingComparisonContext = new FloatingComparisonContextImpl();
+		return floatingComparisonContext;
 	}
 
 	/**

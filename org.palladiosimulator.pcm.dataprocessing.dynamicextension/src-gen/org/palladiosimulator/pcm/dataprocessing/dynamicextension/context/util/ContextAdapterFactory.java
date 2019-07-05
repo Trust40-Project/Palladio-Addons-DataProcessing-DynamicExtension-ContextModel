@@ -145,6 +145,16 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseIntegralComparisonContext(IntegralComparisonContext object) {
+			return createIntegralComparisonContextAdapter();
+		}
+
+		@Override
+		public Adapter caseFloatingComparisonContext(FloatingComparisonContext object) {
+			return createFloatingComparisonContextAdapter();
+		}
+
+		@Override
 		public Adapter caseIdentifier(Identifier object) {
 			return createIdentifierAdapter();
 		}
@@ -381,6 +391,34 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExtensionContextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext <em>Integral Comparison Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext
+	 * @generated
+	 */
+	public Adapter createIntegralComparisonContextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.FloatingComparisonContext <em>Floating Comparison Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.FloatingComparisonContext
+	 * @generated
+	 */
+	public Adapter createFloatingComparisonContextAdapter() {
 		return null;
 	}
 

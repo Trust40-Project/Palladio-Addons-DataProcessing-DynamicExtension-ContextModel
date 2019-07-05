@@ -95,15 +95,6 @@ public interface ContextFactory extends EFactory {
 	PrivacyLevelContext createPrivacyLevelContext();
 
 	/**
-	 * Returns a new object of class '<em>Comparison Context</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Comparison Context</em>'.
-	 * @generated
-	 */
-	ComparisonContext createComparisonContext();
-
-	/**
 	 * Returns a new object of class '<em>Prerequisite Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,6 +111,24 @@ public interface ContextFactory extends EFactory {
 	 * @generated
 	 */
 	ExtensionContext createExtensionContext();
+
+	/**
+	 * Returns a new object of class '<em>Integral Comparison Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Integral Comparison Context</em>'.
+	 * @generated
+	 */
+	IntegralComparisonContext createIntegralComparisonContext();
+
+	/**
+	 * Returns a new object of class '<em>Floating Comparison Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Floating Comparison Context</em>'.
+	 * @generated
+	 */
+	FloatingComparisonContext createFloatingComparisonContext();
 
 	/**
 	 * Returns the package supported by this factory.

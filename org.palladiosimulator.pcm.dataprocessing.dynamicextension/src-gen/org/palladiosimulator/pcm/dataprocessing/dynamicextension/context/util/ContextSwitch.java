@@ -296,6 +296,44 @@ public class ContextSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ContextPackage.INTEGRAL_COMPARISON_CONTEXT: {
+			IntegralComparisonContext integralComparisonContext = (IntegralComparisonContext) theEObject;
+			T result = caseIntegralComparisonContext(integralComparisonContext);
+			if (result == null)
+				result = caseComparisonContext(integralComparisonContext);
+			if (result == null)
+				result = caseEnvironmentalContext(integralComparisonContext);
+			if (result == null)
+				result = caseContext(integralComparisonContext);
+			if (result == null)
+				result = caseEntity(integralComparisonContext);
+			if (result == null)
+				result = caseIdentifier(integralComparisonContext);
+			if (result == null)
+				result = caseNamedElement(integralComparisonContext);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ContextPackage.FLOATING_COMPARISON_CONTEXT: {
+			FloatingComparisonContext floatingComparisonContext = (FloatingComparisonContext) theEObject;
+			T result = caseFloatingComparisonContext(floatingComparisonContext);
+			if (result == null)
+				result = caseComparisonContext(floatingComparisonContext);
+			if (result == null)
+				result = caseEnvironmentalContext(floatingComparisonContext);
+			if (result == null)
+				result = caseContext(floatingComparisonContext);
+			if (result == null)
+				result = caseEntity(floatingComparisonContext);
+			if (result == null)
+				result = caseIdentifier(floatingComparisonContext);
+			if (result == null)
+				result = caseNamedElement(floatingComparisonContext);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -508,6 +546,36 @@ public class ContextSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExtensionContext(ExtensionContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Integral Comparison Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Integral Comparison Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntegralComparisonContext(IntegralComparisonContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Floating Comparison Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Floating Comparison Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFloatingComparisonContext(FloatingComparisonContext object) {
 		return null;
 	}
 

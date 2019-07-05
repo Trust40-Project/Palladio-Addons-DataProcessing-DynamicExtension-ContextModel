@@ -587,22 +587,13 @@ public interface ContextPackage extends EPackage {
 	int COMPARISON_CONTEXT__COMPARISON = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Threshold</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPARISON_CONTEXT__THRESHOLD = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Comparison Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARISON_CONTEXT_FEATURE_COUNT = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 2;
+	int COMPARISON_CONTEXT_FEATURE_COUNT = ENVIRONMENTAL_CONTEXT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl <em>Prerequisite Context</em>}' class.
@@ -697,6 +688,116 @@ public interface ContextPackage extends EPackage {
 	int EXTENSION_CONTEXT_FEATURE_COUNT = USER_DECLARED_CONTEXT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegralComparisonContextImpl <em>Integral Comparison Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegralComparisonContextImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getIntegralComparisonContext()
+	 * @generated
+	 */
+	int INTEGRAL_COMPARISON_CONTEXT = 14;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGRAL_COMPARISON_CONTEXT__ID = COMPARISON_CONTEXT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGRAL_COMPARISON_CONTEXT__ENTITY_NAME = COMPARISON_CONTEXT__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Comparison</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGRAL_COMPARISON_CONTEXT__COMPARISON = COMPARISON_CONTEXT__COMPARISON;
+
+	/**
+	 * The feature id for the '<em><b>Threshold</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGRAL_COMPARISON_CONTEXT__THRESHOLD = COMPARISON_CONTEXT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Integral Comparison Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGRAL_COMPARISON_CONTEXT_FEATURE_COUNT = COMPARISON_CONTEXT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.FloatingComparisonContextImpl <em>Floating Comparison Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.FloatingComparisonContextImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getFloatingComparisonContext()
+	 * @generated
+	 */
+	int FLOATING_COMPARISON_CONTEXT = 15;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOATING_COMPARISON_CONTEXT__ID = COMPARISON_CONTEXT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOATING_COMPARISON_CONTEXT__ENTITY_NAME = COMPARISON_CONTEXT__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Comparison</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOATING_COMPARISON_CONTEXT__COMPARISON = COMPARISON_CONTEXT__COMPARISON;
+
+	/**
+	 * The feature id for the '<em><b>Threshold</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOATING_COMPARISON_CONTEXT__THRESHOLD = COMPARISON_CONTEXT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Floating Comparison Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOATING_COMPARISON_CONTEXT_FEATURE_COUNT = COMPARISON_CONTEXT_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison <em>Comparison</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,7 +805,7 @@ public interface ContextPackage extends EPackage {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getComparison()
 	 * @generated
 	 */
-	int COMPARISON = 14;
+	int COMPARISON = 16;
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context <em>Context</em>}'.
@@ -937,17 +1038,6 @@ public interface ContextPackage extends EPackage {
 	EAttribute getComparisonContext_Comparison();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold <em>Threshold</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Threshold</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ComparisonContext#getThreshold()
-	 * @see #getComparisonContext()
-	 * @generated
-	 */
-	EReference getComparisonContext_Threshold();
-
-	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.PrerequisiteContext <em>Prerequisite Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -988,6 +1078,48 @@ public interface ContextPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExtensionContext_ExtensionCode();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext <em>Integral Comparison Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Integral Comparison Context</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext
+	 * @generated
+	 */
+	EClass getIntegralComparisonContext();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext#getThreshold <em>Threshold</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Threshold</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext#getThreshold()
+	 * @see #getIntegralComparisonContext()
+	 * @generated
+	 */
+	EAttribute getIntegralComparisonContext_Threshold();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.FloatingComparisonContext <em>Floating Comparison Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Floating Comparison Context</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.FloatingComparisonContext
+	 * @generated
+	 */
+	EClass getFloatingComparisonContext();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.FloatingComparisonContext#getThreshold <em>Threshold</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Threshold</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.FloatingComparisonContext#getThreshold()
+	 * @see #getFloatingComparisonContext()
+	 * @generated
+	 */
+	EAttribute getFloatingComparisonContext_Threshold();
 
 	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison <em>Comparison</em>}'.
@@ -1222,14 +1354,6 @@ public interface ContextPackage extends EPackage {
 		EAttribute COMPARISON_CONTEXT__COMPARISON = eINSTANCE.getComparisonContext_Comparison();
 
 		/**
-		 * The meta object literal for the '<em><b>Threshold</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPARISON_CONTEXT__THRESHOLD = eINSTANCE.getComparisonContext_Threshold();
-
-		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.PrerequisiteContextImpl <em>Prerequisite Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1264,6 +1388,42 @@ public interface ContextPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXTENSION_CONTEXT__EXTENSION_CODE = eINSTANCE.getExtensionContext_ExtensionCode();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegralComparisonContextImpl <em>Integral Comparison Context</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegralComparisonContextImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getIntegralComparisonContext()
+		 * @generated
+		 */
+		EClass INTEGRAL_COMPARISON_CONTEXT = eINSTANCE.getIntegralComparisonContext();
+
+		/**
+		 * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGRAL_COMPARISON_CONTEXT__THRESHOLD = eINSTANCE.getIntegralComparisonContext_Threshold();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.FloatingComparisonContextImpl <em>Floating Comparison Context</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.FloatingComparisonContextImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ContextPackageImpl#getFloatingComparisonContext()
+		 * @generated
+		 */
+		EClass FLOATING_COMPARISON_CONTEXT = eINSTANCE.getFloatingComparisonContext();
+
+		/**
+		 * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FLOATING_COMPARISON_CONTEXT__THRESHOLD = eINSTANCE.getFloatingComparisonContext_Threshold();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Comparison <em>Comparison</em>}' enum.

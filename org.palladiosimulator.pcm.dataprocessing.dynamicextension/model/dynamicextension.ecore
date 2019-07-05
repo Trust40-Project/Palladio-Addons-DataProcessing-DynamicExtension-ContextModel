@@ -51,10 +51,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="PrivacyLevelContext" eSuperTypes="#//context/UserDeclaredContext">
       <eStructuralFeatures xsi:type="ecore:EReference" name="level" eType="ecore:EClass ../../org.palladiosimulator.pcm.dataprocessing/model/dataprocessing.ecore#//characteristics/EnumCharacteristicLiteral"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ComparisonContext" eSuperTypes="#//context/EnvironmentalContext">
+    <eClassifiers xsi:type="ecore:EClass" name="ComparisonContext" abstract="true"
+        eSuperTypes="#//context/EnvironmentalContext">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparison" eType="#//context/Comparison"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" lowerBound="1"
-          eType="#//util/helperattributes/ComparisonValue"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PrerequisiteContext" eSuperTypes="#//context/UserDeclaredContext">
       <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
@@ -62,6 +61,12 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ExtensionContext" eSuperTypes="#//context/UserDeclaredContext">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IntegralComparisonContext" eSuperTypes="#//context/ComparisonContext">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="threshold" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ELong"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FloatingComparisonContext" eSuperTypes="#//context/ComparisonContext">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="threshold" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="util" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/0.1/"
@@ -94,8 +99,6 @@
         <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisitecontainer"
             upperBound="-1" eType="#//util/helperattributes/PrerequisiteContainer"
             containment="true"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="comparisonvalues" upperBound="-1"
-            eType="#//util/helperattributes/ComparisonValue" containment="true"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="LocationContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="organisation" lowerBound="1"
@@ -134,11 +137,6 @@
       <eClassifiers xsi:type="ecore:EClass" name="Prerequisite" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
             eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="ComparisonValue" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="integralValue" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ELong"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="floatingValue" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFloating" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>

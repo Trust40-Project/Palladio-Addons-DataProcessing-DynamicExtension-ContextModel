@@ -40,6 +40,8 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Context
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.EnvironmentalContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.FloatingComparisonContext;
+import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.InternalStateContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.LocationContext;
 import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.OrganisationContext;
@@ -163,6 +165,20 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	private EClass extensionContextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass integralComparisonContextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass floatingComparisonContextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -491,16 +507,6 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getComparisonContext_Threshold() {
-		return (EReference) comparisonContextEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getPrerequisiteContext() {
 		return prerequisiteContextEClass;
 	}
@@ -533,6 +539,46 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	@Override
 	public EAttribute getExtensionContext_ExtensionCode() {
 		return (EAttribute) extensionContextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getIntegralComparisonContext() {
+		return integralComparisonContextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIntegralComparisonContext_Threshold() {
+		return (EAttribute) integralComparisonContextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFloatingComparisonContext() {
+		return floatingComparisonContextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFloatingComparisonContext_Threshold() {
+		return (EAttribute) floatingComparisonContextEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -608,13 +654,18 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 
 		comparisonContextEClass = createEClass(COMPARISON_CONTEXT);
 		createEAttribute(comparisonContextEClass, COMPARISON_CONTEXT__COMPARISON);
-		createEReference(comparisonContextEClass, COMPARISON_CONTEXT__THRESHOLD);
 
 		prerequisiteContextEClass = createEClass(PREREQUISITE_CONTEXT);
 		createEReference(prerequisiteContextEClass, PREREQUISITE_CONTEXT__PREREQUISITE);
 
 		extensionContextEClass = createEClass(EXTENSION_CONTEXT);
 		createEAttribute(extensionContextEClass, EXTENSION_CONTEXT__EXTENSION_CODE);
+
+		integralComparisonContextEClass = createEClass(INTEGRAL_COMPARISON_CONTEXT);
+		createEAttribute(integralComparisonContextEClass, INTEGRAL_COMPARISON_CONTEXT__THRESHOLD);
+
+		floatingComparisonContextEClass = createEClass(FLOATING_COMPARISON_CONTEXT);
+		createEAttribute(floatingComparisonContextEClass, FLOATING_COMPARISON_CONTEXT__THRESHOLD);
 
 		// Create enums
 		comparisonEEnum = createEEnum(COMPARISON);
@@ -654,6 +705,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 				.getEPackage(CharacteristicsPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
 				.getEPackage(XMLTypePackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -674,6 +726,8 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		comparisonContextEClass.getESuperTypes().add(this.getEnvironmentalContext());
 		prerequisiteContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
 		extensionContextEClass.getESuperTypes().add(this.getUserDeclaredContext());
+		integralComparisonContextEClass.getESuperTypes().add(this.getComparisonContext());
+		floatingComparisonContextEClass.getESuperTypes().add(this.getComparisonContext());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -735,14 +789,11 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 				"level", null, 0, 1, PrivacyLevelContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(comparisonContextEClass, ComparisonContext.class, "ComparisonContext", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(comparisonContextEClass, ComparisonContext.class, "ComparisonContext", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComparisonContext_Comparison(), this.getComparison(), "comparison", null, 0, 1,
 				ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getComparisonContext_Threshold(), theHelperattributesPackage.getComparisonValue(), null,
-				"threshold", null, 1, 1, ComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prerequisiteContextEClass, PrerequisiteContext.class, "PrerequisiteContext", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -755,6 +806,18 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		initEAttribute(getExtensionContext_ExtensionCode(), theXMLTypePackage.getString(), "extensionCode", null, 0, 1,
 				ExtensionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(integralComparisonContextEClass, IntegralComparisonContext.class, "IntegralComparisonContext",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntegralComparisonContext_Threshold(), theEcorePackage.getELong(), "threshold", null, 0, 1,
+				IntegralComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(floatingComparisonContextEClass, FloatingComparisonContext.class, "FloatingComparisonContext",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFloatingComparisonContext_Threshold(), theEcorePackage.getEDouble(), "threshold", null, 0, 1,
+				FloatingComparisonContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(comparisonEEnum, Comparison.class, "Comparison");
