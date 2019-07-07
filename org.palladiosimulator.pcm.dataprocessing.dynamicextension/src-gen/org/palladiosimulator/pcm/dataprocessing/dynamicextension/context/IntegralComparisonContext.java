@@ -24,12 +24,12 @@ public interface IntegralComparisonContext extends ComparisonContext {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Threshold</em>' attribute.
-	 * @see #setThreshold(long)
+	 * @see #setThreshold(int)
 	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ContextPackage#getIntegralComparisonContext_Threshold()
 	 * @model
 	 * @generated
 	 */
-	long getThreshold();
+	int getThreshold();
 
 	/**
 	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext#getThreshold <em>Threshold</em>}' attribute.
@@ -39,6 +39,6 @@ public interface IntegralComparisonContext extends ComparisonContext {
 	 * @see #getThreshold()
 	 * @generated
 	 */
-	void setThreshold(long value);
+	void setThreshold(int value);
 
 } // IntegralComparisonContext

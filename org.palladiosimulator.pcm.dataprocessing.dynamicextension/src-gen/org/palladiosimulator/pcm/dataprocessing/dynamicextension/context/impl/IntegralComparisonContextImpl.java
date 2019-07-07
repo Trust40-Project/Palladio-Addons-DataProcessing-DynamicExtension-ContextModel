@@ -46,8 +46,8 @@ public class IntegralComparisonContextImpl extends ComparisonContextImpl impleme
 	 * @generated
 	 */
 	@Override
-	public long getThreshold() {
-		return (Long) eGet(ContextPackage.Literals.INTEGRAL_COMPARISON_CONTEXT__THRESHOLD, true);
+	public int getThreshold() {
+		return (Integer) eGet(ContextPackage.Literals.INTEGRAL_COMPARISON_CONTEXT__THRESHOLD, true);
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class IntegralComparisonContextImpl extends ComparisonContextImpl impleme
 	 * @generated
 	 */
 	@Override
-	public void setThreshold(long newThreshold) {
+	public void setThreshold(int newThreshold) {
 		eSet(ContextPackage.Literals.INTEGRAL_COMPARISON_CONTEXT__THRESHOLD, newThreshold);
 	}
 
