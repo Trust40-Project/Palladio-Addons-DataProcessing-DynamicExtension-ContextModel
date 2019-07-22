@@ -670,13 +670,22 @@ public interface ContextPackage extends EPackage {
 	int EXTENSION_CONTEXT__ENTITY_NAME = USER_DECLARED_CONTEXT__ENTITY_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Extension Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Custom Access Policy</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENSION_CONTEXT__EXTENSION_CODE = USER_DECLARED_CONTEXT_FEATURE_COUNT + 0;
+	int EXTENSION_CONTEXT__CUSTOM_ACCESS_POLICY = USER_DECLARED_CONTEXT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Add At End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENSION_CONTEXT__ADD_AT_END = USER_DECLARED_CONTEXT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Extension Context</em>' class.
@@ -685,7 +694,7 @@ public interface ContextPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENSION_CONTEXT_FEATURE_COUNT = USER_DECLARED_CONTEXT_FEATURE_COUNT + 1;
+	int EXTENSION_CONTEXT_FEATURE_COUNT = USER_DECLARED_CONTEXT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegralComparisonContextImpl <em>Integral Comparison Context</em>}' class.
@@ -1069,15 +1078,26 @@ public interface ContextPackage extends EPackage {
 	EClass getExtensionContext();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext#getExtensionCode <em>Extension Code</em>}'.
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext#getCustomAccessPolicy <em>Custom Access Policy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Extension Code</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext#getExtensionCode()
+	 * @return the meta object for the attribute '<em>Custom Access Policy</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext#getCustomAccessPolicy()
 	 * @see #getExtensionContext()
 	 * @generated
 	 */
-	EAttribute getExtensionContext_ExtensionCode();
+	EAttribute getExtensionContext_CustomAccessPolicy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext#isAddAtEnd <em>Add At End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Add At End</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.ExtensionContext#isAddAtEnd()
+	 * @see #getExtensionContext()
+	 * @generated
+	 */
+	EAttribute getExtensionContext_AddAtEnd();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.IntegralComparisonContext <em>Integral Comparison Context</em>}'.
@@ -1382,12 +1402,20 @@ public interface ContextPackage extends EPackage {
 		EClass EXTENSION_CONTEXT = eINSTANCE.getExtensionContext();
 
 		/**
-		 * The meta object literal for the '<em><b>Extension Code</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Custom Access Policy</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION_CONTEXT__EXTENSION_CODE = eINSTANCE.getExtensionContext_ExtensionCode();
+		EAttribute EXTENSION_CONTEXT__CUSTOM_ACCESS_POLICY = eINSTANCE.getExtensionContext_CustomAccessPolicy();
+
+		/**
+		 * The meta object literal for the '<em><b>Add At End</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXTENSION_CONTEXT__ADD_AT_END = eINSTANCE.getExtensionContext_AddAtEnd();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.IntegralComparisonContextImpl <em>Integral Comparison Context</em>}' class.

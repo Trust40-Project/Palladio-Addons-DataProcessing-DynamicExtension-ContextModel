@@ -60,7 +60,8 @@
           eType="#//util/helperattributes/Prerequisite"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ExtensionContext" eSuperTypes="#//context/UserDeclaredContext">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="customAccessPolicy" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="addAtEnd" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IntegralComparisonContext" eSuperTypes="#//context/ComparisonContext">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="threshold" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>

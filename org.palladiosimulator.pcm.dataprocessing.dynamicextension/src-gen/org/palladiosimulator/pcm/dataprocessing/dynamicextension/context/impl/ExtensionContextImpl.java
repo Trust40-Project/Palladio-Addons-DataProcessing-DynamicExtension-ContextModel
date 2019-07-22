@@ -15,7 +15,8 @@ import org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.Extensi
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ExtensionContextImpl#getExtensionCode <em>Extension Code</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ExtensionContextImpl#getCustomAccessPolicy <em>Custom Access Policy</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.impl.ExtensionContextImpl#isAddAtEnd <em>Add At End</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,8 +47,8 @@ public class ExtensionContextImpl extends UserDeclaredContextImpl implements Ext
 	 * @generated
 	 */
 	@Override
-	public String getExtensionCode() {
-		return (String) eGet(ContextPackage.Literals.EXTENSION_CONTEXT__EXTENSION_CODE, true);
+	public String getCustomAccessPolicy() {
+		return (String) eGet(ContextPackage.Literals.EXTENSION_CONTEXT__CUSTOM_ACCESS_POLICY, true);
 	}
 
 	/**
@@ -56,8 +57,28 @@ public class ExtensionContextImpl extends UserDeclaredContextImpl implements Ext
 	 * @generated
 	 */
 	@Override
-	public void setExtensionCode(String newExtensionCode) {
-		eSet(ContextPackage.Literals.EXTENSION_CONTEXT__EXTENSION_CODE, newExtensionCode);
+	public void setCustomAccessPolicy(String newCustomAccessPolicy) {
+		eSet(ContextPackage.Literals.EXTENSION_CONTEXT__CUSTOM_ACCESS_POLICY, newCustomAccessPolicy);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isAddAtEnd() {
+		return (Boolean) eGet(ContextPackage.Literals.EXTENSION_CONTEXT__ADD_AT_END, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddAtEnd(boolean newAddAtEnd) {
+		eSet(ContextPackage.Literals.EXTENSION_CONTEXT__ADD_AT_END, newAddAtEnd);
 	}
 
 } //ExtensionContextImpl

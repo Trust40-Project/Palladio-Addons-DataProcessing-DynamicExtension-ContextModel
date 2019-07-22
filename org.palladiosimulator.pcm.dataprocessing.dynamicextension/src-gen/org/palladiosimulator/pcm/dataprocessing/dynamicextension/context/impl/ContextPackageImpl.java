@@ -537,8 +537,18 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getExtensionContext_ExtensionCode() {
+	public EAttribute getExtensionContext_CustomAccessPolicy() {
 		return (EAttribute) extensionContextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getExtensionContext_AddAtEnd() {
+		return (EAttribute) extensionContextEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -659,7 +669,8 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		createEReference(prerequisiteContextEClass, PREREQUISITE_CONTEXT__PREREQUISITE);
 
 		extensionContextEClass = createEClass(EXTENSION_CONTEXT);
-		createEAttribute(extensionContextEClass, EXTENSION_CONTEXT__EXTENSION_CODE);
+		createEAttribute(extensionContextEClass, EXTENSION_CONTEXT__CUSTOM_ACCESS_POLICY);
+		createEAttribute(extensionContextEClass, EXTENSION_CONTEXT__ADD_AT_END);
 
 		integralComparisonContextEClass = createEClass(INTEGRAL_COMPARISON_CONTEXT);
 		createEAttribute(integralComparisonContextEClass, INTEGRAL_COMPARISON_CONTEXT__THRESHOLD);
@@ -803,7 +814,10 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 
 		initEClass(extensionContextEClass, ExtensionContext.class, "ExtensionContext", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExtensionContext_ExtensionCode(), theXMLTypePackage.getString(), "extensionCode", null, 0, 1,
+		initEAttribute(getExtensionContext_CustomAccessPolicy(), theXMLTypePackage.getString(), "customAccessPolicy",
+				null, 0, 1, ExtensionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExtensionContext_AddAtEnd(), theEcorePackage.getEBoolean(), "addAtEnd", null, 0, 1,
 				ExtensionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 

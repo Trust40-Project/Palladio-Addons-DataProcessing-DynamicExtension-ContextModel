@@ -76,7 +76,8 @@
             ecoreFeature="ecore:EReference dynamicextension.ecore#//context/PrerequisiteContext/prerequisite"/>
       </genClasses>
       <genClasses ecoreClass="dynamicextension.ecore#//context/ExtensionContext">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//context/ExtensionContext/extensionCode"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//context/ExtensionContext/customAccessPolicy"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//context/ExtensionContext/addAtEnd"/>
       </genClasses>
       <genClasses ecoreClass="dynamicextension.ecore#//context/IntegralComparisonContext">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension.ecore#//context/IntegralComparisonContext/threshold"/>
