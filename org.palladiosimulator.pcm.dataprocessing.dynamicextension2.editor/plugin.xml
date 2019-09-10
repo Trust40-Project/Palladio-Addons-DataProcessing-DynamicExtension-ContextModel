@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dynamicextension2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.presentation.Dynamicextension2ModelWizardID"
+            name="%_UI_Dynamicextension2ModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.presentation.Dynamicextension2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Dynamicextension2ModelFile.gif">
+         <description>%_UI_Dynamicextension2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dynamicextension2 -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.presentation.Dynamicextension2EditorID"
+            name="%_UI_Dynamicextension2Editor_label"
+            icon="icons/full/obj16/Dynamicextension2ModelFile.gif"
+            extensions="dynamicextension2"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.presentation.Dynamicextension2Editor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.presentation.Dynamicextension2ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dynamicextension2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.presentation.ContextModelWizardID"
+            name="%_UI_ContextModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.presentation.ContextModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContextModelFile.gif">
+         <description>%_UI_ContextModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dynamicextension2 -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.presentation.ContextEditorID"
+            name="%_UI_ContextEditor_label"
+            icon="icons/full/obj16/ContextModelFile.gif"
+            extensions="context"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.presentation.ContextEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.presentation.ContextActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dynamicextension2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.presentation.UtilModelWizardID"
+            name="%_UI_UtilModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.presentation.UtilModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UtilModelFile.gif">
+         <description>%_UI_UtilModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dynamicextension2 -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.presentation.UtilEditorID"
+            name="%_UI_UtilEditor_label"
+            icon="icons/full/obj16/UtilModelFile.gif"
+            extensions="util"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.presentation.UtilEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.presentation.UtilActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dynamicextension2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.presentation.SubjectModelWizardID"
+            name="%_UI_SubjectModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.presentation.SubjectModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SubjectModelFile.gif">
+         <description>%_UI_SubjectModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dynamicextension2 -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.presentation.SubjectEditorID"
+            name="%_UI_SubjectEditor_label"
+            icon="icons/full/obj16/SubjectModelFile.gif"
+            extensions="subject"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.presentation.SubjectEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.presentation.SubjectActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dynamicextension2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.helperattributes.presentation.HelperattributesModelWizardID"
+            name="%_UI_HelperattributesModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.helperattributes.presentation.HelperattributesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/HelperattributesModelFile.gif">
+         <description>%_UI_HelperattributesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dynamicextension2 -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.helperattributes.presentation.HelperattributesEditorID"
+            name="%_UI_HelperattributesEditor_label"
+            icon="icons/full/obj16/HelperattributesModelFile.gif"
+            extensions="helperattributes"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.helperattributes.presentation.HelperattributesEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.helperattributes.presentation.HelperattributesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

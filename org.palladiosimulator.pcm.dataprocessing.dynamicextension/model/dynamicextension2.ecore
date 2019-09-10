@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dynamicextension2" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/0.1/"
+    nsPrefix="dynamicextension2">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore.xml.type" value="http://www.eclipse.org/emf/2003/XMLType"/>
+    <details key="entity" value="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextContainer" lowerBound="1"
+        eType="#//context/ContextContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="utilContainer" lowerBound="1"
+        eType="#//util/UtilContainer" containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="context" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/context/0.1/"
+      nsPrefix="context">
+    <eClassifiers xsi:type="ecore:EClass" name="ContextContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" upperBound="-1"
+          eType="#//context/Context" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="permissions" upperBound="-1"
+          eType="#//context/Permission" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true">
+      <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HierarchicalContext" abstract="true"
+        eSuperTypes="#//context/Context"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EnvironmentDependentContext" abstract="true"
+        eSuperTypes="#//context/Context"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SimplePropertyContext" abstract="true"
+        eSuperTypes="#//context/Context"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PrivacyLevelContext" eSuperTypes="#//context/SimplePropertyContext">
+      <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ShiftContext" eSuperTypes="#//context/SimplePropertyContext">
+      <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="shift" lowerBound="1"
+          eType="#//util/helperattributes/Shift"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalStateContext" eSuperTypes="#//context/EnvironmentDependentContext">
+      <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referenceSubject" lowerBound="1"
+          eType="#//util/subject/StatefulSubject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="desiredInternalState"
+          lowerBound="1" eType="#//util/helperattributes/InternalState"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RoleContext" eSuperTypes="#//context/HierarchicalContext">
+      <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1"
+          eType="#//util/helperattributes/Role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LocationContext" eSuperTypes="#//context/HierarchicalContext">
+      <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="location" lowerBound="1"
+          eType="#//util/helperattributes/Location"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrganizationContext" eSuperTypes="#//context/HierarchicalContext">
+      <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="organization" lowerBound="1"
+          eType="#//util/subject/Organization"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Permission" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" lowerBound="1"
+          upperBound="-1" eType="#//context/Context"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="util" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/util/0.1/"
+      nsPrefix="util">
+    <eClassifiers xsi:type="ecore:EClass" name="UtilContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subjectContainer" lowerBound="1"
+          eType="#//util/subject/SubjectContainer" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="helperattributesContainer"
+          lowerBound="1" eType="#//util/helperattributes/HelperContainer" containment="true"/>
+    </eClassifiers>
+    <eSubpackages name="subject" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/util/subject/0.1/"
+        nsPrefix="subject">
+      <eClassifiers xsi:type="ecore:EClass" name="SubjectContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subject" upperBound="-1"
+            eType="#//util/subject/Subject" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Subject" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" upperBound="-1"
+            eType="#//context/Context"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StatefulSubject" abstract="true"
+          eSuperTypes="#//util/subject/Subject">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="internalState" upperBound="-1"
+            eType="#//util/helperattributes/InternalState"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//util/subject/Subject"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Organization" eSuperTypes="#//util/subject/StatefulSubject">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ownedSubjects" upperBound="-1"
+            eType="#//util/subject/Subject"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ownedBy" eType="#//util/subject/Organization"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//util/subject/StatefulSubject"/>
+    </eSubpackages>
+    <eSubpackages name="helperattributes" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/util/helperattributes/0.1/"
+        nsPrefix="helperattributes">
+      <eClassifiers xsi:type="ecore:EClass" name="HelperContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="shiftcontainer" upperBound="-1"
+            eType="#//util/helperattributes/ShiftContainer" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="rolecontainer" upperBound="-1"
+            eType="#//util/helperattributes/RoleContainer" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="locationcontainer"
+            upperBound="-1" eType="#//util/helperattributes/LocationContainer" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="internalstatecontainer"
+            upperBound="-1" eType="#//util/helperattributes/InternalStateContainer"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LocationContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="organisation" lowerBound="1"
+            eType="#//util/subject/Organization"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="location" upperBound="-1"
+            eType="#//util/helperattributes/Location" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ShiftContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="organisation" lowerBound="1"
+            eType="#//util/subject/Organization"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="shift" upperBound="-1"
+            eType="#//util/helperattributes/Shift" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RoleContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="organisation" lowerBound="1"
+            eType="#//util/subject/Organization"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="role" upperBound="-1"
+            eType="#//util/helperattributes/Role" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InternalStateContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="internalStates" upperBound="-1"
+            eType="#//util/helperattributes/InternalState"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="organization" lowerBound="1"
+            eType="#//util/subject/Organization"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
+            eType="#//util/helperattributes/Location"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Shift" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DateTime"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="endTime" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DateTime"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="superordinateRoles"
+            upperBound="-1" eType="#//util/helperattributes/Role"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subordinateRoles" upperBound="-1"
+            eType="#//util/helperattributes/Role"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InternalState" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.palladiosimulator.pcm.dataprocessing.dynamicextension/src-gen"
+    editDirectory="/org.palladiosimulator.pcm.dataprocessing.dynamicextension2.edit/src-gen"
+    editorDirectory="/org.palladiosimulator.pcm.dataprocessing.dynamicextension2.editor/src-gen"
+    modelPluginID="org.palladiosimulator.pcm.dataprocessing.dynamicextension" modelName="Dynamicextension2"
+    editPluginClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.provider.Dynamicextension2EditPlugin"
+    editorPluginClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.presentation.Dynamicextension2EditorPlugin"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" testsDirectory="/org.palladiosimulator.pcm.dataprocessing.dynamicextension.tests/src-gen"
+    testSuiteClass="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.tests.Dynamicextension2AllTests"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective" complianceLevel="10.0"
+    copyrightFields="false" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
+    editPluginID="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.edit"
+    editorPluginID="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.editor"
+    testsPluginID="org.palladiosimulator.pcm.dataprocessing.dynamicextension.tests"
+    usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    importOrganizing="true">
+  <foreignModel>dynamicextension2.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Dynamicextension2" basePackage="org.palladiosimulator.pcm.dataprocessing"
+      disposableProviderFactory="true" extensibleProviderFactory="true" childCreationExtenders="true"
+      ecorePackage="dynamicextension2.ecore#/">
+    <genClasses ecoreClass="dynamicextension2.ecore#//DynamicSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//DynamicSpecification/contextContainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//DynamicSpecification/utilContainer"/>
+    </genClasses>
+    <nestedGenPackages prefix="Context" disposableProviderFactory="true" ecorePackage="dynamicextension2.ecore#//context">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/ContextContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ContextContainer/contexts"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ContextContainer/permissions"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/Context">
+        <genOperations ecoreOperation="dynamicextension2.ecore#//context/Context/equalsContext">
+          <genParameters ecoreParameter="dynamicextension2.ecore#//context/Context/equalsContext/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/HierarchicalContext"/>
+      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/EnvironmentDependentContext"/>
+      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/SimplePropertyContext"/>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/PrivacyLevelContext">
+        <genOperations ecoreOperation="dynamicextension2.ecore#//context/PrivacyLevelContext/equalsContext">
+          <genParameters ecoreParameter="dynamicextension2.ecore#//context/PrivacyLevelContext/equalsContext/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/ShiftContext">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ShiftContext/shift"/>
+        <genOperations ecoreOperation="dynamicextension2.ecore#//context/ShiftContext/equalsContext">
+          <genParameters ecoreParameter="dynamicextension2.ecore#//context/ShiftContext/equalsContext/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/InternalStateContext">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/InternalStateContext/referenceSubject"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/InternalStateContext/desiredInternalState"/>
+        <genOperations ecoreOperation="dynamicextension2.ecore#//context/InternalStateContext/equalsContext">
+          <genParameters ecoreParameter="dynamicextension2.ecore#//context/InternalStateContext/equalsContext/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/RoleContext">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/RoleContext/role"/>
+        <genOperations ecoreOperation="dynamicextension2.ecore#//context/RoleContext/equalsContext">
+          <genParameters ecoreParameter="dynamicextension2.ecore#//context/RoleContext/equalsContext/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/LocationContext">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/LocationContext/location"/>
+        <genOperations ecoreOperation="dynamicextension2.ecore#//context/LocationContext/equalsContext">
+          <genParameters ecoreParameter="dynamicextension2.ecore#//context/LocationContext/equalsContext/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/OrganizationContext">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/OrganizationContext/organization"/>
+        <genOperations ecoreOperation="dynamicextension2.ecore#//context/OrganizationContext/equalsContext">
+          <genParameters ecoreParameter="dynamicextension2.ecore#//context/OrganizationContext/equalsContext/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/Permission">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/Permission/contexts"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Util" disposableProviderFactory="true" ecorePackage="dynamicextension2.ecore#//util">
+      <genClasses ecoreClass="dynamicextension2.ecore#//util/UtilContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/UtilContainer/subjectContainer"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/UtilContainer/helperattributesContainer"/>
+      </genClasses>
+      <nestedGenPackages prefix="Subject" disposableProviderFactory="true" ecorePackage="dynamicextension2.ecore#//util/subject">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/SubjectContainer">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/SubjectContainer/subject"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="dynamicextension2.ecore#//util/subject/Subject">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/Subject/contexts"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="dynamicextension2.ecore#//util/subject/StatefulSubject">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/StatefulSubject/internalState"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/User"/>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/Organization">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/Organization/ownedSubjects"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/Organization/ownedBy"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/Resource"/>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Helperattributes" disposableProviderFactory="true"
+          ecorePackage="dynamicextension2.ecore#//util/helperattributes">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/HelperContainer">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/HelperContainer/shiftcontainer"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/HelperContainer/rolecontainer"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/HelperContainer/locationcontainer"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/HelperContainer/internalstatecontainer"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/LocationContainer">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/LocationContainer/organisation"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/LocationContainer/location"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/ShiftContainer">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/ShiftContainer/organisation"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/ShiftContainer/shift"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/RoleContainer">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/RoleContainer/organisation"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/RoleContainer/role"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/InternalStateContainer">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/InternalStateContainer/internalStates"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/InternalStateContainer/organization"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Location">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/Location/includes"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Shift">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension2.ecore#//util/helperattributes/Shift/startTime"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension2.ecore#//util/helperattributes/Shift/endTime"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Role">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/Role/superordinateRoles"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/Role/subordinateRoles"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/InternalState">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension2.ecore#//util/helperattributes/InternalState/name"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
