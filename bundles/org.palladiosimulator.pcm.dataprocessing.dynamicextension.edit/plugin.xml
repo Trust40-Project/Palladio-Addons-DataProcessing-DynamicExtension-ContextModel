@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated dynamicextension -->
+      <factory
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension.provider.DynamicextensionItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated dynamicextension -->
+      <factory
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/context/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.provider.ContextItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated dynamicextension -->
+      <extender
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/processing/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.provider.ContextItemProviderAdapterFactory$ProcessingChildCreationExtender"/>
+      <extender
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.provider.ContextItemProviderAdapterFactory$CharacteristicsChildCreationExtender"/>
+      <extender
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/effectspecification/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension.context.provider.ContextItemProviderAdapterFactory$EffectspecificationChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated dynamicextension -->
+      <factory
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/subject/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.subject.provider.SubjectItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated dynamicextension -->
+      <factory
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic/util/helperattributes/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension.util.helperattributes.provider.HelperattributesItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+</plugin>

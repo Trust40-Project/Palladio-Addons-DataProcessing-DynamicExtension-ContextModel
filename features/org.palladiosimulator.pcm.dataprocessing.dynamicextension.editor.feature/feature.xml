@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.palladiosimulator.pcm.dataprocessing.dynamicextension.editor.feature"
+      label="PCM Data Processing Meta Model Editor"
+      version="0.1.0.qualifier"
+      plugin="org.palladiosimulator.branding"
+      license-feature="org.palladiosimulator.license.epl2"
+      license-feature-version="1.0.0">
+
+   <includes
+         id="org.palladiosimulator.pcm.dataprocessing.dynamicextension.model.feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.palladiosimulator.branding"/>
+   </requires>
+
+   <plugin
+         id="org.palladiosimulator.pcm.dataprocessing.dynamicextension.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.palladiosimulator.pcm.dataprocessing.dynamicextension.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
