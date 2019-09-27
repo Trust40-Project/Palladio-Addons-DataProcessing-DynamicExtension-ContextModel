@@ -1,3 +1,3 @@
 PalladioPipeline {
-    deployUpdatesite 'org.palladiosimulator.pcm.dataprocessing.dynamicextension.updatesite/target/repository'
+    deployUpdatesite 'releng/org.palladiosimulator.pcm.dataprocessing.dynamicextension.updatesite/target/repository'
 }
