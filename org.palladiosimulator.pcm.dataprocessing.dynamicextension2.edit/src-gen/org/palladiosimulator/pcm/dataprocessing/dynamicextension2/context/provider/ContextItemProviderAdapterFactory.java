@@ -95,6 +95,29 @@ public class ContextItemProviderAdapterFactory extends ContextAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.PermissionContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PermissionContainerItemProvider permissionContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.PermissionContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPermissionContainerAdapter() {
+		if (permissionContainerItemProvider == null) {
+			permissionContainerItemProvider = new PermissionContainerItemProvider(this);
+		}
+
+		return permissionContainerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.PrivacyLevelContext} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -361,6 +384,7 @@ public class ContextItemProviderAdapterFactory extends ContextAdapterFactory imp
 	@Override
 	public void dispose() {
 		if (contextContainerItemProvider != null) contextContainerItemProvider.dispose();
+		if (permissionContainerItemProvider != null) permissionContainerItemProvider.dispose();
 		if (privacyLevelContextItemProvider != null) privacyLevelContextItemProvider.dispose();
 		if (shiftContextItemProvider != null) shiftContextItemProvider.dispose();
 		if (internalStateContextItemProvider != null) internalStateContextItemProvider.dispose();

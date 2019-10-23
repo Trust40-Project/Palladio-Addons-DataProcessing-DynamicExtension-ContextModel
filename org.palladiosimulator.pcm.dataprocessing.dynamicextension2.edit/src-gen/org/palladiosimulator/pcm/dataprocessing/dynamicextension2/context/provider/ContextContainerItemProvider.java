@@ -14,7 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -64,31 +63,8 @@ public class ContextContainerItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addContextsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Contexts feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContextsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ContextContainer_contexts_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContextContainer_contexts_feature", "_UI_ContextContainer_type"),
-				 ContextPackage.Literals.CONTEXT_CONTAINER__CONTEXTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -104,6 +80,7 @@ public class ContextContainerItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ContextPackage.Literals.CONTEXT_CONTAINER__CONTEXTS);
+			childrenFeatures.add(ContextPackage.Literals.CONTEXT_CONTAINER__PERMISSION_CONTAINER);
 			childrenFeatures.add(ContextPackage.Literals.CONTEXT_CONTAINER__PERMISSIONS);
 		}
 		return childrenFeatures;
@@ -158,6 +135,7 @@ public class ContextContainerItemProvider
 
 		switch (notification.getFeatureID(ContextContainer.class)) {
 			case ContextPackage.CONTEXT_CONTAINER__CONTEXTS:
+			case ContextPackage.CONTEXT_CONTAINER__PERMISSION_CONTAINER:
 			case ContextPackage.CONTEXT_CONTAINER__PERMISSIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -205,6 +183,11 @@ public class ContextContainerItemProvider
 			(createChildParameter
 				(ContextPackage.Literals.CONTEXT_CONTAINER__CONTEXTS,
 				 ContextFactory.eINSTANCE.createOrganizationContext()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ContextPackage.Literals.CONTEXT_CONTAINER__PERMISSION_CONTAINER,
+				 ContextFactory.eINSTANCE.createPermissionContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter

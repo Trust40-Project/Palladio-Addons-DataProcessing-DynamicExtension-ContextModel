@@ -72,26 +72,49 @@ public class SubjectItemProviderAdapterFactory extends SubjectAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.SubjectContainer} instances.
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.TopLevelSubjectContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SubjectContainerItemProvider subjectContainerItemProvider;
+	protected TopLevelSubjectContainerItemProvider topLevelSubjectContainerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.SubjectContainer}.
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.TopLevelSubjectContainer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSubjectContainerAdapter() {
-		if (subjectContainerItemProvider == null) {
-			subjectContainerItemProvider = new SubjectContainerItemProvider(this);
+	public Adapter createTopLevelSubjectContainerAdapter() {
+		if (topLevelSubjectContainerItemProvider == null) {
+			topLevelSubjectContainerItemProvider = new TopLevelSubjectContainerItemProvider(this);
 		}
 
-		return subjectContainerItemProvider;
+		return topLevelSubjectContainerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.UsageGroupSubjectContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UsageGroupSubjectContainerItemProvider usageGroupSubjectContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.UsageGroupSubjectContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUsageGroupSubjectContainerAdapter() {
+		if (usageGroupSubjectContainerItemProvider == null) {
+			usageGroupSubjectContainerItemProvider = new UsageGroupSubjectContainerItemProvider(this);
+		}
+
+		return usageGroupSubjectContainerItemProvider;
 	}
 
 	/**
@@ -268,7 +291,8 @@ public class SubjectItemProviderAdapterFactory extends SubjectAdapterFactory imp
 	 */
 	@Override
 	public void dispose() {
-		if (subjectContainerItemProvider != null) subjectContainerItemProvider.dispose();
+		if (topLevelSubjectContainerItemProvider != null) topLevelSubjectContainerItemProvider.dispose();
+		if (usageGroupSubjectContainerItemProvider != null) usageGroupSubjectContainerItemProvider.dispose();
 		if (userItemProvider != null) userItemProvider.dispose();
 		if (organizationItemProvider != null) organizationItemProvider.dispose();
 		if (resourceItemProvider != null) resourceItemProvider.dispose();

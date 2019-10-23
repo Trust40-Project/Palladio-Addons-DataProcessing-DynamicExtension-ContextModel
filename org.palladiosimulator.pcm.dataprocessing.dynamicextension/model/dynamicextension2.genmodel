@@ -28,7 +28,12 @@
     <nestedGenPackages prefix="Context" disposableProviderFactory="true" ecorePackage="dynamicextension2.ecore#//context">
       <genClasses ecoreClass="dynamicextension2.ecore#//context/ContextContainer">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ContextContainer/contexts"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ContextContainer/permissionContainer"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ContextContainer/permissions"/>
+      </genClasses>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/PermissionContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/PermissionContainer/permissions"/>
       </genClasses>
       <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/Context">
         <genOperations ecoreOperation="dynamicextension2.ecore#//context/Context/equalsContext">
@@ -89,10 +94,15 @@
       <genClasses ecoreClass="dynamicextension2.ecore#//util/UtilContainer">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/UtilContainer/subjectContainer"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/UtilContainer/helperattributesContainer"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/UtilContainer/usageGroupSubjectContainers"/>
       </genClasses>
       <nestedGenPackages prefix="Subject" disposableProviderFactory="true" ecorePackage="dynamicextension2.ecore#//util/subject">
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/SubjectContainer">
-          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/SubjectContainer/subject"/>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/TopLevelSubjectContainer">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/TopLevelSubjectContainer/subject"/>
+        </genClasses>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/UsageGroupSubjectContainer">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/UsageGroupSubjectContainer/subjectsInSameUsageGroup"/>
         </genClasses>
         <genClasses image="false" ecoreClass="dynamicextension2.ecore#//util/subject/Subject">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"

@@ -17,8 +17,14 @@
     <eClassifiers xsi:type="ecore:EClass" name="ContextContainer">
       <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" upperBound="-1"
           eType="#//context/Context" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="permissionContainer"
+          upperBound="-1" eType="#//context/PermissionContainer" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="permissions" upperBound="-1"
           eType="#//context/Permission" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PermissionContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="permissions" lowerBound="1"
+          upperBound="-1" eType="#//context/Permission"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true">
       <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -82,15 +88,21 @@
       nsPrefix="util">
     <eClassifiers xsi:type="ecore:EClass" name="UtilContainer">
       <eStructuralFeatures xsi:type="ecore:EReference" name="subjectContainer" lowerBound="1"
-          eType="#//util/subject/SubjectContainer" containment="true"/>
+          eType="#//util/subject/TopLevelSubjectContainer" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="helperattributesContainer"
           lowerBound="1" eType="#//util/helperattributes/HelperContainer" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="usageGroupSubjectContainers"
+          upperBound="-1" eType="#//util/subject/UsageGroupSubjectContainer" containment="true"/>
     </eClassifiers>
     <eSubpackages name="subject" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/util/subject/0.1/"
         nsPrefix="subject">
-      <eClassifiers xsi:type="ecore:EClass" name="SubjectContainer">
+      <eClassifiers xsi:type="ecore:EClass" name="TopLevelSubjectContainer">
         <eStructuralFeatures xsi:type="ecore:EReference" name="subject" upperBound="-1"
             eType="#//util/subject/Subject" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="UsageGroupSubjectContainer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subjectsInSameUsageGroup"
+            lowerBound="1" upperBound="-1" eType="#//util/subject/Subject"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Subject" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" upperBound="-1"

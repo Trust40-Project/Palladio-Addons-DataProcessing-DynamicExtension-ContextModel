@@ -85,6 +85,7 @@ public class UtilContainerItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(UtilPackage.Literals.UTIL_CONTAINER__SUBJECT_CONTAINER);
 			childrenFeatures.add(UtilPackage.Literals.UTIL_CONTAINER__HELPERATTRIBUTES_CONTAINER);
+			childrenFeatures.add(UtilPackage.Literals.UTIL_CONTAINER__USAGE_GROUP_SUBJECT_CONTAINERS);
 		}
 		return childrenFeatures;
 	}
@@ -139,6 +140,7 @@ public class UtilContainerItemProvider
 		switch (notification.getFeatureID(UtilContainer.class)) {
 			case UtilPackage.UTIL_CONTAINER__SUBJECT_CONTAINER:
 			case UtilPackage.UTIL_CONTAINER__HELPERATTRIBUTES_CONTAINER:
+			case UtilPackage.UTIL_CONTAINER__USAGE_GROUP_SUBJECT_CONTAINERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,12 +161,17 @@ public class UtilContainerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(UtilPackage.Literals.UTIL_CONTAINER__SUBJECT_CONTAINER,
-				 SubjectFactory.eINSTANCE.createSubjectContainer()));
+				 SubjectFactory.eINSTANCE.createTopLevelSubjectContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(UtilPackage.Literals.UTIL_CONTAINER__HELPERATTRIBUTES_CONTAINER,
 				 HelperattributesFactory.eINSTANCE.createHelperContainer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UtilPackage.Literals.UTIL_CONTAINER__USAGE_GROUP_SUBJECT_CONTAINERS,
+				 SubjectFactory.eINSTANCE.createUsageGroupSubjectContainer()));
 	}
 
 	/**
