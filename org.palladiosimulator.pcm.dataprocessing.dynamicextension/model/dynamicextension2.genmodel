@@ -31,31 +31,37 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ContextContainer/permissionContainer"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ContextContainer/permissions"/>
       </genClasses>
-      <genClasses ecoreClass="dynamicextension2.ecore#//context/PermissionContainer">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/PermissionContainer"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/PermissionContainer/permissions"/>
       </genClasses>
-      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/Context">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/Context" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genOperations ecoreOperation="dynamicextension2.ecore#//context/Context/equalsContext">
           <genParameters ecoreParameter="dynamicextension2.ecore#//context/Context/equalsContext/context"/>
         </genOperations>
       </genClasses>
-      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/HierarchicalContext"/>
-      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/EnvironmentDependentContext"/>
-      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/SimplePropertyContext"/>
-      <genClasses ecoreClass="dynamicextension2.ecore#//context/PrivacyLevelContext">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/HierarchicalContext"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/EnvironmentDependentContext"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/SimplePropertyContext"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/PrivacyLevelContext"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genOperations ecoreOperation="dynamicextension2.ecore#//context/PrivacyLevelContext/equalsContext">
           <genParameters ecoreParameter="dynamicextension2.ecore#//context/PrivacyLevelContext/equalsContext/context"/>
         </genOperations>
       </genClasses>
-      <genClasses image="false" ecoreClass="dynamicextension2.ecore#//context/ShiftContext">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/ShiftContext" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/ShiftContext/shift"/>
         <genOperations ecoreOperation="dynamicextension2.ecore#//context/ShiftContext/equalsContext">
           <genParameters ecoreParameter="dynamicextension2.ecore#//context/ShiftContext/equalsContext/context"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="dynamicextension2.ecore#//context/InternalStateContext">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/InternalStateContext"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/InternalStateContext/referenceSubject"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -64,28 +70,29 @@
           <genParameters ecoreParameter="dynamicextension2.ecore#//context/InternalStateContext/equalsContext/context"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="dynamicextension2.ecore#//context/RoleContext">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/RoleContext" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/RoleContext/role"/>
         <genOperations ecoreOperation="dynamicextension2.ecore#//context/RoleContext/equalsContext">
           <genParameters ecoreParameter="dynamicextension2.ecore#//context/RoleContext/equalsContext/context"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="dynamicextension2.ecore#//context/LocationContext">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/LocationContext" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/LocationContext/location"/>
         <genOperations ecoreOperation="dynamicextension2.ecore#//context/LocationContext/equalsContext">
           <genParameters ecoreParameter="dynamicextension2.ecore#//context/LocationContext/equalsContext/context"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="dynamicextension2.ecore#//context/OrganizationContext">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/OrganizationContext"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/OrganizationContext/organization"/>
         <genOperations ecoreOperation="dynamicextension2.ecore#//context/OrganizationContext/equalsContext">
           <genParameters ecoreParameter="dynamicextension2.ecore#//context/OrganizationContext/equalsContext/context"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="dynamicextension2.ecore#//context/Permission">
+      <genClasses ecoreClass="dynamicextension2.ecore#//context/Permission" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dynamicextension2.ecore#//context/Permission/contexts"/>
       </genClasses>
@@ -100,26 +107,29 @@
         <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/TopLevelSubjectContainer">
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/TopLevelSubjectContainer/subject"/>
         </genClasses>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/UsageGroupSubjectContainer">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/UsageGroupSubjectContainer"
+            labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/UsageGroupSubjectContainer/subjectsInSameUsageGroup"/>
         </genClasses>
-        <genClasses image="false" ecoreClass="dynamicextension2.ecore#//util/subject/Subject">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/Subject" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/Subject/contexts"/>
         </genClasses>
-        <genClasses image="false" ecoreClass="dynamicextension2.ecore#//util/subject/StatefulSubject">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/StatefulSubject"
+            labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/StatefulSubject/internalState"/>
         </genClasses>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/User"/>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/Organization">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/User" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/Organization"
+            labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/Organization/ownedSubjects"/>
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/subject/Organization/ownedBy"/>
         </genClasses>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/Resource"/>
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/subject/Resource" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
       </nestedGenPackages>
       <nestedGenPackages prefix="Helperattributes" disposableProviderFactory="true"
           ecorePackage="dynamicextension2.ecore#//util/helperattributes">
@@ -151,21 +161,27 @@
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/InternalStateContainer/organization"/>
         </genClasses>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Location">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Location"
+            labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/Location/includes"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/Location/includedIn"/>
         </genClasses>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Shift">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Shift"
+            labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension2.ecore#//util/helperattributes/Shift/startTime"/>
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension2.ecore#//util/helperattributes/Shift/endTime"/>
         </genClasses>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Role">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/Role"
+            labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/Role/superordinateRoles"/>
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference dynamicextension2.ecore#//util/helperattributes/Role/subordinateRoles"/>
         </genClasses>
-        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/InternalState">
+        <genClasses ecoreClass="dynamicextension2.ecore#//util/helperattributes/InternalState"
+            labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dynamicextension2.ecore#//util/helperattributes/InternalState/name"/>
         </genClasses>
       </nestedGenPackages>

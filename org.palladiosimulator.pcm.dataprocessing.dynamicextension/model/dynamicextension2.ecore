@@ -26,7 +26,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="permissions" lowerBound="1"
           upperBound="-1" eType="#//context/Permission"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true">
+    <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eOperations name="equalsContext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="context" lowerBound="1" eType="#//context/Context"/>
       </eOperations>
@@ -100,7 +100,7 @@
         <eStructuralFeatures xsi:type="ecore:EReference" name="subject" upperBound="-1"
             eType="#//util/subject/Subject" containment="true"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="UsageGroupSubjectContainer">
+      <eClassifiers xsi:type="ecore:EClass" name="UsageGroupSubjectContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="subjectsInSameUsageGroup"
             lowerBound="1" upperBound="-1" eType="#//util/subject/Subject"/>
       </eClassifiers>
@@ -159,7 +159,9 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
-            eType="#//util/helperattributes/Location"/>
+            eType="#//util/helperattributes/Location" eOpposite="#//util/helperattributes/Location/includedIn"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="includedIn" eType="#//util/helperattributes/Location"
+            eOpposite="#//util/helperattributes/Location/includes"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Shift" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" lowerBound="1"
@@ -169,9 +171,9 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EReference" name="superordinateRoles"
-            upperBound="-1" eType="#//util/helperattributes/Role"/>
+            upperBound="-1" eType="#//util/helperattributes/Role" eOpposite="#//util/helperattributes/Role/subordinateRoles"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="subordinateRoles" upperBound="-1"
-            eType="#//util/helperattributes/Role"/>
+            eType="#//util/helperattributes/Role" eOpposite="#//util/helperattributes/Role/superordinateRoles"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="InternalState" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
