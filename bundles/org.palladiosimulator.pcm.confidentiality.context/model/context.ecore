@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="context" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/0.1/"
+    nsPrefix="context">
+  <eClassifiers xsi:type="ecore:EClass" name="ConfidentialAccessSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextContainer" eType="#//model/Context"
+        containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="model" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/context/model/0.1/"
+      nsPrefix="model">
+    <eClassifiers xsi:type="ecore:EClass" name="HierachicalContext" eSuperTypes="#//model/Context">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//model/HierachicalContext"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SingleAttributeContext" eSuperTypes="#//model/Context"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RelatedContext" eSuperTypes="#//model/Context"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true"/>
+  </eSubpackages>
+</ecore:EPackage>
