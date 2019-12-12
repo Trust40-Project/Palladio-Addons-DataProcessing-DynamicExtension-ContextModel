@@ -59,8 +59,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
             return (EObject) createHierachicalContext();
         case ModelPackage.SINGLE_ATTRIBUTE_CONTEXT:
             return (EObject) createSingleAttributeContext();
-        case ModelPackage.RELATED_CONTEXT:
-            return (EObject) createRelatedContext();
+        case ModelPackage.RELATED_CONTEXT_SET:
+            return (EObject) createRelatedContextSet();
+        case ModelPackage.CONTEXT_CONTAINER:
+            return (EObject) createContextContainer();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -91,9 +93,19 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public RelatedContext createRelatedContext() {
-        RelatedContextImpl relatedContext = new RelatedContextImpl();
-        return relatedContext;
+    public RelatedContextSet createRelatedContextSet() {
+        RelatedContextSetImpl relatedContextSet = new RelatedContextSetImpl();
+        return relatedContextSet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ContextContainer createContextContainer() {
+        ContextContainerImpl contextContainer = new ContextContainerImpl();
+        return contextContainer;
     }
 
     /**

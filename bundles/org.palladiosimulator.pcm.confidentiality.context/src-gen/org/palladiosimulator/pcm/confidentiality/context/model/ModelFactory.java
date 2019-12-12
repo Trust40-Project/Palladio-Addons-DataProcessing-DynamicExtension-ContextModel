@@ -40,13 +40,22 @@ public interface ModelFactory extends EFactory {
     SingleAttributeContext createSingleAttributeContext();
 
     /**
-     * Returns a new object of class '<em>Related Context</em>'.
+     * Returns a new object of class '<em>Related Context Set</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Related Context</em>'.
+     * @return a new object of class '<em>Related Context Set</em>'.
      * @generated
      */
-    RelatedContext createRelatedContext();
+    RelatedContextSet createRelatedContextSet();
+
+    /**
+     * Returns a new object of class '<em>Context Container</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Context Container</em>'.
+     * @generated
+     */
+    ContextContainer createContextContainer();
 
     /**
      * Returns the package supported by this factory.

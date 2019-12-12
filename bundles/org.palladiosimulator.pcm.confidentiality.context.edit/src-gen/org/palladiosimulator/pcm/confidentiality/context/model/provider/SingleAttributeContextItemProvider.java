@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.palladiosimulator.pcm.confidentiality.context.model.SingleAttributeContext;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.context.model.SingleAttributeContext} object.
@@ -71,7 +72,9 @@ public class SingleAttributeContextItemProvider extends ContextItemProvider {
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_SingleAttributeContext_type");
+        String label = ((SingleAttributeContext) object).getEntityName();
+        return label == null || label.length() == 0 ? getString("_UI_SingleAttributeContext_type")
+                : getString("_UI_SingleAttributeContext_type") + " " + label;
     }
 
     /**

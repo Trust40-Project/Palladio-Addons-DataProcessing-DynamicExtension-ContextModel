@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
-
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelFactory;
+import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyFactory;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification} object.
@@ -57,8 +57,44 @@ public class ConfidentialAccessSpecificationItemProvider extends ItemProviderAda
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addPolicyContainerPropertyDescriptor(object);
+            addContextcontainerPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Policy Container feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addPolicyContainerPropertyDescriptor(Object object) {
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(), getString("_UI_ConfidentialAccessSpecification_policyContainer_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_ConfidentialAccessSpecification_policyContainer_feature",
+                                "_UI_ConfidentialAccessSpecification_type"),
+                        ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__POLICY_CONTAINER, true, false, true,
+                        null, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Contextcontainer feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addContextcontainerPropertyDescriptor(Object object) {
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(), getString("_UI_ConfidentialAccessSpecification_contextcontainer_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_ConfidentialAccessSpecification_contextcontainer_feature",
+                                "_UI_ConfidentialAccessSpecification_type"),
+                        ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER, true, false, true,
+                        null, null, null));
     }
 
     /**
@@ -73,7 +109,8 @@ public class ConfidentialAccessSpecificationItemProvider extends ItemProviderAda
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER);
+            childrenFeatures.add(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__POLICY_CONTAINER);
+            childrenFeatures.add(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER);
         }
         return childrenFeatures;
     }
@@ -135,7 +172,8 @@ public class ConfidentialAccessSpecificationItemProvider extends ItemProviderAda
         updateChildren(notification);
 
         switch (notification.getFeatureID(ConfidentialAccessSpecification.class)) {
-        case ContextPackage.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER:
+        case ContextPackage.CONFIDENTIAL_ACCESS_SPECIFICATION__POLICY_CONTAINER:
+        case ContextPackage.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -154,16 +192,12 @@ public class ConfidentialAccessSpecificationItemProvider extends ItemProviderAda
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors
-                .add(createChildParameter(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER,
-                        ModelFactory.eINSTANCE.createHierachicalContext()));
+                .add(createChildParameter(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__POLICY_CONTAINER,
+                        PolicyFactory.eINSTANCE.createPolicyContainer()));
 
         newChildDescriptors
-                .add(createChildParameter(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER,
-                        ModelFactory.eINSTANCE.createSingleAttributeContext()));
-
-        newChildDescriptors
-                .add(createChildParameter(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER,
-                        ModelFactory.eINSTANCE.createRelatedContext()));
+                .add(createChildParameter(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER,
+                        ModelFactory.eINSTANCE.createContextContainer()));
     }
 
     /**

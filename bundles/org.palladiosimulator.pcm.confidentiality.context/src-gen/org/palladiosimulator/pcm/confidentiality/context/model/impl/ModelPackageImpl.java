@@ -22,12 +22,23 @@ import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.impl.ContextPackageImpl;
 
+import org.palladiosimulator.pcm.confidentiality.context.misusage.MisusagePackage;
+import org.palladiosimulator.pcm.confidentiality.context.misusage.impl.MisusagePackageImpl;
 import org.palladiosimulator.pcm.confidentiality.context.model.Context;
+import org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer;
 import org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelFactory;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
-import org.palladiosimulator.pcm.confidentiality.context.model.RelatedContext;
+import org.palladiosimulator.pcm.confidentiality.context.model.RelatedContextSet;
 import org.palladiosimulator.pcm.confidentiality.context.model.SingleAttributeContext;
+
+import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyPackage;
+
+import org.palladiosimulator.pcm.confidentiality.context.policy.impl.PolicyPackageImpl;
+
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
+
+import org.palladiosimulator.pcm.repository.RepositoryPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +66,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass relatedContextEClass = null;
+    private EClass relatedContextSetEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -63,6 +74,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     private EClass contextEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass contextContainerEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -126,14 +144,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
         ContextPackageImpl theContextPackage = (ContextPackageImpl) (registeredPackage instanceof ContextPackageImpl
                 ? registeredPackage
                 : ContextPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PolicyPackage.eNS_URI);
+        PolicyPackageImpl thePolicyPackage = (PolicyPackageImpl) (registeredPackage instanceof PolicyPackageImpl
+                ? registeredPackage
+                : PolicyPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MisusagePackage.eNS_URI);
+        MisusagePackageImpl theMisusagePackage = (MisusagePackageImpl) (registeredPackage instanceof MisusagePackageImpl
+                ? registeredPackage
+                : MisusagePackage.eINSTANCE);
 
         // Create package meta-data objects
         theModelPackage.createPackageContents();
         theContextPackage.createPackageContents();
+        thePolicyPackage.createPackageContents();
+        theMisusagePackage.createPackageContents();
 
         // Initialize created meta-data
         theModelPackage.initializePackageContents();
         theContextPackage.initializePackageContents();
+        thePolicyPackage.initializePackageContents();
+        theMisusagePackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theModelPackage.freeze();
@@ -175,8 +205,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getRelatedContext() {
-        return relatedContextEClass;
+    public EClass getRelatedContextSet() {
+        return relatedContextSetEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getRelatedContextSet_Context() {
+        return (EReference) relatedContextSetEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -186,6 +225,33 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     public EClass getContext() {
         return contextEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getContext_Repositorycomponent() {
+        return (EReference) contextEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getContextContainer() {
+        return contextContainerEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getContextContainer_Context() {
+        return (EReference) contextContainerEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -222,9 +288,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
         singleAttributeContextEClass = createEClass(SINGLE_ATTRIBUTE_CONTEXT);
 
-        relatedContextEClass = createEClass(RELATED_CONTEXT);
+        relatedContextSetEClass = createEClass(RELATED_CONTEXT_SET);
+        createEReference(relatedContextSetEClass, RELATED_CONTEXT_SET__CONTEXT);
 
         contextEClass = createEClass(CONTEXT);
+        createEReference(contextEClass, CONTEXT__REPOSITORYCOMPONENT);
+
+        contextContainerEClass = createEClass(CONTEXT_CONTAINER);
+        createEReference(contextContainerEClass, CONTEXT_CONTAINER__CONTEXT);
     }
 
     /**
@@ -251,6 +322,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
         setNsPrefix(eNS_PREFIX);
         setNsURI(eNS_URI);
 
+        // Obtain other dependent packages
+        EntityPackage theEntityPackage = (EntityPackage) EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
+        RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
+                .getEPackage(RepositoryPackage.eNS_URI);
+
         // Create type parameters
 
         // Set bounds for type parameters
@@ -258,7 +334,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
         // Add supertypes to classes
         hierachicalContextEClass.getESuperTypes().add(this.getContext());
         singleAttributeContextEClass.getESuperTypes().add(this.getContext());
-        relatedContextEClass.getESuperTypes().add(this.getContext());
+        relatedContextSetEClass.getESuperTypes().add(this.getContext());
+        contextEClass.getESuperTypes().add(theEntityPackage.getEntity());
+        contextContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
         // Initialize classes and features; add operations and parameters
         initEClass(hierachicalContextEClass, HierachicalContext.class, "HierachicalContext", !IS_ABSTRACT,
@@ -270,10 +348,22 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
         initEClass(singleAttributeContextEClass, SingleAttributeContext.class, "SingleAttributeContext", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(relatedContextEClass, RelatedContext.class, "RelatedContext", !IS_ABSTRACT, !IS_INTERFACE,
+        initEClass(relatedContextSetEClass, RelatedContextSet.class, "RelatedContextSet", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getRelatedContextSet_Context(), this.getContext(), null, "context", null, 1, -1,
+                RelatedContextSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getContext_Repositorycomponent(), theRepositoryPackage.getRepositoryComponent(), null,
+                "repositorycomponent", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(contextContainerEClass, ContextContainer.class, "ContextContainer", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getContextContainer_Context(), this.getContext(), null, "context", null, 0, -1,
+                ContextContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     }
 
 } //ModelPackageImpl

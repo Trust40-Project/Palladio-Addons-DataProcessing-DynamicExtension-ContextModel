@@ -119,26 +119,49 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.context.model.RelatedContext} instances.
+     * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.context.model.RelatedContextSet} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected RelatedContextItemProvider relatedContextItemProvider;
+    protected RelatedContextSetItemProvider relatedContextSetItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.context.model.RelatedContext}.
+     * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.context.model.RelatedContextSet}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createRelatedContextAdapter() {
-        if (relatedContextItemProvider == null) {
-            relatedContextItemProvider = new RelatedContextItemProvider(this);
+    public Adapter createRelatedContextSetAdapter() {
+        if (relatedContextSetItemProvider == null) {
+            relatedContextSetItemProvider = new RelatedContextSetItemProvider(this);
         }
 
-        return relatedContextItemProvider;
+        return relatedContextSetItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ContextContainerItemProvider contextContainerItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createContextContainerAdapter() {
+        if (contextContainerItemProvider == null) {
+            contextContainerItemProvider = new ContextContainerItemProvider(this);
+        }
+
+        return contextContainerItemProvider;
     }
 
     /**
@@ -244,8 +267,10 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
             hierachicalContextItemProvider.dispose();
         if (singleAttributeContextItemProvider != null)
             singleAttributeContextItemProvider.dispose();
-        if (relatedContextItemProvider != null)
-            relatedContextItemProvider.dispose();
+        if (relatedContextSetItemProvider != null)
+            relatedContextSetItemProvider.dispose();
+        if (contextContainerItemProvider != null)
+            contextContainerItemProvider.dispose();
     }
 
 }

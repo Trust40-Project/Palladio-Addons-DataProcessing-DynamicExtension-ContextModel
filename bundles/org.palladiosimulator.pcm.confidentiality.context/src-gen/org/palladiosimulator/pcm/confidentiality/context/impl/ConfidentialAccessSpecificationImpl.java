@@ -8,8 +8,8 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
-
-import org.palladiosimulator.pcm.confidentiality.context.model.Context;
+import org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer;
+import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,8 @@ import org.palladiosimulator.pcm.confidentiality.context.model.Context;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.context.impl.ConfidentialAccessSpecificationImpl#getContextContainer <em>Context Container</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.context.impl.ConfidentialAccessSpecificationImpl#getPolicyContainer <em>Policy Container</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.context.impl.ConfidentialAccessSpecificationImpl#getContextcontainer <em>Contextcontainer</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,8 +60,9 @@ public class ConfidentialAccessSpecificationImpl extends CDOObjectImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
-    public Context getContextContainer() {
-        return (Context) eGet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER, true);
+    public PolicyContainer getPolicyContainer() {
+        return (PolicyContainer) eGet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__POLICY_CONTAINER,
+                true);
     }
 
     /**
@@ -68,8 +70,27 @@ public class ConfidentialAccessSpecificationImpl extends CDOObjectImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setContextContainer(Context newContextContainer) {
-        eSet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER, newContextContainer);
+    public void setPolicyContainer(PolicyContainer newPolicyContainer) {
+        eSet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__POLICY_CONTAINER, newPolicyContainer);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ContextContainer getContextcontainer() {
+        return (ContextContainer) eGet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER,
+                true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setContextcontainer(ContextContainer newContextcontainer) {
+        eSet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER, newContextcontainer);
     }
 
 } //ConfidentialAccessSpecificationImpl

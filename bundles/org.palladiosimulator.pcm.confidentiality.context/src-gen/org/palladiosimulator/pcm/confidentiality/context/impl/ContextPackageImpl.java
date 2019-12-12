@@ -22,9 +22,15 @@ import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpeci
 import org.palladiosimulator.pcm.confidentiality.context.ContextFactory;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
 
+import org.palladiosimulator.pcm.confidentiality.context.misusage.MisusagePackage;
+import org.palladiosimulator.pcm.confidentiality.context.misusage.impl.MisusagePackageImpl;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl;
+
+import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyPackage;
+
+import org.palladiosimulator.pcm.confidentiality.context.policy.impl.PolicyPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,14 +108,26 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
         ModelPackageImpl theModelPackage = (ModelPackageImpl) (registeredPackage instanceof ModelPackageImpl
                 ? registeredPackage
                 : ModelPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PolicyPackage.eNS_URI);
+        PolicyPackageImpl thePolicyPackage = (PolicyPackageImpl) (registeredPackage instanceof PolicyPackageImpl
+                ? registeredPackage
+                : PolicyPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MisusagePackage.eNS_URI);
+        MisusagePackageImpl theMisusagePackage = (MisusagePackageImpl) (registeredPackage instanceof MisusagePackageImpl
+                ? registeredPackage
+                : MisusagePackage.eINSTANCE);
 
         // Create package meta-data objects
         theContextPackage.createPackageContents();
         theModelPackage.createPackageContents();
+        thePolicyPackage.createPackageContents();
+        theMisusagePackage.createPackageContents();
 
         // Initialize created meta-data
         theContextPackage.initializePackageContents();
         theModelPackage.initializePackageContents();
+        thePolicyPackage.initializePackageContents();
+        theMisusagePackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theContextPackage.freeze();
@@ -133,8 +151,17 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getConfidentialAccessSpecification_ContextContainer() {
+    public EReference getConfidentialAccessSpecification_PolicyContainer() {
         return (EReference) confidentialAccessSpecificationEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getConfidentialAccessSpecification_Contextcontainer() {
+        return (EReference) confidentialAccessSpecificationEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -167,7 +194,8 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 
         // Create classes and their features
         confidentialAccessSpecificationEClass = createEClass(CONFIDENTIAL_ACCESS_SPECIFICATION);
-        createEReference(confidentialAccessSpecificationEClass, CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXT_CONTAINER);
+        createEReference(confidentialAccessSpecificationEClass, CONFIDENTIAL_ACCESS_SPECIFICATION__POLICY_CONTAINER);
+        createEReference(confidentialAccessSpecificationEClass, CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER);
     }
 
     /**
@@ -196,9 +224,14 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 
         // Obtain other dependent packages
         ModelPackage theModelPackage = (ModelPackage) EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI);
+        PolicyPackage thePolicyPackage = (PolicyPackage) EPackage.Registry.INSTANCE.getEPackage(PolicyPackage.eNS_URI);
+        MisusagePackage theMisusagePackage = (MisusagePackage) EPackage.Registry.INSTANCE
+                .getEPackage(MisusagePackage.eNS_URI);
 
         // Add subpackages
         getESubpackages().add(theModelPackage);
+        getESubpackages().add(thePolicyPackage);
+        getESubpackages().add(theMisusagePackage);
 
         // Create type parameters
 
@@ -209,9 +242,13 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
         // Initialize classes and features; add operations and parameters
         initEClass(confidentialAccessSpecificationEClass, ConfidentialAccessSpecification.class,
                 "ConfidentialAccessSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getConfidentialAccessSpecification_ContextContainer(), theModelPackage.getContext(), null,
-                "contextContainer", null, 0, 1, ConfidentialAccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
+        initEReference(getConfidentialAccessSpecification_PolicyContainer(), thePolicyPackage.getPolicyContainer(),
+                null, "policyContainer", null, 1, 1, ConfidentialAccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getConfidentialAccessSpecification_Contextcontainer(), theModelPackage.getContextContainer(),
+                null, "contextcontainer", null, 1, 1, ConfidentialAccessSpecification.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+                IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);

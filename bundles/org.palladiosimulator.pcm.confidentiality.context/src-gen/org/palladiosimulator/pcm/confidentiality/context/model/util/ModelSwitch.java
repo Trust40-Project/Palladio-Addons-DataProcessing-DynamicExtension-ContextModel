@@ -2,12 +2,17 @@
  */
 package org.palladiosimulator.pcm.confidentiality.context.model.util;
 
+import de.uka.ipd.sdq.identifier.Identifier;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
 import org.palladiosimulator.pcm.confidentiality.context.model.*;
+
+import org.palladiosimulator.pcm.core.entity.Entity;
+import org.palladiosimulator.pcm.core.entity.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,6 +77,12 @@ public class ModelSwitch<T> extends Switch<T> {
             if (result == null)
                 result = caseContext(hierachicalContext);
             if (result == null)
+                result = caseEntity(hierachicalContext);
+            if (result == null)
+                result = caseIdentifier(hierachicalContext);
+            if (result == null)
+                result = caseNamedElement(hierachicalContext);
+            if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
@@ -81,14 +92,26 @@ public class ModelSwitch<T> extends Switch<T> {
             if (result == null)
                 result = caseContext(singleAttributeContext);
             if (result == null)
+                result = caseEntity(singleAttributeContext);
+            if (result == null)
+                result = caseIdentifier(singleAttributeContext);
+            if (result == null)
+                result = caseNamedElement(singleAttributeContext);
+            if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case ModelPackage.RELATED_CONTEXT: {
-            RelatedContext relatedContext = (RelatedContext) theEObject;
-            T result = caseRelatedContext(relatedContext);
+        case ModelPackage.RELATED_CONTEXT_SET: {
+            RelatedContextSet relatedContextSet = (RelatedContextSet) theEObject;
+            T result = caseRelatedContextSet(relatedContextSet);
             if (result == null)
-                result = caseContext(relatedContext);
+                result = caseContext(relatedContextSet);
+            if (result == null)
+                result = caseEntity(relatedContextSet);
+            if (result == null)
+                result = caseIdentifier(relatedContextSet);
+            if (result == null)
+                result = caseNamedElement(relatedContextSet);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -96,6 +119,25 @@ public class ModelSwitch<T> extends Switch<T> {
         case ModelPackage.CONTEXT: {
             Context context = (Context) theEObject;
             T result = caseContext(context);
+            if (result == null)
+                result = caseEntity(context);
+            if (result == null)
+                result = caseIdentifier(context);
+            if (result == null)
+                result = caseNamedElement(context);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case ModelPackage.CONTEXT_CONTAINER: {
+            ContextContainer contextContainer = (ContextContainer) theEObject;
+            T result = caseContextContainer(contextContainer);
+            if (result == null)
+                result = caseEntity(contextContainer);
+            if (result == null)
+                result = caseIdentifier(contextContainer);
+            if (result == null)
+                result = caseNamedElement(contextContainer);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -136,17 +178,17 @@ public class ModelSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Related Context</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Related Context Set</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Related Context</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Related Context Set</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseRelatedContext(RelatedContext object) {
+    public T caseRelatedContextSet(RelatedContextSet object) {
         return null;
     }
 
@@ -162,6 +204,66 @@ public class ModelSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseContext(Context object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Context Container</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Context Container</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseContextContainer(ContextContainer object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseIdentifier(Identifier object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseNamedElement(NamedElement object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseEntity(Entity object) {
         return null;
     }
 
