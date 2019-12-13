@@ -1,1 +1,1 @@
-# ContextConfidentiality
+# ContextConfidentiality Metamodel
