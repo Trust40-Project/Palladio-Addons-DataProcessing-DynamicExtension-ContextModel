@@ -38,4 +38,38 @@
             genModel="model/dynamicextension.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dynamicextension2 -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.Dynamicextension2Package"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dynamicextension2 -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/context/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.context.ContextPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dynamicextension2 -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/util/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.UtilPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dynamicextension2 -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/util/subject/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.subject.SubjectPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dynamicextension2 -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/dynamic2/util/helperattributes/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dynamicextension2.util.helperattributes.HelperattributesPackage"/>
+   </extension>
 </plugin>
