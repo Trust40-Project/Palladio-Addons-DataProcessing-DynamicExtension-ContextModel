@@ -6,5 +6,5 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.modelversioning.emfprofile,
  org.modelversioning.emfprofile.registry,
- org.palladiosimulator.pcm;bundle-version="4.2.0",
+ org.palladiosimulator.pcm,
  org.palladiosimulator.pcm.confidentiality.context;bundle-version="0.1.0"
