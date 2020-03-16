@@ -166,8 +166,6 @@ import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import org.palladiosimulator.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.confidentiality.context.misusage.provider.MisusageItemProviderAdapterFactory;
 import org.palladiosimulator.pcm.confidentiality.context.model.provider.ModelItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.confidentiality.context.presentation.ContextEditorPlugin;
@@ -734,7 +732,6 @@ public class PolicyEditor extends MultiPageEditorPart
         adapterFactory.addAdapterFactory(new ContextItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new ModelItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new PolicyItemProviderAdapterFactory());
-        adapterFactory.addAdapterFactory(new MisusageItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());

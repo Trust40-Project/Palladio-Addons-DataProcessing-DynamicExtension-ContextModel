@@ -12,6 +12,7 @@ package org.palladiosimulator.pcm.confidentiality.context.model;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext#getIncludeDirection <em>Include Direction</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage#getHierachicalContext()
@@ -40,5 +41,30 @@ public interface HierachicalContext extends Context {
      * @generated
      */
     void setParent(HierachicalContext value);
+
+    /**
+     * Returns the value of the '<em><b>Include Direction</b></em>' attribute.
+     * The literals are from the enumeration {@link org.palladiosimulator.pcm.confidentiality.context.model.Direction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Include Direction</em>' attribute.
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.Direction
+     * @see #setIncludeDirection(Direction)
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage#getHierachicalContext_IncludeDirection()
+     * @model
+     * @generated
+     */
+    Direction getIncludeDirection();
+
+    /**
+     * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext#getIncludeDirection <em>Include Direction</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Include Direction</em>' attribute.
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.Direction
+     * @see #getIncludeDirection()
+     * @generated
+     */
+    void setIncludeDirection(Direction value);
 
 } // HierachicalContext

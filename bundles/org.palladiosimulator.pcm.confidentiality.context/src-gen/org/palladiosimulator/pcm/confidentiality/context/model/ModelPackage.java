@@ -2,7 +2,9 @@
  */
 package org.palladiosimulator.pcm.confidentiality.context.model;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -85,22 +87,13 @@ public interface ModelPackage extends EPackage {
     int CONTEXT__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
     /**
-     * The feature id for the '<em><b>Repositorycomponent</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONTEXT__REPOSITORYCOMPONENT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
-
-    /**
      * The number of structural features of the '<em>Context</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CONTEXT_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+    int CONTEXT_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
     /**
      * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.HierachicalContextImpl <em>Hierachical Context</em>}' class.
@@ -131,15 +124,6 @@ public interface ModelPackage extends EPackage {
     int HIERACHICAL_CONTEXT__ENTITY_NAME = CONTEXT__ENTITY_NAME;
 
     /**
-     * The feature id for the '<em><b>Repositorycomponent</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HIERACHICAL_CONTEXT__REPOSITORYCOMPONENT = CONTEXT__REPOSITORYCOMPONENT;
-
-    /**
      * The feature id for the '<em><b>Parent</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -149,13 +133,22 @@ public interface ModelPackage extends EPackage {
     int HIERACHICAL_CONTEXT__PARENT = CONTEXT_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Include Direction</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HIERACHICAL_CONTEXT__INCLUDE_DIRECTION = CONTEXT_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Hierachical Context</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int HIERACHICAL_CONTEXT_FEATURE_COUNT = CONTEXT_FEATURE_COUNT + 1;
+    int HIERACHICAL_CONTEXT_FEATURE_COUNT = CONTEXT_FEATURE_COUNT + 2;
 
     /**
      * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.SingleAttributeContextImpl <em>Single Attribute Context</em>}' class.
@@ -184,15 +177,6 @@ public interface ModelPackage extends EPackage {
      * @ordered
      */
     int SINGLE_ATTRIBUTE_CONTEXT__ENTITY_NAME = CONTEXT__ENTITY_NAME;
-
-    /**
-     * The feature id for the '<em><b>Repositorycomponent</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SINGLE_ATTRIBUTE_CONTEXT__REPOSITORYCOMPONENT = CONTEXT__REPOSITORYCOMPONENT;
 
     /**
      * The number of structural features of the '<em>Single Attribute Context</em>' class.
@@ -230,15 +214,6 @@ public interface ModelPackage extends EPackage {
      * @ordered
      */
     int RELATED_CONTEXT_SET__ENTITY_NAME = CONTEXT__ENTITY_NAME;
-
-    /**
-     * The feature id for the '<em><b>Repositorycomponent</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RELATED_CONTEXT_SET__REPOSITORYCOMPONENT = CONTEXT__REPOSITORYCOMPONENT;
 
     /**
      * The feature id for the '<em><b>Context</b></em>' reference list.
@@ -305,6 +280,16 @@ public interface ModelPackage extends EPackage {
     int CONTEXT_CONTAINER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
     /**
+     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.Direction <em>Direction</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.Direction
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getDirection()
+     * @generated
+     */
+    int DIRECTION = 5;
+
+    /**
      * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext <em>Hierachical Context</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -324,6 +309,17 @@ public interface ModelPackage extends EPackage {
      * @generated
      */
     EReference getHierachicalContext_Parent();
+
+    /**
+     * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext#getIncludeDirection <em>Include Direction</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Include Direction</em>'.
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext#getIncludeDirection()
+     * @see #getHierachicalContext()
+     * @generated
+     */
+    EAttribute getHierachicalContext_IncludeDirection();
 
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.context.model.SingleAttributeContext <em>Single Attribute Context</em>}'.
@@ -367,17 +363,6 @@ public interface ModelPackage extends EPackage {
     EClass getContext();
 
     /**
-     * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.confidentiality.context.model.Context#getRepositorycomponent <em>Repositorycomponent</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Repositorycomponent</em>'.
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.Context#getRepositorycomponent()
-     * @see #getContext()
-     * @generated
-     */
-    EReference getContext_Repositorycomponent();
-
-    /**
      * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer <em>Context Container</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -397,6 +382,16 @@ public interface ModelPackage extends EPackage {
      * @generated
      */
     EReference getContextContainer_Context();
+
+    /**
+     * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.context.model.Direction <em>Direction</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Direction</em>'.
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.Direction
+     * @generated
+     */
+    EEnum getDirection();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -439,6 +434,14 @@ public interface ModelPackage extends EPackage {
         EReference HIERACHICAL_CONTEXT__PARENT = eINSTANCE.getHierachicalContext_Parent();
 
         /**
+         * The meta object literal for the '<em><b>Include Direction</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HIERACHICAL_CONTEXT__INCLUDE_DIRECTION = eINSTANCE.getHierachicalContext_IncludeDirection();
+
+        /**
          * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.SingleAttributeContextImpl <em>Single Attribute Context</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -477,14 +480,6 @@ public interface ModelPackage extends EPackage {
         EClass CONTEXT = eINSTANCE.getContext();
 
         /**
-         * The meta object literal for the '<em><b>Repositorycomponent</b></em>' reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference CONTEXT__REPOSITORYCOMPONENT = eINSTANCE.getContext_Repositorycomponent();
-
-        /**
          * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextContainerImpl <em>Context Container</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -501,6 +496,16 @@ public interface ModelPackage extends EPackage {
          * @generated
          */
         EReference CONTEXT_CONTAINER__CONTEXT = eINSTANCE.getContextContainer_Context();
+
+        /**
+         * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.Direction <em>Direction</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see org.palladiosimulator.pcm.confidentiality.context.model.Direction
+         * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getDirection()
+         * @generated
+         */
+        EEnum DIRECTION = eINSTANCE.getDirection();
 
     }
 

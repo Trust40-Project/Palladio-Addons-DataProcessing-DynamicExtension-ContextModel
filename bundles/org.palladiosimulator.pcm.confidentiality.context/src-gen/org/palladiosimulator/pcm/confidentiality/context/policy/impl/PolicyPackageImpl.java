@@ -21,9 +21,6 @@ import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.impl.ContextPackageImpl;
-
-import org.palladiosimulator.pcm.confidentiality.context.misusage.MisusagePackage;
-import org.palladiosimulator.pcm.confidentiality.context.misusage.impl.MisusagePackageImpl;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl;
@@ -122,22 +119,16 @@ public class PolicyPackageImpl extends EPackageImpl implements PolicyPackage {
         ModelPackageImpl theModelPackage = (ModelPackageImpl) (registeredPackage instanceof ModelPackageImpl
                 ? registeredPackage
                 : ModelPackage.eINSTANCE);
-        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MisusagePackage.eNS_URI);
-        MisusagePackageImpl theMisusagePackage = (MisusagePackageImpl) (registeredPackage instanceof MisusagePackageImpl
-                ? registeredPackage
-                : MisusagePackage.eINSTANCE);
 
         // Create package meta-data objects
         thePolicyPackage.createPackageContents();
         theContextPackage.createPackageContents();
         theModelPackage.createPackageContents();
-        theMisusagePackage.createPackageContents();
 
         // Initialize created meta-data
         thePolicyPackage.initializePackageContents();
         theContextPackage.initializePackageContents();
         theModelPackage.initializePackageContents();
-        theMisusagePackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         thePolicyPackage.freeze();

@@ -4,6 +4,7 @@ package org.palladiosimulator.pcm.confidentiality.context.model.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.palladiosimulator.pcm.confidentiality.context.model.Direction;
 import org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
@@ -16,6 +17,7 @@ import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.HierachicalContextImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.HierachicalContextImpl#getIncludeDirection <em>Include Direction</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +58,24 @@ public class HierachicalContextImpl extends ContextImpl implements HierachicalCo
      */
     public void setParent(HierachicalContext newParent) {
         eSet(ModelPackage.Literals.HIERACHICAL_CONTEXT__PARENT, newParent);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Direction getIncludeDirection() {
+        return (Direction) eGet(ModelPackage.Literals.HIERACHICAL_CONTEXT__INCLUDE_DIRECTION, true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setIncludeDirection(Direction newIncludeDirection) {
+        eSet(ModelPackage.Literals.HIERACHICAL_CONTEXT__INCLUDE_DIRECTION, newIncludeDirection);
     }
 
 } //HierachicalContextImpl

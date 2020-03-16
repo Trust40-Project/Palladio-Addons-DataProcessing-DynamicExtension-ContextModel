@@ -21,9 +21,6 @@ import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.ContextFactory;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
-
-import org.palladiosimulator.pcm.confidentiality.context.misusage.MisusagePackage;
-import org.palladiosimulator.pcm.confidentiality.context.misusage.impl.MisusagePackageImpl;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl;
@@ -112,22 +109,16 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
         PolicyPackageImpl thePolicyPackage = (PolicyPackageImpl) (registeredPackage instanceof PolicyPackageImpl
                 ? registeredPackage
                 : PolicyPackage.eINSTANCE);
-        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MisusagePackage.eNS_URI);
-        MisusagePackageImpl theMisusagePackage = (MisusagePackageImpl) (registeredPackage instanceof MisusagePackageImpl
-                ? registeredPackage
-                : MisusagePackage.eINSTANCE);
 
         // Create package meta-data objects
         theContextPackage.createPackageContents();
         theModelPackage.createPackageContents();
         thePolicyPackage.createPackageContents();
-        theMisusagePackage.createPackageContents();
 
         // Initialize created meta-data
         theContextPackage.initializePackageContents();
         theModelPackage.initializePackageContents();
         thePolicyPackage.initializePackageContents();
-        theMisusagePackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theContextPackage.freeze();
@@ -225,13 +216,10 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
         // Obtain other dependent packages
         ModelPackage theModelPackage = (ModelPackage) EPackage.Registry.INSTANCE.getEPackage(ModelPackage.eNS_URI);
         PolicyPackage thePolicyPackage = (PolicyPackage) EPackage.Registry.INSTANCE.getEPackage(PolicyPackage.eNS_URI);
-        MisusagePackage theMisusagePackage = (MisusagePackage) EPackage.Registry.INSTANCE
-                .getEPackage(MisusagePackage.eNS_URI);
 
         // Add subpackages
         getESubpackages().add(theModelPackage);
         getESubpackages().add(thePolicyPackage);
-        getESubpackages().add(theMisusagePackage);
 
         // Create type parameters
 

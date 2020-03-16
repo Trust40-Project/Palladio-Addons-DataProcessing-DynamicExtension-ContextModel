@@ -21,19 +21,21 @@
     </genClasses>
     <nestedGenPackages prefix="Model" basePackage="org.palladiosimulator.pcm.confidentiality.context"
         disposableProviderFactory="true" ecorePackage="context.ecore#//model">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="context.ecore#//model/Direction">
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//model/Direction/TOPDOWN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//model/Direction/BOTTOMUP"/>
+      </genEnums>
       <genClasses ecoreClass="context.ecore#//model/HierachicalContext" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference context.ecore#//model/HierachicalContext/parent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//model/HierachicalContext/includeDirection"/>
       </genClasses>
       <genClasses ecoreClass="context.ecore#//model/SingleAttributeContext" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
       <genClasses ecoreClass="context.ecore#//model/RelatedContextSet" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference context.ecore#//model/RelatedContextSet/context"/>
       </genClasses>
-      <genClasses ecoreClass="context.ecore#//model/Context" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference context.ecore#//model/Context/repositorycomponent"/>
-      </genClasses>
+      <genClasses ecoreClass="context.ecore#//model/Context" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
       <genClasses ecoreClass="context.ecore#//model/ContextContainer">
         <genFeatures children="true" createChild="true" propertySortChoices="true"
             ecoreFeature="ecore:EReference context.ecore#//model/ContextContainer/context"/>

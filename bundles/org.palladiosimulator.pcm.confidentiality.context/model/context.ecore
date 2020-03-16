@@ -12,19 +12,21 @@
       nsPrefix="model">
     <eClassifiers xsi:type="ecore:EClass" name="HierachicalContext" eSuperTypes="#//model/Context">
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//model/HierachicalContext"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="includeDirection" eType="#//model/Direction"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SingleAttributeContext" eSuperTypes="#//model/Context"/>
     <eClassifiers xsi:type="ecore:EClass" name="RelatedContextSet" eSuperTypes="#//model/Context">
       <eStructuralFeatures xsi:type="ecore:EReference" name="context" lowerBound="1"
           upperBound="-1" eType="#//model/Context"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="repositorycomponent"
-          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="ContextContainer" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
           eType="#//model/Context" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Direction">
+      <eLiterals name="TOPDOWN"/>
+      <eLiterals name="BOTTOMUP" value="1"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="policy" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/context/policy/0.1/"

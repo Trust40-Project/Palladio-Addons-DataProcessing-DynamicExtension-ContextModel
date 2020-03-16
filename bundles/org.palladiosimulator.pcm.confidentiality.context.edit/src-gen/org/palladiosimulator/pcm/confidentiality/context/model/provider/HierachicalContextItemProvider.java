@@ -11,6 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
@@ -43,6 +45,7 @@ public class HierachicalContextItemProvider extends ContextItemProvider {
             super.getPropertyDescriptors(object);
 
             addParentPropertyDescriptor(object);
+            addIncludeDirectionPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -60,6 +63,22 @@ public class HierachicalContextItemProvider extends ContextItemProvider {
                         getString("_UI_PropertyDescriptor_description", "_UI_HierachicalContext_parent_feature",
                                 "_UI_HierachicalContext_type"),
                         ModelPackage.Literals.HIERACHICAL_CONTEXT__PARENT, true, false, true, null, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Include Direction feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addIncludeDirectionPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_HierachicalContext_includeDirection_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_HierachicalContext_includeDirection_feature",
+                        "_UI_HierachicalContext_type"),
+                ModelPackage.Literals.HIERACHICAL_CONTEXT__INCLUDE_DIRECTION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -106,6 +125,12 @@ public class HierachicalContextItemProvider extends ContextItemProvider {
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
+
+        switch (notification.getFeatureID(HierachicalContext.class)) {
+        case ModelPackage.HIERACHICAL_CONTEXT__INCLUDE_DIRECTION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            return;
+        }
         super.notifyChanged(notification);
     }
 

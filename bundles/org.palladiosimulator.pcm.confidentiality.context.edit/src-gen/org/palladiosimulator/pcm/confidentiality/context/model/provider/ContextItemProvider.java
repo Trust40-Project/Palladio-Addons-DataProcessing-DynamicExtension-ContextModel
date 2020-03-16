@@ -9,11 +9,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.confidentiality.context.model.Context;
-import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 import org.palladiosimulator.pcm.confidentiality.context.provider.ContextEditPlugin;
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
@@ -45,24 +42,8 @@ public class ContextItemProvider extends EntityItemProvider {
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addRepositorycomponentPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Repositorycomponent feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addRepositorycomponentPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(), getString("_UI_Context_repositorycomponent_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_Context_repositorycomponent_feature",
-                                "_UI_Context_type"),
-                        ModelPackage.Literals.CONTEXT__REPOSITORYCOMPONENT, true, false, true, null, null, null));
     }
 
     /**
