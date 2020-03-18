@@ -3,7 +3,7 @@ package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launche
 
 
 /**
- * Executes an {@link AnalysisWorkflow} with an {@link AnalysisBlackboard} and
+ * Executes an {@link AttackerAnalysisWorkflow} with an {@link AnalysisBlackboard} and
  * uses an {@link OutputJob} to show its results.
  * 
  * @author mirko
@@ -21,7 +21,7 @@ public class WorkflowExecuter {
 
 	public void execute() {
 //		SequentialJob combinedJob = new SequentialJob();
-//		AnalysisWorkflow analysisWorkflow = new AnalysisWorkflow(wfeConfig);
+//		AttackerAnalysisWorkflow analysisWorkflow = new AttackerAnalysisWorkflow(wfeConfig);
 //		analysisWorkflow.setBlackboard(blackboard);
 //		combinedJob.add(analysisWorkflow);
 		

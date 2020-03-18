@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.Consumer;
 
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.IQuery;
+import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.query.IQuery;
 
 public class QueryChangeSubject {
 

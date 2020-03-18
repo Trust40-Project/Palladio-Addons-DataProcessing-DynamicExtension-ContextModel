@@ -1,4 +1,4 @@
-package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow;
+package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;

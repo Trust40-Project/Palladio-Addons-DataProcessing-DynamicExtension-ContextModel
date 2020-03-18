@@ -1,10 +1,10 @@
 /**
  * 
  */
-package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.workflow.job;
+package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.job;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.workflow.AnalysisBlackboard;
+import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.AnalysisBlackboard;
 import org.palladiosimulator.pcm.dataprocessing.prolog.prologmodel.System;
 import org.prolog4j.Prover;
 import org.prolog4j.Query;

@@ -19,12 +19,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
+import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.query.IQuery;
+import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.query.QueryInformation;
 //import org.prolog4j.IProverFactory;
 //import org.prolog4j.ProverInformation;
 import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launcher.Activator;
 import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launcher.constants.Constants;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.IQuery;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.QueryInformation;
 
 import de.uka.ipd.sdq.workflow.launchconfig.tabs.TabHelper;
 //TODO use Resourcebundles for Strings. ResourceBundle.getBundle

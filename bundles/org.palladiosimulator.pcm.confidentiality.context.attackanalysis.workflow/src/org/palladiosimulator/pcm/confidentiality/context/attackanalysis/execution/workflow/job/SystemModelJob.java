@@ -1,4 +1,4 @@
-package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.workflow.job;
+package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.job;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.pcm.allocation.Allocation;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.QueryParameterType;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.workflow.AnalysisBlackboard;
+import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.query.QueryParameterType;
+import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.AnalysisBlackboard;
 import org.palladiosimulator.pcm.dataprocessing.analysis.transformation.basic.ITransformator;
 import org.palladiosimulator.pcm.dataprocessing.analysis.transformation.basic.ITransformatorFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicTypeContainer;
