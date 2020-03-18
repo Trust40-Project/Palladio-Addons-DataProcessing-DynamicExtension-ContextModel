@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.impl.ReturnVariableQuery">
+   <property name="id" value="pcm.dataprocessing.analysis.launcher.returnquery"/>
+   <property name="name" value="ReturnVariableQuery"/>
+   <service>
+      <provide interface="org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.IQuery"/>
+   </service>
+   <implementation class="org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.impl.ReturnVariableQuery"/>
+</scr:component>

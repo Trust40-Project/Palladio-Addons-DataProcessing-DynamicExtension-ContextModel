@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0" immediate="true" name="org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.QueryManager">
+   <service>
+      <provide interface="org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.impl.IQueryManager"/>
+   </service>
+   <reference bind="bindQuery" cardinality="0..n" interface="org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.IQuery" name="Query" policy="dynamic" unbind="unbindQuery" updated="updatedQuery"/>
+   <implementation class="org.palladiosimulator.pcm.confidentiality.context.attackanalysis.workflow.query.QueryManager"/>
+</scr:component>
