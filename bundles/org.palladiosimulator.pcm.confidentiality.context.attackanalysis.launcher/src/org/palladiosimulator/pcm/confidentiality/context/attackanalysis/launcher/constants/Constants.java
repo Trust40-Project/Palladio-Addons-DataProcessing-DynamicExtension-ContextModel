@@ -1,11 +1,12 @@
 package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launcher.constants;
 /**
- * PartitionConstants of the PCM Dataprocessing Launcher
+ * PartitionConstants of the PCM Attacker Analysis Launcher
+ * @author majuwa
  * @author Mirko Sowa
  *
  */
 public enum Constants {
-
+    //FIXME convert to String constants
 	NAME("Attacker Analysis Modelling Launcher"),
 	BUTTON_BROWSE_TEXT("Browse..."),
 	BUTTON_DIR_BROWSE_TEXT("Working Directory..."),
