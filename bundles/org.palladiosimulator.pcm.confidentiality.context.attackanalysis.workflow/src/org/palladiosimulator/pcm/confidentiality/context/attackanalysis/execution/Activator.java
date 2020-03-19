@@ -2,6 +2,8 @@ package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.executi
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+import org.palladiosimulator.pcm.confidentiality.context.analysis.api.Analysis;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -14,8 +16,7 @@ public class Activator extends AbstractUIPlugin {
 	// The shared instance
 	private static Activator instance;
 
-	// The shared instances of both the prover and the query manager
-//	private IProverManager proverManager;
+    private Analysis analysis;
 
 	/**
 	 * The constructor
@@ -28,8 +29,9 @@ public class Activator extends AbstractUIPlugin {
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		setInstance(instance);
-//		ServiceReference<IProverManager> proverManagerReference = context.getServiceReference(IProverManager.class);
-//		this.proverManager = context.getService(proverManagerReference);
+		ServiceReference<Analysis> reference = context.getServiceReference(Analysis.class);
+        analysis = context.getService(reference);
+        instance = this;
 	}
 
 	@Override
@@ -38,23 +40,14 @@ public class Activator extends AbstractUIPlugin {
 		super.stop(context);
 	}
 
-	/**
-	 * Returns the shared instance
-	 *
-	 * @return the shared instance
-	 */
-	public static Activator getDefault() {
-		return instance;
-	}
-
-//	public IProverManager getProverManagerInstance() {
-//		return proverManager;
-//	}
 
 	private static void setInstance(Activator instance) {
 		Activator.instance = instance;
 	}
-
+	
+	public Analysis getAnalysis() {
+	    return analysis;
+	}
 	/**
 	 * Returns the shared instance
 	 *

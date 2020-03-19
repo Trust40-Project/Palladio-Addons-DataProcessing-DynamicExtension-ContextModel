@@ -19,8 +19,7 @@ public class LaunchConfigurationTabGroup extends AbstractLaunchConfigurationTabG
 	 */
 	@Override
 	public void createTabs(ILaunchConfigurationDialog dialog, String mode) {
-		QueryChangeSubject querySubject = new QueryChangeSubject();
-		setTabs(new ILaunchConfigurationTab[] { new ModelInputTab(querySubject), new CommonTab()});
+		setTabs(new ILaunchConfigurationTab[] { new ModelInputTab(), new CommonTab()});
 	}
 
 }

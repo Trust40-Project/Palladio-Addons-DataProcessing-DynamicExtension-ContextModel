@@ -1,6 +1,6 @@
 package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launcher.constants;
 /**
- * Constants of the PCM Dataprocessing Launcher
+ * PartitionConstants of the PCM Dataprocessing Launcher
  * @author Mirko Sowa
  *
  */

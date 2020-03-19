@@ -1,7 +1,6 @@
 package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launcher.ui;
 
 import java.io.File;
-import java.util.Map;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
@@ -17,16 +16,14 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.query.IQuery;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.query.QueryInformation;
 //import org.prolog4j.IProverFactory;
 //import org.prolog4j.ProverInformation;
 import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launcher.Activator;
 import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.launcher.constants.Constants;
 
 import de.uka.ipd.sdq.workflow.launchconfig.tabs.TabHelper;
+
 //TODO use Resourcebundles for Strings. ResourceBundle.getBundle
 /**
  * Main configuration tab for the launch configuration
@@ -46,15 +43,8 @@ public class ModelInputTab extends AbstractLaunchConfigurationTab {
     private Text dataTextField;
     private Text adversaryTextField;
 
+    public ModelInputTab() {
 
-//	private Map<ProverInformation, IProverFactory> proversMap;
-    private Map<QueryInformation, IQuery> queryMap;
-
-    private final QueryChangeSubject querySubject;
-    
-    public ModelInputTab(QueryChangeSubject querySubject) {
-        
-        this.querySubject = querySubject;
         Activator sharedInstance = Activator.getInstance();
         if (sharedInstance != null) {
 //			proversMap = sharedInstance.getProverManagerInstance().getProvers();
@@ -77,7 +67,7 @@ public class ModelInputTab extends AbstractLaunchConfigurationTab {
 //        return !repositoryTextField.getText().isEmpty() && !allocationTextField.getText().isEmpty()
 //                && !contextTextField.getText().isEmpty() && isURIexistent(repositoryTextField.getText())
 //                && isURIexistent(allocationTextField.getText()) && isURIexistent(contextTextField.getText());
-        //FIXME     
+        // FIXME
         return true;
     }
 
@@ -105,7 +95,8 @@ public class ModelInputTab extends AbstractLaunchConfigurationTab {
                         .setText(configuration.getAttribute(Constants.ALLOCATION_MODEL_LABEL.getConstant(), ""));
                 contextTextField.setText(configuration.getAttribute(Constants.CONTEXT_MODEL_LABEL.getConstant(), ""));
                 dataTextField.setText(configuration.getAttribute(Constants.DATA_MODEL_LABEL.getConstant(), ""));
-                adversaryTextField.setText(configuration.getAttribute(Constants.ADVERSARY_MODEL_LABEL.getConstant(), ""));
+                adversaryTextField
+                        .setText(configuration.getAttribute(Constants.ADVERSARY_MODEL_LABEL.getConstant(), ""));
 
             } catch (CoreException e) {
                 // TODO expection handling
@@ -169,15 +160,11 @@ public class ModelInputTab extends AbstractLaunchConfigurationTab {
         TabHelper.createFileInputSection(comp, modifyListener, Constants.DATA_MODEL_LABEL.getConstant(),
                 new String[] { "*.confidentiality" }, dataTextField, Display.getCurrent().getActiveShell(), "");
 
-        
         adversaryTextField = new Text(comp, SWT.BORDER);
         adversaryTextField.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         TabHelper.createFileInputSection(comp, modifyListener, Constants.ADVERSARY_MODEL_LABEL.getConstant(),
                 new String[] { "*.adversary" }, adversaryTextField, Display.getCurrent().getActiveShell(), "");
-        
-        
-        
-        
+
         // TODO setPositionForStart
     }
 

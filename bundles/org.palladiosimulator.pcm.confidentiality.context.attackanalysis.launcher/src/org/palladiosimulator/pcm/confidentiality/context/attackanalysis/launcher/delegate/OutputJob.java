@@ -30,7 +30,7 @@ public class OutputJob implements IJob {
 	public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
 //		if (blackboard.getSolution() != null) {
 //
-//			MessageConsole myConsole = findConsole(Constants.CONSOLE_ID.getConstant());
+//			MessageConsole myConsole = findConsole(PartitionConstants.CONSOLE_ID.getConstant());
 //			MessageConsoleStream out = myConsole.newMessageStream();
 //			if (blackboard.getSolution().isSuccess()) {
 //				for (Entry<String, String> t : blackboard.getQuery().getResultVars().entrySet()) {

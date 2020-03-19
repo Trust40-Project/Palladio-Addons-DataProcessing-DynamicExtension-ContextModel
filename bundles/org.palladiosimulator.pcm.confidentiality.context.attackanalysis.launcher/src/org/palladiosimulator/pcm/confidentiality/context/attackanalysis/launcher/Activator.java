@@ -54,25 +54,4 @@ public class Activator extends AbstractUIPlugin {
 		return Activator.instance;
 	}
 
-//	public IProverManager getProverManagerInstance() {
-//		return proverManager;
-//	}
-//
-//	public IQueryManager getQueryManagerInstance() {
-//		IQueryManager foundQueryManager = queryManager;
-//		if (foundQueryManager == null) {
-//			synchronized (this) {
-//				foundQueryManager = queryManager;
-//				if (foundQueryManager == null) {
-//					BundleContext bundleContext = getInstance().getBundle().getBundleContext();
-//					ServiceReference<IQueryManager> queryManagerReference = bundleContext
-//							.getServiceReference(IQueryManager.class);
-//					foundQueryManager = bundleContext.getService(queryManagerReference);
-//					queryManager = foundQueryManager;
-//				}
-//			}
-//		}
-//		return foundQueryManager;
-//	}
-
 }

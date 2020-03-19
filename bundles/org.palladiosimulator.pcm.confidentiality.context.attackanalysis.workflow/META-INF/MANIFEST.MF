@@ -11,12 +11,13 @@ Require-Bundle: org.eclipse.ui,
  org.palladiosimulator.pcm,
  de.uka.ipd.sdq.workflow.mdsd;visibility:=reexport,
  org.eclipse.emf.ecore,
- org.apache.commons.lang3;bundle-version="3.1.0",
  org.apache.log4j,
  de.uka.ipd.sdq.workflow.launchconfig,
  org.palladiosimulator.analyzer.workflow;bundle-version="4.2.0",
- org.palladiosimulator.pcm.confidentiality.context
+ org.palladiosimulator.pcm.confidentiality.context,
+ org.palladiosimulator.pcm.confidentiality.context.attackeranalysis.api
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: pcm.dataprocessing.analysis.wfe
-Export-Package: org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow
+Export-Package: org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.partition,
+ org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow
 Import-Package: org.osgi.service.component.annotations;version="1.2.0"
