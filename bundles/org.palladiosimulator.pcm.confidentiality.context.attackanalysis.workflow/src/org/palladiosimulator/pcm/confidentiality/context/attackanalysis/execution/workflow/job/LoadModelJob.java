@@ -1,10 +1,9 @@
 package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.job;
 
 import static org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.partition.PartitionConstants.PARTITION_ID_CONTEXT;
-import static org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.partition.PartitionConstants.PARTITION_ID_PCM;
 import static org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.partition.PartitionConstants.PARTITION_ID_KASTEL;
+import static org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.partition.PartitionConstants.PARTITION_ID_PCM;
 
-import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
@@ -23,8 +22,12 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.ResourceSetPartition;
 import edu.kit.kastel.scbs.confidentiality.ConfidentialityPackage;
 
+/**
+ * Job for loading the required models for an Attacker Analysis into a MDSDBlackboard
+ * @author majuwa
+ *
+ */
 public class LoadModelJob implements IBlackboardInteractingJob<MDSDBlackboard> {
-    private static final Logger LOGGER = Logger.getLogger(LoadModelJob.class);
     private MDSDBlackboard blackboard;
     private AttackerAnalysisWorkflowConfig configuration;
 
@@ -66,7 +69,6 @@ public class LoadModelJob implements IBlackboardInteractingJob<MDSDBlackboard> {
 
     @Override
     public String getName() {
-        // TODO Auto-generated method stub
         return "Load Model";
     }
 

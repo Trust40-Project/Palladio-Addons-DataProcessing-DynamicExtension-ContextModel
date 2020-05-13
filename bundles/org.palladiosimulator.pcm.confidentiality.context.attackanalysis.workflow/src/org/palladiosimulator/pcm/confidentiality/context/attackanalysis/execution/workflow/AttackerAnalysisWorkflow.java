@@ -1,7 +1,7 @@
 package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow;
 
 import org.apache.log4j.Logger;
-import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.job.AnalysisJob;
+import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.job.AttackerAnalysisJob;
 import org.palladiosimulator.pcm.confidentiality.context.attackanalysis.execution.workflow.job.LoadModelJob;
 
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -19,6 +19,6 @@ public class AttackerAnalysisWorkflow extends SequentialBlackboardInteractingJob
     public AttackerAnalysisWorkflow(AttackerAnalysisWorkflowConfig config) {
         super(false);
         this.add(new LoadModelJob(config));
-        this.add(new AnalysisJob(config));
+        this.add(new AttackerAnalysisJob(config));
     }
 }

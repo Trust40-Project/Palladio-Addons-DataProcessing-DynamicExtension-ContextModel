@@ -3,7 +3,7 @@ package org.palladiosimulator.pcm.confidentiality.context.attackanalysis.executi
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
-import org.palladiosimulator.pcm.confidentiality.context.analysis.api.Analysis;
+import org.palladiosimulator.pcm.confidentiality.context.analysis.api.AttackerAnalysis;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -16,7 +16,7 @@ public class Activator extends AbstractUIPlugin {
 	// The shared instance
 	private static Activator instance;
 
-    private Analysis analysis;
+    private AttackerAnalysis analysis;
 
 	/**
 	 * The constructor
@@ -29,7 +29,7 @@ public class Activator extends AbstractUIPlugin {
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		setInstance(instance);
-		ServiceReference<Analysis> reference = context.getServiceReference(Analysis.class);
+		ServiceReference<AttackerAnalysis> reference = context.getServiceReference(AttackerAnalysis.class);
         analysis = context.getService(reference);
         instance = this;
 	}
@@ -45,7 +45,7 @@ public class Activator extends AbstractUIPlugin {
 		Activator.instance = instance;
 	}
 	
-	public Analysis getAnalysis() {
+	public AttackerAnalysis getAnalysis() {
 	    return analysis;
 	}
 	/**

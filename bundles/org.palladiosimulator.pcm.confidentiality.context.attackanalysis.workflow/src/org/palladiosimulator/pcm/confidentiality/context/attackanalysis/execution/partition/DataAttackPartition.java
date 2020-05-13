@@ -8,10 +8,12 @@ import edu.kit.kastel.scbs.confidentiality.adversary.AdversaryPackage;
 
 public class DataAttackPartition extends ResourceSetPartition{
     
-    public Adversaries getContextSpecification() {
-        return ((Adversaries) getElement(AdversaryPackage.eINSTANCE.getAdversaries()));
+    public Adversaries getAdversaryModel() {
+        //TODO handle multiple Adversaries
+        return ((Adversaries) getElement(AdversaryPackage.eINSTANCE.getAdversaries()).get(0));
     }
     public ConfidentialitySpecification getDataspecification() {
-        return (ConfidentialitySpecification) getElement(ConfidentialityPackage.eINSTANCE.getConfidentialitySpecification());
+        //TODO handle multiple specifications
+        return (ConfidentialitySpecification) getElement(ConfidentialityPackage.eINSTANCE.getConfidentialitySpecification()).get(0);
     }
 }
