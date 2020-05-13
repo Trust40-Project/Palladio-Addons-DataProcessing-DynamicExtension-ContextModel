@@ -20,7 +20,7 @@ import org.palladiosimulator.pcm.confidentiality.context.model.RelatedContextSet
  * <!-- end-user-doc -->
  * @generated
  */
-public class RelatedContextSetItemProvider extends ContextItemProvider {
+public class RelatedContextSetItemProvider extends ContextAttributeItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->

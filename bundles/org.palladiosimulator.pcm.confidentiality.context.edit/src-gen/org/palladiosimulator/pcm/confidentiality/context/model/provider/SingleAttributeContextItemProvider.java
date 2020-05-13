@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
 import org.palladiosimulator.pcm.confidentiality.context.model.SingleAttributeContext;
 
 /**
@@ -17,7 +18,7 @@ import org.palladiosimulator.pcm.confidentiality.context.model.SingleAttributeCo
  * <!-- end-user-doc -->
  * @generated
  */
-public class SingleAttributeContextItemProvider extends ContextItemProvider {
+public class SingleAttributeContextItemProvider extends ContextAttributeItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->

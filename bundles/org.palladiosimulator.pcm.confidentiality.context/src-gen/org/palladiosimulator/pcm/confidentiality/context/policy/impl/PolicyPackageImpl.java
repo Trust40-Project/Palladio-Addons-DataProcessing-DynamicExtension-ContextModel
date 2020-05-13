@@ -21,6 +21,7 @@ import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.impl.ContextPackageImpl;
+
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl;
@@ -254,9 +255,9 @@ public class PolicyPackageImpl extends EPackageImpl implements PolicyPackage {
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(policyEClass, Policy.class, "Policy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getPolicy_Contexts(), theModelPackage.getContext(), null, "contexts", null, 0, -1, Policy.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPolicy_Contexts(), theModelPackage.getContextAttribute(), null, "contexts", null, 0, -1,
+                Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     }
 
 } //PolicyPackageImpl

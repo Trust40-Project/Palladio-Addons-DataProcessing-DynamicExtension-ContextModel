@@ -23,8 +23,9 @@ import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.impl.ContextPackageImpl;
+
 import org.palladiosimulator.pcm.confidentiality.context.model.Context;
-import org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer;
+import org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute;
 import org.palladiosimulator.pcm.confidentiality.context.model.Direction;
 import org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelFactory;
@@ -71,14 +72,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass contextEClass = null;
+    private EClass contextAttributeEClass = null;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass contextContainerEClass = null;
+    private EClass contextEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -231,6 +232,15 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getContextAttribute() {
+        return contextAttributeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getContext() {
         return contextEClass;
     }
@@ -240,17 +250,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getContextContainer() {
-        return contextContainerEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EReference getContextContainer_Context() {
-        return (EReference) contextContainerEClass.getEStructuralFeatures().get(0);
+    public EReference getContext_Context() {
+        return (EReference) contextEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -300,10 +301,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
         relatedContextSetEClass = createEClass(RELATED_CONTEXT_SET);
         createEReference(relatedContextSetEClass, RELATED_CONTEXT_SET__CONTEXT);
 
-        contextEClass = createEClass(CONTEXT);
+        contextAttributeEClass = createEClass(CONTEXT_ATTRIBUTE);
 
-        contextContainerEClass = createEClass(CONTEXT_CONTAINER);
-        createEReference(contextContainerEClass, CONTEXT_CONTAINER__CONTEXT);
+        contextEClass = createEClass(CONTEXT);
+        createEReference(contextEClass, CONTEXT__CONTEXT);
 
         // Create enums
         directionEEnum = createEEnum(DIRECTION);
@@ -341,11 +342,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        hierachicalContextEClass.getESuperTypes().add(this.getContext());
-        singleAttributeContextEClass.getESuperTypes().add(this.getContext());
-        relatedContextSetEClass.getESuperTypes().add(this.getContext());
+        hierachicalContextEClass.getESuperTypes().add(this.getContextAttribute());
+        singleAttributeContextEClass.getESuperTypes().add(this.getContextAttribute());
+        relatedContextSetEClass.getESuperTypes().add(this.getContextAttribute());
+        contextAttributeEClass.getESuperTypes().add(theEntityPackage.getEntity());
         contextEClass.getESuperTypes().add(theEntityPackage.getEntity());
-        contextContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
         // Initialize classes and features; add operations and parameters
         initEClass(hierachicalContextEClass, HierachicalContext.class, "HierachicalContext", !IS_ABSTRACT,
@@ -362,17 +363,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
         initEClass(relatedContextSetEClass, RelatedContextSet.class, "RelatedContextSet", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getRelatedContextSet_Context(), this.getContext(), null, "context", null, 1, -1,
+        initEReference(getRelatedContextSet_Context(), this.getContextAttribute(), null, "context", null, 1, -1,
                 RelatedContextSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(contextEClass, Context.class, "Context", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        initEClass(contextContainerEClass, ContextContainer.class, "ContextContainer", !IS_ABSTRACT, !IS_INTERFACE,
+        initEClass(contextAttributeEClass, ContextAttribute.class, "ContextAttribute", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getContextContainer_Context(), this.getContext(), null, "context", null, 0, -1,
-                ContextContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getContext_Context(), this.getContextAttribute(), null, "context", null, 0, -1, Context.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(directionEEnum, Direction.class, "Direction");

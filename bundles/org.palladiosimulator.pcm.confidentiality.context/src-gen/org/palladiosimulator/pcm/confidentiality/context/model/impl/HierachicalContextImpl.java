@@ -22,7 +22,7 @@ import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
  *
  * @generated
  */
-public class HierachicalContextImpl extends ContextImpl implements HierachicalContext {
+public class HierachicalContextImpl extends ContextAttributeImpl implements HierachicalContext {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

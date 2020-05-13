@@ -10,9 +10,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.palladiosimulator.pcm.confidentiality.context.model.HierachicalContext;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
@@ -22,7 +22,7 @@ import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HierachicalContextItemProvider extends ContextItemProvider {
+public class HierachicalContextItemProvider extends ContextAttributeItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->

@@ -87,13 +87,13 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseContext(Context object) {
-            return createContextAdapter();
+        public Adapter caseContextAttribute(ContextAttribute object) {
+            return createContextAttributeAdapter();
         }
 
         @Override
-        public Adapter caseContextContainer(ContextContainer object) {
-            return createContextContainerAdapter();
+        public Adapter caseContext(Context object) {
+            return createContextAdapter();
         }
 
         @Override
@@ -173,6 +173,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute <em>Context Attribute</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute
+     * @generated
+     */
+    public Adapter createContextAttributeAdapter() {
+        return null;
+    }
+
+    /**
      * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.context.model.Context <em>Context</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
@@ -183,20 +197,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createContextAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer <em>Context Container</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer
-     * @generated
-     */
-    public Adapter createContextContainerAdapter() {
         return null;
     }
 

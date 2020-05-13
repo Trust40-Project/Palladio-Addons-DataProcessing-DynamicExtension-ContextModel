@@ -59,6 +59,181 @@ public interface ModelPackage extends EPackage {
     ModelPackage eINSTANCE = org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl.init();
 
     /**
+     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextAttributeImpl <em>Context Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextAttributeImpl
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getContextAttribute()
+     * @generated
+     */
+    int CONTEXT_ATTRIBUTE = 3;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTEXT_ATTRIBUTE__ID = EntityPackage.ENTITY__ID;
+
+    /**
+     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTEXT_ATTRIBUTE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+    /**
+     * The number of structural features of the '<em>Context Attribute</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTEXT_ATTRIBUTE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.HierachicalContextImpl <em>Hierachical Context</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.HierachicalContextImpl
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getHierachicalContext()
+     * @generated
+     */
+    int HIERACHICAL_CONTEXT = 0;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HIERACHICAL_CONTEXT__ID = CONTEXT_ATTRIBUTE__ID;
+
+    /**
+     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HIERACHICAL_CONTEXT__ENTITY_NAME = CONTEXT_ATTRIBUTE__ENTITY_NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HIERACHICAL_CONTEXT__PARENT = CONTEXT_ATTRIBUTE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Include Direction</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HIERACHICAL_CONTEXT__INCLUDE_DIRECTION = CONTEXT_ATTRIBUTE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Hierachical Context</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HIERACHICAL_CONTEXT_FEATURE_COUNT = CONTEXT_ATTRIBUTE_FEATURE_COUNT + 2;
+
+    /**
+     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.SingleAttributeContextImpl <em>Single Attribute Context</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.SingleAttributeContextImpl
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getSingleAttributeContext()
+     * @generated
+     */
+    int SINGLE_ATTRIBUTE_CONTEXT = 1;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SINGLE_ATTRIBUTE_CONTEXT__ID = CONTEXT_ATTRIBUTE__ID;
+
+    /**
+     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SINGLE_ATTRIBUTE_CONTEXT__ENTITY_NAME = CONTEXT_ATTRIBUTE__ENTITY_NAME;
+
+    /**
+     * The number of structural features of the '<em>Single Attribute Context</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SINGLE_ATTRIBUTE_CONTEXT_FEATURE_COUNT = CONTEXT_ATTRIBUTE_FEATURE_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.RelatedContextSetImpl <em>Related Context Set</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.RelatedContextSetImpl
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getRelatedContextSet()
+     * @generated
+     */
+    int RELATED_CONTEXT_SET = 2;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RELATED_CONTEXT_SET__ID = CONTEXT_ATTRIBUTE__ID;
+
+    /**
+     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RELATED_CONTEXT_SET__ENTITY_NAME = CONTEXT_ATTRIBUTE__ENTITY_NAME;
+
+    /**
+     * The feature id for the '<em><b>Context</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RELATED_CONTEXT_SET__CONTEXT = CONTEXT_ATTRIBUTE_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Related Context Set</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RELATED_CONTEXT_SET_FEATURE_COUNT = CONTEXT_ATTRIBUTE_FEATURE_COUNT + 1;
+
+    /**
      * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextImpl <em>Context</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -66,7 +241,7 @@ public interface ModelPackage extends EPackage {
      * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getContext()
      * @generated
      */
-    int CONTEXT = 3;
+    int CONTEXT = 4;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -87,197 +262,22 @@ public interface ModelPackage extends EPackage {
     int CONTEXT__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
     /**
-     * The number of structural features of the '<em>Context</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONTEXT_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.HierachicalContextImpl <em>Hierachical Context</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.HierachicalContextImpl
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getHierachicalContext()
-     * @generated
-     */
-    int HIERACHICAL_CONTEXT = 0;
-
-    /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HIERACHICAL_CONTEXT__ID = CONTEXT__ID;
-
-    /**
-     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HIERACHICAL_CONTEXT__ENTITY_NAME = CONTEXT__ENTITY_NAME;
-
-    /**
-     * The feature id for the '<em><b>Parent</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HIERACHICAL_CONTEXT__PARENT = CONTEXT_FEATURE_COUNT + 0;
-
-    /**
-     * The feature id for the '<em><b>Include Direction</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HIERACHICAL_CONTEXT__INCLUDE_DIRECTION = CONTEXT_FEATURE_COUNT + 1;
-
-    /**
-     * The number of structural features of the '<em>Hierachical Context</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HIERACHICAL_CONTEXT_FEATURE_COUNT = CONTEXT_FEATURE_COUNT + 2;
-
-    /**
-     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.SingleAttributeContextImpl <em>Single Attribute Context</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.SingleAttributeContextImpl
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getSingleAttributeContext()
-     * @generated
-     */
-    int SINGLE_ATTRIBUTE_CONTEXT = 1;
-
-    /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SINGLE_ATTRIBUTE_CONTEXT__ID = CONTEXT__ID;
-
-    /**
-     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SINGLE_ATTRIBUTE_CONTEXT__ENTITY_NAME = CONTEXT__ENTITY_NAME;
-
-    /**
-     * The number of structural features of the '<em>Single Attribute Context</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SINGLE_ATTRIBUTE_CONTEXT_FEATURE_COUNT = CONTEXT_FEATURE_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.RelatedContextSetImpl <em>Related Context Set</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.RelatedContextSetImpl
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getRelatedContextSet()
-     * @generated
-     */
-    int RELATED_CONTEXT_SET = 2;
-
-    /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RELATED_CONTEXT_SET__ID = CONTEXT__ID;
-
-    /**
-     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RELATED_CONTEXT_SET__ENTITY_NAME = CONTEXT__ENTITY_NAME;
-
-    /**
-     * The feature id for the '<em><b>Context</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RELATED_CONTEXT_SET__CONTEXT = CONTEXT_FEATURE_COUNT + 0;
-
-    /**
-     * The number of structural features of the '<em>Related Context Set</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RELATED_CONTEXT_SET_FEATURE_COUNT = CONTEXT_FEATURE_COUNT + 1;
-
-    /**
-     * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextContainerImpl <em>Context Container</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextContainerImpl
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getContextContainer()
-     * @generated
-     */
-    int CONTEXT_CONTAINER = 4;
-
-    /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONTEXT_CONTAINER__ID = EntityPackage.ENTITY__ID;
-
-    /**
-     * The feature id for the '<em><b>Entity Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONTEXT_CONTAINER__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
-
-    /**
      * The feature id for the '<em><b>Context</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CONTEXT_CONTAINER__CONTEXT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+    int CONTEXT__CONTEXT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
     /**
-     * The number of structural features of the '<em>Context Container</em>' class.
+     * The number of structural features of the '<em>Context</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CONTEXT_CONTAINER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+    int CONTEXT_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
     /**
      * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.Direction <em>Direction</em>}' enum.
@@ -353,6 +353,16 @@ public interface ModelPackage extends EPackage {
     EReference getRelatedContextSet_Context();
 
     /**
+     * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute <em>Context Attribute</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Context Attribute</em>'.
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute
+     * @generated
+     */
+    EClass getContextAttribute();
+
+    /**
      * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.context.model.Context <em>Context</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -363,25 +373,15 @@ public interface ModelPackage extends EPackage {
     EClass getContext();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer <em>Context Container</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Context Container</em>'.
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer
-     * @generated
-     */
-    EClass getContextContainer();
-
-    /**
-     * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer#getContext <em>Context</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.confidentiality.context.model.Context#getContext <em>Context</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the containment reference list '<em>Context</em>'.
-     * @see org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer#getContext()
-     * @see #getContextContainer()
+     * @see org.palladiosimulator.pcm.confidentiality.context.model.Context#getContext()
+     * @see #getContext()
      * @generated
      */
-    EReference getContextContainer_Context();
+    EReference getContext_Context();
 
     /**
      * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.context.model.Direction <em>Direction</em>}'.
@@ -470,6 +470,16 @@ public interface ModelPackage extends EPackage {
         EReference RELATED_CONTEXT_SET__CONTEXT = eINSTANCE.getRelatedContextSet_Context();
 
         /**
+         * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextAttributeImpl <em>Context Attribute</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextAttributeImpl
+         * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getContextAttribute()
+         * @generated
+         */
+        EClass CONTEXT_ATTRIBUTE = eINSTANCE.getContextAttribute();
+
+        /**
          * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextImpl <em>Context</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -480,22 +490,12 @@ public interface ModelPackage extends EPackage {
         EClass CONTEXT = eINSTANCE.getContext();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextContainerImpl <em>Context Container</em>}' class.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ContextContainerImpl
-         * @see org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl#getContextContainer()
-         * @generated
-         */
-        EClass CONTEXT_CONTAINER = eINSTANCE.getContextContainer();
-
-        /**
          * The meta object literal for the '<em><b>Context</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CONTEXT_CONTAINER__CONTEXT = eINSTANCE.getContextContainer_Context();
+        EReference CONTEXT__CONTEXT = eINSTANCE.getContext_Context();
 
         /**
          * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.context.model.Direction <em>Direction</em>}' enum.

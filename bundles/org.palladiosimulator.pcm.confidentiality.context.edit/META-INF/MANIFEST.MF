@@ -9,8 +9,7 @@ Bundle-Activator: org.palladiosimulator.pcm.confidentiality.context.provider.Con
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.palladiosimulator.pcm.confidentiality.context.misusage.provider,
- org.palladiosimulator.pcm.confidentiality.context.model.provider,
+Export-Package: org.palladiosimulator.pcm.confidentiality.context.model.provider,
  org.palladiosimulator.pcm.confidentiality.context.policy.provider,
  org.palladiosimulator.pcm.confidentiality.context.provider
 Require-Bundle: org.eclipse.core.runtime,

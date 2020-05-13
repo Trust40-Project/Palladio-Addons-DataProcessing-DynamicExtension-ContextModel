@@ -14,7 +14,7 @@ import org.palladiosimulator.pcm.confidentiality.context.model.SingleAttributeCo
  *
  * @generated
  */
-public class SingleAttributeContextImpl extends ContextImpl implements SingleAttributeContext {
+public class SingleAttributeContextImpl extends ContextAttributeImpl implements SingleAttributeContext {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

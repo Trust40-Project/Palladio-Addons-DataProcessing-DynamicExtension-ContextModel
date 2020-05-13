@@ -142,26 +142,26 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer} instances.
+     * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.context.model.Context} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected ContextContainerItemProvider contextContainerItemProvider;
+    protected ContextItemProvider contextItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer}.
+     * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.context.model.Context}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createContextContainerAdapter() {
-        if (contextContainerItemProvider == null) {
-            contextContainerItemProvider = new ContextContainerItemProvider(this);
+    public Adapter createContextAdapter() {
+        if (contextItemProvider == null) {
+            contextItemProvider = new ContextItemProvider(this);
         }
 
-        return contextContainerItemProvider;
+        return contextItemProvider;
     }
 
     /**
@@ -269,8 +269,8 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
             singleAttributeContextItemProvider.dispose();
         if (relatedContextSetItemProvider != null)
             relatedContextSetItemProvider.dispose();
-        if (contextContainerItemProvider != null)
-            contextContainerItemProvider.dispose();
+        if (contextItemProvider != null)
+            contextItemProvider.dispose();
     }
 
 }

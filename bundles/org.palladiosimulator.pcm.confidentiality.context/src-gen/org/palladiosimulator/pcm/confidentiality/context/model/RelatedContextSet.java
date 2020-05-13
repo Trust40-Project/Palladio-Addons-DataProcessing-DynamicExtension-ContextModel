@@ -20,10 +20,10 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface RelatedContextSet extends Context {
+public interface RelatedContextSet extends ContextAttribute {
     /**
      * Returns the value of the '<em><b>Context</b></em>' reference list.
-     * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.context.model.Context}.
+     * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Context</em>' reference list.
@@ -31,6 +31,6 @@ public interface RelatedContextSet extends Context {
      * @model required="true"
      * @generated
      */
-    EList<Context> getContext();
+    EList<ContextAttribute> getContext();
 
 } // RelatedContextSet

@@ -166,9 +166,11 @@ import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import org.palladiosimulator.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
+
 import org.palladiosimulator.pcm.confidentiality.context.model.provider.ModelItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.confidentiality.context.policy.provider.PolicyItemProviderAdapterFactory;
+
 import org.palladiosimulator.pcm.core.composition.provider.CompositionItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProviderAdapterFactory;

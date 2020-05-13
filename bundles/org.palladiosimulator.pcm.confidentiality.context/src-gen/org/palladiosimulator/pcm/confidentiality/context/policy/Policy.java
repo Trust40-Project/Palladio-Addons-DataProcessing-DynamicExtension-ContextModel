@@ -4,7 +4,7 @@ package org.palladiosimulator.pcm.confidentiality.context.policy;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.palladiosimulator.pcm.confidentiality.context.model.Context;
+import org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute;
 
 import org.palladiosimulator.pcm.core.entity.Entity;
 
@@ -27,7 +27,7 @@ import org.palladiosimulator.pcm.core.entity.Entity;
 public interface Policy extends Entity {
     /**
      * Returns the value of the '<em><b>Contexts</b></em>' reference list.
-     * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.context.model.Context}.
+     * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Contexts</em>' reference list.
@@ -35,6 +35,6 @@ public interface Policy extends Entity {
      * @model
      * @generated
      */
-    EList<Context> getContexts();
+    EList<ContextAttribute> getContexts();
 
 } // Policy

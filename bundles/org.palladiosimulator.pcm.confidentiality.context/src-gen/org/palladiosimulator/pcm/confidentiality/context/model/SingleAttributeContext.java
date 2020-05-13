@@ -12,5 +12,5 @@ package org.palladiosimulator.pcm.confidentiality.context.model;
  * @model
  * @generated
  */
-public interface SingleAttributeContext extends Context {
+public interface SingleAttributeContext extends ContextAttribute {
 } // SingleAttributeContext

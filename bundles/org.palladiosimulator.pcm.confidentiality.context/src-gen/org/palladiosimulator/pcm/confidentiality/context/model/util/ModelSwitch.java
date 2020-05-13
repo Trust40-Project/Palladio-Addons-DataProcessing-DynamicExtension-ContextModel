@@ -75,7 +75,7 @@ public class ModelSwitch<T> extends Switch<T> {
             HierachicalContext hierachicalContext = (HierachicalContext) theEObject;
             T result = caseHierachicalContext(hierachicalContext);
             if (result == null)
-                result = caseContext(hierachicalContext);
+                result = caseContextAttribute(hierachicalContext);
             if (result == null)
                 result = caseEntity(hierachicalContext);
             if (result == null)
@@ -90,7 +90,7 @@ public class ModelSwitch<T> extends Switch<T> {
             SingleAttributeContext singleAttributeContext = (SingleAttributeContext) theEObject;
             T result = caseSingleAttributeContext(singleAttributeContext);
             if (result == null)
-                result = caseContext(singleAttributeContext);
+                result = caseContextAttribute(singleAttributeContext);
             if (result == null)
                 result = caseEntity(singleAttributeContext);
             if (result == null)
@@ -105,13 +105,26 @@ public class ModelSwitch<T> extends Switch<T> {
             RelatedContextSet relatedContextSet = (RelatedContextSet) theEObject;
             T result = caseRelatedContextSet(relatedContextSet);
             if (result == null)
-                result = caseContext(relatedContextSet);
+                result = caseContextAttribute(relatedContextSet);
             if (result == null)
                 result = caseEntity(relatedContextSet);
             if (result == null)
                 result = caseIdentifier(relatedContextSet);
             if (result == null)
                 result = caseNamedElement(relatedContextSet);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case ModelPackage.CONTEXT_ATTRIBUTE: {
+            ContextAttribute contextAttribute = (ContextAttribute) theEObject;
+            T result = caseContextAttribute(contextAttribute);
+            if (result == null)
+                result = caseEntity(contextAttribute);
+            if (result == null)
+                result = caseIdentifier(contextAttribute);
+            if (result == null)
+                result = caseNamedElement(contextAttribute);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -125,19 +138,6 @@ public class ModelSwitch<T> extends Switch<T> {
                 result = caseIdentifier(context);
             if (result == null)
                 result = caseNamedElement(context);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case ModelPackage.CONTEXT_CONTAINER: {
-            ContextContainer contextContainer = (ContextContainer) theEObject;
-            T result = caseContextContainer(contextContainer);
-            if (result == null)
-                result = caseEntity(contextContainer);
-            if (result == null)
-                result = caseIdentifier(contextContainer);
-            if (result == null)
-                result = caseNamedElement(contextContainer);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -193,6 +193,21 @@ public class ModelSwitch<T> extends Switch<T> {
     }
 
     /**
+     * Returns the result of interpreting the object as an instance of '<em>Context Attribute</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Context Attribute</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseContextAttribute(ContextAttribute object) {
+        return null;
+    }
+
+    /**
      * Returns the result of interpreting the object as an instance of '<em>Context</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
@@ -204,21 +219,6 @@ public class ModelSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseContext(Context object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Context Container</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Context Container</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseContextContainer(ContextContainer object) {
         return null;
     }
 

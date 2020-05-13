@@ -21,6 +21,7 @@ import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.ContextFactory;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
+
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.model.impl.ModelPackageImpl;
@@ -233,10 +234,9 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
         initEReference(getConfidentialAccessSpecification_PolicyContainer(), thePolicyPackage.getPolicyContainer(),
                 null, "policyContainer", null, 1, 1, ConfidentialAccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getConfidentialAccessSpecification_Contextcontainer(), theModelPackage.getContextContainer(),
-                null, "contextcontainer", null, 1, 1, ConfidentialAccessSpecification.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-                IS_ORDERED);
+        initEReference(getConfidentialAccessSpecification_Contextcontainer(), theModelPackage.getContext(), null,
+                "contextcontainer", null, 1, 1, ConfidentialAccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);

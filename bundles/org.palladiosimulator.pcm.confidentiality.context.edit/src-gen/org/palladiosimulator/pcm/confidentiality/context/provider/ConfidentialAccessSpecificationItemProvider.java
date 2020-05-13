@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -24,7 +25,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
+
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelFactory;
+
 import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyFactory;
 
 /**
@@ -197,7 +200,7 @@ public class ConfidentialAccessSpecificationItemProvider extends ItemProviderAda
 
         newChildDescriptors
                 .add(createChildParameter(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER,
-                        ModelFactory.eINSTANCE.createContextContainer()));
+                        ModelFactory.eINSTANCE.createContext()));
     }
 
     /**

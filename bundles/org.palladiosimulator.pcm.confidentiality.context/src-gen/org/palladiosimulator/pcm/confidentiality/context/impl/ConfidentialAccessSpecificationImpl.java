@@ -8,7 +8,9 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.ContextPackage;
-import org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer;
+
+import org.palladiosimulator.pcm.confidentiality.context.model.Context;
+
 import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyContainer;
 
 /**
@@ -79,9 +81,8 @@ public class ConfidentialAccessSpecificationImpl extends CDOObjectImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
-    public ContextContainer getContextcontainer() {
-        return (ContextContainer) eGet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER,
-                true);
+    public Context getContextcontainer() {
+        return (Context) eGet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER, true);
     }
 
     /**
@@ -89,7 +90,7 @@ public class ConfidentialAccessSpecificationImpl extends CDOObjectImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setContextcontainer(ContextContainer newContextcontainer) {
+    public void setContextcontainer(Context newContextcontainer) {
         eSet(ContextPackage.Literals.CONFIDENTIAL_ACCESS_SPECIFICATION__CONTEXTCONTAINER, newContextcontainer);
     }
 

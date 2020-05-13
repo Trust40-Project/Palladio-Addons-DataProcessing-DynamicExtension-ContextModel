@@ -3,7 +3,9 @@
 package org.palladiosimulator.pcm.confidentiality.context;
 
 import org.eclipse.emf.cdo.CDOObject;
-import org.palladiosimulator.pcm.confidentiality.context.model.ContextContainer;
+
+import org.palladiosimulator.pcm.confidentiality.context.model.Context;
+
 import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyContainer;
 
 /**
@@ -52,12 +54,12 @@ public interface ConfidentialAccessSpecification extends CDOObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Contextcontainer</em>' containment reference.
-     * @see #setContextcontainer(ContextContainer)
+     * @see #setContextcontainer(Context)
      * @see org.palladiosimulator.pcm.confidentiality.context.ContextPackage#getConfidentialAccessSpecification_Contextcontainer()
      * @model containment="true" required="true"
      * @generated
      */
-    ContextContainer getContextcontainer();
+    Context getContextcontainer();
 
     /**
      * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification#getContextcontainer <em>Contextcontainer</em>}' containment reference.
@@ -67,6 +69,6 @@ public interface ConfidentialAccessSpecification extends CDOObject {
      * @see #getContextcontainer()
      * @generated
      */
-    void setContextcontainer(ContextContainer value);
+    void setContextcontainer(Context value);
 
 } // ConfidentialAccessSpecification

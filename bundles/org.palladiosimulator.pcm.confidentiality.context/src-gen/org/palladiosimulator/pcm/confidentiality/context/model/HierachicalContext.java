@@ -19,7 +19,7 @@ package org.palladiosimulator.pcm.confidentiality.context.model;
  * @model
  * @generated
  */
-public interface HierachicalContext extends Context {
+public interface HierachicalContext extends ContextAttribute {
     /**
      * Returns the value of the '<em><b>Parent</b></em>' reference.
      * <!-- begin-user-doc -->

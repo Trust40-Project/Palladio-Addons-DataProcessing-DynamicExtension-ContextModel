@@ -21,6 +21,7 @@ import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyFactory;
 import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.provider.ContextEditPlugin;
+
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**

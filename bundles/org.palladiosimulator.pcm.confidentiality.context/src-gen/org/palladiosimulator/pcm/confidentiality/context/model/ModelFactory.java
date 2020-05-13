@@ -49,13 +49,13 @@ public interface ModelFactory extends EFactory {
     RelatedContextSet createRelatedContextSet();
 
     /**
-     * Returns a new object of class '<em>Context Container</em>'.
+     * Returns a new object of class '<em>Context</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Context Container</em>'.
+     * @return a new object of class '<em>Context</em>'.
      * @generated
      */
-    ContextContainer createContextContainer();
+    Context createContext();
 
     /**
      * Returns the package supported by this factory.

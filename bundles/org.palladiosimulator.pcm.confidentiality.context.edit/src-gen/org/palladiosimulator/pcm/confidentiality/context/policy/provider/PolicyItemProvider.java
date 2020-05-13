@@ -12,10 +12,12 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
 import org.palladiosimulator.pcm.confidentiality.context.policy.Policy;
 import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyPackage;
 
 import org.palladiosimulator.pcm.confidentiality.context.provider.ContextEditPlugin;
+
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**

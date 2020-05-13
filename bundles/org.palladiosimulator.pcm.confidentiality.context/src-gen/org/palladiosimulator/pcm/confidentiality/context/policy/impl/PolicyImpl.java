@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.palladiosimulator.pcm.confidentiality.context.model.Context;
+import org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute;
 
 import org.palladiosimulator.pcm.confidentiality.context.policy.Policy;
 import org.palladiosimulator.pcm.confidentiality.context.policy.PolicyPackage;
@@ -52,8 +52,8 @@ public class PolicyImpl extends EntityImpl implements Policy {
      * @generated
      */
     @SuppressWarnings("unchecked")
-    public EList<Context> getContexts() {
-        return (EList<Context>) eGet(PolicyPackage.Literals.POLICY__CONTEXTS, true);
+    public EList<ContextAttribute> getContexts() {
+        return (EList<ContextAttribute>) eGet(PolicyPackage.Literals.POLICY__CONTEXTS, true);
     }
 
 } //PolicyImpl

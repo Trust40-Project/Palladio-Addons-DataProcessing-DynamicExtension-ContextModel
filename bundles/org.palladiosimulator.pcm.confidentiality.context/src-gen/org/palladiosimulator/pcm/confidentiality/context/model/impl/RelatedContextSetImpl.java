@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.palladiosimulator.pcm.confidentiality.context.model.Context;
+import org.palladiosimulator.pcm.confidentiality.context.model.ContextAttribute;
 import org.palladiosimulator.pcm.confidentiality.context.model.ModelPackage;
 import org.palladiosimulator.pcm.confidentiality.context.model.RelatedContextSet;
 
@@ -23,7 +23,7 @@ import org.palladiosimulator.pcm.confidentiality.context.model.RelatedContextSet
  *
  * @generated
  */
-public class RelatedContextSetImpl extends ContextImpl implements RelatedContextSet {
+public class RelatedContextSetImpl extends ContextAttributeImpl implements RelatedContextSet {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -49,8 +49,8 @@ public class RelatedContextSetImpl extends ContextImpl implements RelatedContext
      * @generated
      */
     @SuppressWarnings("unchecked")
-    public EList<Context> getContext() {
-        return (EList<Context>) eGet(ModelPackage.Literals.RELATED_CONTEXT_SET__CONTEXT, true);
+    public EList<ContextAttribute> getContext() {
+        return (EList<ContextAttribute>) eGet(ModelPackage.Literals.RELATED_CONTEXT_SET__CONTEXT, true);
     }
 
 } //RelatedContextSetImpl
