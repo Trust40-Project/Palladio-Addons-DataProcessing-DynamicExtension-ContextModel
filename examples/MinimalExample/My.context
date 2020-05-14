@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:ConfidentialAccessSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.palladiosimulator.org/pcm/confidentiality/0.1/" xmlns:model="http://www.palladiosimulator.org/pcm/confidentiality/context/model/0.1/">
+  <policyContainer id="_2jvykJXBEeqset1RkCBSHQ">
+    <policies id="_2wnJ4JXBEeqset1RkCBSHQ" entityName="policyMethod1"/>
+  </policyContainer>
+  <contextcontainer id="_1fHs0ZXBEeqset1RkCBSHQ">
+    <context xsi:type="model:HierachicalContext" id="_6HPHcJXBEeqset1RkCBSHQ" entityName="root"/>
+    <context xsi:type="model:HierachicalContext" id="_8j7MUJXBEeqset1RkCBSHQ" entityName="A" parent="_6HPHcJXBEeqset1RkCBSHQ"/>
+    <context xsi:type="model:HierachicalContext" id="_8387kJXBEeqset1RkCBSHQ" entityName="B" parent="_6HPHcJXBEeqset1RkCBSHQ"/>
+  </contextcontainer>
+</context:ConfidentialAccessSpecification>

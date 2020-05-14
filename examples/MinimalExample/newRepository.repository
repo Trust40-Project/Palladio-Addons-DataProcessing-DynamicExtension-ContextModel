@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:myprofile="org.palladiosimulator.pcm.confidentiality" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2">
+  <repository:Repository id="_p-zrUJXBEeqset1RkCBSHQ" entityName="New Repository">
+    <components__Repository xsi:type="repository:BasicComponent" id="_sbX0YJXBEeqset1RkCBSHQ" entityName="BasicComponent1">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_v14MYJXBEeqset1RkCBSHQ" entityName="BasicComponent1.Interface1.OperationProvidedRole1" providedInterface__OperationProvidedRole="_sBfUwJXBEeqset1RkCBSHQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_v2NjkJXBEeqset1RkCBSHQ" describedService__SEFF="_tqItkJXBEeqset1RkCBSHQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_v2PYwJXBEeqset1RkCBSHQ" successor_AbstractAction="_v2P_0JXBEeqset1RkCBSHQ"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_v2P_0JXBEeqset1RkCBSHQ" predecessor_AbstractAction="_v2PYwJXBEeqset1RkCBSHQ"/>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_sBfUwJXBEeqset1RkCBSHQ" entityName="Interface1">
+      <signatures__OperationInterface id="_tqItkJXBEeqset1RkCBSHQ" entityName="method1"/>
+    </interfaces__Repository>
+  </repository:Repository>
+  <emfprofileapplication:ProfileApplication>
+    <stereotypeApplications xsi:type="myprofile:PolicySpecification" appliedTo="_v2NjkJXBEeqset1RkCBSHQ">
+      <extension href="../org.palladiosimulator.pcm.confidentiality.profile/profile.emfprofile_diagram#_-yjjMBzEEeqnO4co57HKgA"/>
+      <policy href="My.context#_2wnJ4JXBEeqset1RkCBSHQ"/>
+    </stereotypeApplications>
+    <importedProfiles nsURI="org.palladiosimulator.pcm.confidentiality" location="platform:/resource/org.palladiosimulator.pcm.confidentiality.profile/profile.emfprofile_diagram"/>
+  </emfprofileapplication:ProfileApplication>
+</xmi:XMI>

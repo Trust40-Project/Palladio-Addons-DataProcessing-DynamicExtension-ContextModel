@@ -7,7 +7,7 @@
     <semanticResources>http://edu.kit.kastel.scbs.confidentiality</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_0m_HEBzEEeqnO4co57HKgA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0ozE8BzEEeqnO4co57HKgA" name="EMF Profiles" repPath="#_0nKGMBzEEeqnO4co57HKgA" changeId="0373652e-7da4-4416-9fba-01b9d5e783f2">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0ozE8BzEEeqnO4co57HKgA" name="EMF Profiles" repPath="#_0nKGMBzEEeqnO4co57HKgA" changeId="41559951-e8d8-40fd-9039-6ef52ce3ddc8">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']"/>
         <target xmi:type="emfprofile:Profile" href="profile.emfprofile_diagram#_0PDvQBzEEeqnO4co57HKgA"/>
       </ownedRepresentationDescriptors>
@@ -118,33 +118,6 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_6KKpYWePEeqwUOzpmf7KFw" fontName="Cantarell" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6KKpYmePEeqwUOzpmf7KFw" x="165" y="545" height="10"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_j0BpkGhaEeqKmoPQiNhDeA" type="2003" element="_jzzAEGhaEeqKmoPQiNhDeA">
-          <children xmi:type="notation:Node" xmi:id="_j0CQoGhaEeqKmoPQiNhDeA" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_j0CQoWhaEeqKmoPQiNhDeA" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_j0CQomhaEeqKmoPQiNhDeA"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_j0CQo2haEeqKmoPQiNhDeA"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_j0BpkWhaEeqKmoPQiNhDeA" fontName="Cantarell" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j0BpkmhaEeqKmoPQiNhDeA" x="565" y="435"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_02K78GhaEeqKmoPQiNhDeA" type="2002" element="_015PIGhaEeqKmoPQiNhDeA">
-          <children xmi:type="notation:Node" xmi:id="_02LjAGhaEeqKmoPQiNhDeA" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_02LjAWhaEeqKmoPQiNhDeA" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_02LjAmhaEeqKmoPQiNhDeA"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_02LjA2haEeqKmoPQiNhDeA"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_02K78WhaEeqKmoPQiNhDeA" fontName="Cantarell" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_02K78mhaEeqKmoPQiNhDeA" x="822" y="384" height="10"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_EPU3QGhbEeqKmoPQiNhDeA" type="2003" element="_EPLtUWhbEeqKmoPQiNhDeA">
-          <children xmi:type="notation:Node" xmi:id="_EPU3Q2hbEeqKmoPQiNhDeA" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_EPVeUGhbEeqKmoPQiNhDeA" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_EPVeUWhbEeqKmoPQiNhDeA"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_EPVeUmhbEeqKmoPQiNhDeA"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_EPU3QWhbEeqKmoPQiNhDeA" fontName="Cantarell" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EPU3QmhbEeqKmoPQiNhDeA" x="862" y="445"/>
-        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_0o3WYhzEEeqnO4co57HKgA"/>
         <edges xmi:type="notation:Edge" xmi:id="_-zJZEBzEEeqnO4co57HKgA" type="4001" element="_-ywXgBzEEeqnO4co57HKgA" source="_49LEMBzEEeqnO4co57HKgA" target="_-MEyABzEEeqnO4co57HKgA">
           <children xmi:type="notation:Node" xmi:id="_-zKnMBzEEeqnO4co57HKgA" type="6001">
@@ -241,22 +214,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_67FwA2ePEeqwUOzpmf7KFw" points="[0, 0, 55, -89]$[-55, 89, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_67GXFmePEeqwUOzpmf7KFw" id="(0.20440251572327045,1.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_67GXF2ePEeqwUOzpmf7KFw" id="(0.40540540540540543,0.0)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_7EiisGhaEeqKmoPQiNhDeA" type="4001" element="_7EVHWGhaEeqKmoPQiNhDeA" source="_j0BpkGhaEeqKmoPQiNhDeA" target="_02K78GhaEeqKmoPQiNhDeA">
-          <children xmi:type="notation:Node" xmi:id="_7EjJwGhaEeqKmoPQiNhDeA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7EjJwWhaEeqKmoPQiNhDeA" x="-49" y="-3"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_7EjJwmhaEeqKmoPQiNhDeA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7EjJw2haEeqKmoPQiNhDeA" x="29" y="-1"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_7EjJxGhaEeqKmoPQiNhDeA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7EjJxWhaEeqKmoPQiNhDeA" x="-16" y="6"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_7EiisWhaEeqKmoPQiNhDeA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_7EiismhaEeqKmoPQiNhDeA" fontName="Cantarell" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7Eiis2haEeqKmoPQiNhDeA" points="[0, 0, -113, 60]$[113, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7EjJxmhaEeqKmoPQiNhDeA" id="(1.0,0.5128205128205128)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7EjJx2haEeqKmoPQiNhDeA" id="(0.0,0.5)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -434,48 +391,6 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_663tkmePEeqwUOzpmf7KFw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_jzzAEGhaEeqKmoPQiNhDeA" name="InitialAttackerComponent" outgoingEdges="_7EVHWGhaEeqKmoPQiNhDeA">
-      <target xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_jzxK4GhaEeqKmoPQiNhDeA"/>
-      <semanticElements xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_jzxK4GhaEeqKmoPQiNhDeA"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_jzzAEWhaEeqKmoPQiNhDeA" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_015PIGhaEeqKmoPQiNhDeA" name="BasicComponent" incomingEdges="_7EVHWGhaEeqKmoPQiNhDeA" height="1">
-      <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/BasicComponent"/>
-      <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/BasicComponent"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_015PIWhaEeqKmoPQiNhDeA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_7EVHWGhaEeqKmoPQiNhDeA" name="basiccomponent[0..1]" sourceNode="_jzzAEGhaEeqKmoPQiNhDeA" targetNode="_015PIGhaEeqKmoPQiNhDeA">
-      <target xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_7EQO0GhaEeqKmoPQiNhDeA"/>
-      <semanticElements xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_7EQO0GhaEeqKmoPQiNhDeA"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_7EVHWWhaEeqKmoPQiNhDeA" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_7EVHWmhaEeqKmoPQiNhDeA" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_EPLtUWhbEeqKmoPQiNhDeA" name="InitialContextSet">
-      <target xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_EPLGQGhbEeqKmoPQiNhDeA"/>
-      <semanticElements xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_EPLGQGhbEeqKmoPQiNhDeA"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_EPLtUmhbEeqKmoPQiNhDeA" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_0nQz4BzEEeqnO4co57HKgA"/>

@@ -46,24 +46,6 @@
         <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/RepositoryComponent"/>
       </extensions>
     </eClassifiers>
-    <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_jzxK4GhaEeqKmoPQiNhDeA" name="InitialAttackerComponent">
-      <eSuperTypes xmi:type="ecore:EClass" href="http://www.modelversioning.org/emfprofile/application/1.1#//StereotypeApplication"/>
-      <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_7EQO0GhaEeqKmoPQiNhDeA" name="basiccomponent">
-        <eType xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/BasicComponent"/>
-      </eStructuralFeatures>
-      <extensions xmi:type="emfprofile:Extension" xmi:id="_4WJp0GhaEeqKmoPQiNhDeA">
-        <target xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//adversary/Adversary"/>
-      </extensions>
-    </eClassifiers>
-    <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_EPLGQGhbEeqKmoPQiNhDeA" name="InitialContextSet">
-      <eSuperTypes xmi:type="ecore:EClass" href="http://www.modelversioning.org/emfprofile/application/1.1#//StereotypeApplication"/>
-      <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_JUjEoGhbEeqKmoPQiNhDeA" name="policy">
-        <eType xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#//policy/Policy"/>
-      </eStructuralFeatures>
-      <extensions xmi:type="emfprofile:Extension" xmi:id="_HCQ48GhbEeqKmoPQiNhDeA">
-        <target xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//adversary/Adversary"/>
-      </extensions>
-    </eClassifiers>
   </emfprofile:Profile>
   <notation:Diagram xmi:id="_0PsocBzEEeqnO4co57HKgA" type="EMFProfile" element="_0PDvQBzEEeqnO4co57HKgA" name="profile.emfprofile_diagram" measurementUnit="Pixel">
     <styles xmi:type="notation:DiagramStyle" xmi:id="_0PsocRzEEeqnO4co57HKgA"/>
